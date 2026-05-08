@@ -14,4 +14,5 @@ Astro will print a local URL (usually `http://localhost:4321`).
 ## Key docs
 
 - `PROJECT_HANDOVER.md`: developer handover and project summary
+- `OPEN_PROJECT.md`: how to open and run locally (VS Code)
 
