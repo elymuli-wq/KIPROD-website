@@ -1,0 +1,62 @@
+---
+import "../styles/global.css";
+import Nav from "../components/Nav.astro";
+import Footer from "../components/Footer.astro";
+
+const {
+  title = "KIPROD",
+  description = "KIPROD strengthens credit risk management in financial institutions—from capability development to system strengthening and long-term institutional partnerships.",
+  activePath = "/",
+} = Astro.props;
+---
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <Nav activePath={activePath} />
+    <main>
+      <slot />
+    </main>
+    <Footer />
+
+    <script>
+      (function () {
+        const reveals = document.querySelectorAll(".reveal");
+        if (reveals.length) {
+          const observer = new IntersectionObserver(
+            (entries) => {
+              entries.forEach((e) => {
+                if (e.isIntersecting) {
+                  e.target.classList.add("visible");
+                  observer.unobserve(e.target);
+                }
+              });
+            },
+            { threshold: 0.12, rootMargin: "0px 0px -40px 0px" }
+          );
+          reveals.forEach((el) => observer.observe(el));
+        }
+
+        const nav = document.querySelector("nav");
+        if (nav) {
+          window.addEventListener("scroll", () => {
+            nav.style.boxShadow = window.scrollY > 40 ? "0 4px 40px rgba(0,0,0,0.3)" : "none";
+          });
+        }
+      })();
+    </script>
+  </body>
+</html>
+

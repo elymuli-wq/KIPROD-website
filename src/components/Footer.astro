@@ -1,0 +1,69 @@
+---
+const links = [
+  { href: "/", label: "Homepage" },
+  { href: "/about", label: "About KIPROD" },
+  { href: "/academy", label: "Risk Management Academy" },
+  { href: "/partnerships", label: "Institutional Partnerships" },
+  { href: "/institute", label: "Credit Risk Institute" },
+  { href: "/contact", label: "Contact" },
+];
+---
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand-name">KI<span>PROD</span></div>
+        <div class="footer-brand-desc">
+          KIPROD supports financial institutions in moving from credit risk knowledge to structured execution and
+          sustainable portfolio performance.
+        </div>
+      </div>
+
+      <div>
+        <div class="footer-col-title">Navigation</div>
+        <ul class="footer-links">
+          {links.map((l) => (
+            <li>
+              <a href={l.href}>{l.label}</a>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <div>
+        <div class="footer-col-title">Resources</div>
+        <ul class="footer-links">
+          <li>
+            <a href="https://learning.kiprodrisk.com/" target="_blank" rel="noreferrer">Start Free Course</a>
+          </li>
+          <li>
+            <a href="/insights">Publications</a>
+          </li>
+          <li>
+            <a href="/resources">Downloads</a>
+          </li>
+          <li>
+            <a href="/contact">Request a meeting</a>
+          </li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="footer-col-title">Markets</div>
+        <ul class="footer-links">
+          <li><a href="/#problem">Kenya</a></li>
+          <li><a href="/#problem">Uganda</a></li>
+          <li><a href="/#problem">Tanzania</a></li>
+          <li><a href="/#problem">East Africa</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-copy">© 2026 KIPROD. All rights reserved.</div>
+      <div class="footer-markets">Banks · SACCOs · Microfinance · Fintech</div>
+    </div>
+  </div>
+</footer>
+

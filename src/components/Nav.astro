@@ -1,0 +1,36 @@
+---
+const { activePath = "/" } = Astro.props;
+
+const links = [
+  { href: "/", label: "Homepage" },
+  { href: "/about", label: "About KIPROD" },
+  { href: "/academy", label: "Risk Management Academy" },
+  { href: "/partnerships", label: "Institutional Partnerships" },
+  { href: "/institute", label: "Credit Risk Institute" },
+  { href: "/contact", label: "Contact" },
+];
+---
+
+<nav>
+  <a class="nav-logo" href="/" aria-label="KIPROD home">
+    <div class="nav-logo-mark"></div>
+    <span class="nav-logo-text">KI<span>PROD</span></span>
+  </a>
+  <ul class="nav-links">
+    {
+      links.map((l) => (
+        <li>
+          <a href={l.href} class={activePath === l.href ? "nav-link-active" : undefined}>
+            {l.label}
+          </a>
+        </li>
+      ))
+    }
+    <li>
+      <a href="https://learning.kiprodrisk.com/" class="nav-cta" target="_blank" rel="noreferrer">
+        Start Free Course →
+      </a>
+    </li>
+  </ul>
+</nav>
+

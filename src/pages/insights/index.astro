@@ -1,0 +1,65 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { getCollection } from "astro:content";
+
+const allInsights = await getCollection("insights", ({ data }) => !data.draft);
+const insights = allInsights.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+
+function toSlug(entry: { id: string }) {
+  return entry.id.replace(/\.mdx?$/i, "").split("/").pop()!;
+}
+---
+
+<BaseLayout
+  title="Insights – KIPROD"
+  description="Practical credit risk insights and briefs from the KIPROD Credit Risk Institute."
+  activePath="/institute"
+>
+  <section class="hero" style="min-height: 46vh">
+    <div class="hero-grid"></div>
+    <div class="hero-inner" style="grid-template-columns: 1fr; padding-bottom: 70px">
+      <h1 class="hero-heading">Insights &amp; <em>Briefs</em></h1>
+      <p class="hero-sub">
+        Practical articles and short briefs for executives and credit teams—focused on execution: detect risk early,
+        monitor consistently, decide well, and recover faster.
+      </p>
+      <div class="hero-actions">
+        <a href="/institute" class="btn-primary">Go to Institute →</a>
+        <a href="/contact" class="btn-secondary">Request a briefing →</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="about" style="background: var(--white); padding-top: 90px">
+    <div class="section-inner">
+      <div class="section-tag reveal">Latest</div>
+      <h2 class="section-heading reveal">Featured insights</h2>
+      <p class="section-sub reveal">Short, decision-useful writing—kept corporate, clear, and practical.</p>
+
+      <div class="download-grid" style="grid-template-columns: repeat(2, 1fr)">
+        {insights.map((post) => (
+          <div class="download-card reveal">
+            <div class="pill">{post.data.date.toLocaleDateString("en-US", { year: "numeric", month: "short", day: "2-digit" })}</div>
+            <div class="download-title">{post.data.title}</div>
+            <div class="download-desc">{post.data.description}</div>
+            <a class="arm-link" href={`/insights/${toSlug(post)}`}>Read article →</a>
+          </div>
+        ))}
+      </div>
+
+      <div style="height: 16px"></div>
+      <div class="mini-panel reveal" style="background: var(--cream)">
+        <div class="mini-title">Want a tailored discussion?</div>
+        <div class="mini-note">
+          If you want to apply these ideas to your institution, the next step is a short confidential discussion.
+        </div>
+        <div style="margin-top: 16px">
+          <a class="btn-primary" href="/contact">Request a meeting →</a>
+          <span style="display:inline-block;width:10px"></span>
+          <a class="btn-secondary" href="/partnerships">See engagement model →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+

@@ -1,0 +1,106 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { getCollection, render } from "astro:content";
+
+export async function getStaticPaths() {
+  const posts = await getCollection("insights", ({ data }) => !data.draft);
+  const toSlug = (entry) => entry.id.replace(/\.mdx?$/i, "").split("/").pop();
+  return posts.map((post) => ({ params: { slug: toSlug(post) }, props: { post } }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+---
+
+<BaseLayout title={`${post.data.title} – KIPROD`} description={post.data.description} activePath="/institute">
+  <section class="hero" style="min-height: 46vh">
+    <div class="hero-grid"></div>
+    <div class="hero-inner" style="grid-template-columns: 1fr; padding-bottom: 70px">
+      <h1 class="hero-heading">
+        {post.data.title}
+      </h1>
+      <p class="hero-sub">{post.data.description}</p>
+      <div class="hero-actions">
+        <a href="/insights" class="btn-primary">Back to Insights →</a>
+        <a href="/contact" class="btn-secondary">Request a meeting →</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="about" style="background: var(--white); padding-top: 90px">
+    <div class="section-inner">
+      <div class="section-tag reveal">
+        Published {post.data.date.toLocaleDateString("en-US", { year: "numeric", month: "long", day: "2-digit" })}
+      </div>
+
+      <article class="reveal kiprod-article">
+        <Content />
+      </article>
+
+      <div style="height: 34px"></div>
+
+      <div class="mini-panel reveal" style="background: var(--cream)">
+        <div class="mini-title">Next step</div>
+        <div class="mini-note">
+          If you’d like to discuss how this applies to your institution’s portfolio and governance routines, request a
+          short confidential meeting.
+        </div>
+        <div style="margin-top: 16px">
+          <a class="btn-primary" href="/contact">Request a meeting →</a>
+          <span style="display:inline-block;width:10px"></span>
+          <a class="btn-secondary" href="/partnerships">See engagement model →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .kiprod-article :global(h2) {
+    font-family: var(--font-display);
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--navy);
+    margin: 26px 0 10px;
+    line-height: 1.2;
+  }
+
+  .kiprod-article :global(h3) {
+    font-family: var(--font-display);
+    font-size: 1.35rem;
+    font-weight: 600;
+    color: var(--navy);
+    margin: 22px 0 8px;
+    line-height: 1.25;
+  }
+
+  .kiprod-article :global(p),
+  .kiprod-article :global(li) {
+    font-size: 1.02rem;
+    font-weight: 300;
+    color: var(--muted);
+    line-height: 1.85;
+  }
+
+  .kiprod-article :global(p) {
+    margin: 12px 0;
+  }
+
+  .kiprod-article :global(ul) {
+    margin: 12px 0 12px 22px;
+  }
+
+  .kiprod-article :global(strong) {
+    color: var(--navy);
+    font-weight: 600;
+  }
+  .kiprod-article :global(a) {
+    color: var(--gold);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(196, 136, 42, 0.35);
+  }
+  .kiprod-article :global(a:hover) {
+    border-bottom-color: var(--gold);
+  }
+</style>
+
