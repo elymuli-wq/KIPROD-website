@@ -44,41 +44,54 @@ import BaseLayout from "../layouts/BaseLayout.astro";
         </div>
       </div>
 
-      <div class="hero-card">
-        <div class="hero-card-label">How it works (in plain steps)</div>
-        <div class="journey-step">
-          <div class="step-num">01</div>
-          <div>
-            <div class="step-title">Capability Development (Phase 0)</div>
-            <div class="step-desc">
-              Start with LMS-based learning to build shared risk language and discipline.
+      <div class="hero-visual" aria-label="KIPROD overview visual">
+        <div class="hero-visual-inner">
+          <div class="hero-visual-label">A simple pathway</div>
+          <div class="hero-visual-title">Capability → Systems → Outcomes</div>
+          <div class="hero-visual-sub">Designed for banks, SACCOs, microfinance institutions, and fintech lenders.</div>
+
+          <div class="hero-visual-grid" role="list">
+            <div class="hero-visual-chip" role="listitem">
+              <div class="chip-dot"></div>
+              <div>
+                <div class="chip-title">Learn</div>
+                <div class="chip-desc">LMS capability development</div>
+              </div>
             </div>
-          </div>
-        </div>
-        <div class="journey-step">
-          <div class="step-num">02</div>
-          <div>
-            <div class="step-title">Governance Review (Phase 1)</div>
-            <div class="step-desc">
-              Assess systems, policies, and execution discipline across the credit lifecycle.
+            <div class="hero-visual-chip" role="listitem">
+              <div class="chip-dot"></div>
+              <div>
+                <div class="chip-title">Assess</div>
+                <div class="chip-desc">Credit Risk Governance Review</div>
+              </div>
             </div>
-          </div>
-        </div>
-        <div class="journey-step">
-          <div class="step-num">03</div>
-          <div>
-            <div class="step-title">Portfolio Insight (Phase 2)</div>
-            <div class="step-desc">
-              High-level portfolio analysis to identify concentration and emerging risks.
+            <div class="hero-visual-chip" role="listitem">
+              <div class="chip-dot"></div>
+              <div>
+                <div class="chip-title">Understand</div>
+                <div class="chip-desc">Portfolio insight &amp; signals</div>
+              </div>
             </div>
-          </div>
-        </div>
-        <div class="journey-step">
-          <div class="step-num">04</div>
-          <div>
-            <div class="step-title">Implementation &amp; Support (Phase 3+)</div>
-            <div class="step-desc">
-              Frameworks, tools, and partnership support to improve portfolio outcomes.
+            <div class="hero-visual-chip" role="listitem">
+              <div class="chip-dot"></div>
+              <div>
+                <div class="chip-title">Strengthen</div>
+                <div class="chip-desc">Implementation support</div>
+              </div>
+            </div>
+            <div class="hero-visual-chip" role="listitem">
+              <div class="chip-dot"></div>
+              <div>
+                <div class="chip-title">Sustain</div>
+                <div class="chip-desc">Ongoing support &amp; rhythm</div>
+              </div>
+            </div>
+            <div class="hero-visual-chip" role="listitem">
+              <div class="chip-dot"></div>
+              <div>
+                <div class="chip-title">Two paths</div>
+                <div class="chip-desc">Course entry + institutional discussion</div>
+              </div>
             </div>
           </div>
         </div>
@@ -89,8 +102,11 @@ import BaseLayout from "../layouts/BaseLayout.astro";
   <section class="about" id="problem">
     <div class="section-inner">
       <div class="section-tag reveal">The problem</div>
-      <h2 class="section-heading reveal">Most institutions have policies.<br /><em>Portfolio issues still arise.</em></h2>
-      <p class="section-sub reveal">This is often due to execution gaps—not intent.</p>
+      <h2 class="section-heading reveal">Why credit risk challenges persist</h2>
+      <p class="section-sub reveal">
+        Many institutions have strong credit policies, yet still face portfolio deterioration. This is often due to
+        execution gaps—especially in detection, monitoring, engagement, and recovery.
+      </p>
 
       <div class="about-grid">
         <div class="about-text reveal">
@@ -117,20 +133,20 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
   <section class="about" id="solution" style="background: var(--cream)">
     <div class="section-inner">
-      <div class="section-tag reveal">The KIPROD solution</div>
-      <h2 class="section-heading reveal">Strengthen how credit risk is managed <em>in practice</em>.</h2>
+      <div class="section-tag reveal">Our approach</div>
+      <h2 class="section-heading reveal">A structured approach to credit risk management</h2>
       <p class="section-sub reveal">
-        KIPROD supports institutions in strengthening credit risk management systems to improve portfolio performance
-        and build sustainable lending capability.
+        KIPROD focuses on strengthening how credit risk is managed in practice through structured systems, disciplined
+        monitoring, and consistent decision-making.
       </p>
 
       <div class="about-grid">
         <div class="about-text reveal">
-          <p>We focus on:</p>
+          <p>We strengthen execution across the credit lifecycle:</p>
           <ul class="bullets">
             <li><span class="dot"></span>Early identification of emerging risk</li>
-            <li><span class="dot"></span>Structured monitoring systems and discipline</li>
-            <li><span class="dot"></span>Consistent decision-making frameworks</li>
+            <li><span class="dot"></span>Disciplined portfolio monitoring</li>
+            <li><span class="dot"></span>Structured decision-making frameworks</li>
             <li><span class="dot"></span>Effective borrower engagement, restructuring, and recovery</li>
           </ul>
         </div>
@@ -397,10 +413,10 @@ import BaseLayout from "../layouts/BaseLayout.astro";
       <div class="institutional-inner">
         <div class="reveal">
           <div class="section-tag">Institutional partnerships</div>
-          <h2 class="section-heading">Move to <em>system strengthening</em>.</h2>
+          <h2 class="section-heading">Move from learning to <em>system strengthening</em>.</h2>
           <p class="inst-desc">
-            Once capability gaps are identified, institutions can move into structured support: governance reviews,
-            portfolio diagnostics, framework development, implementation support, and ongoing advisory.
+            KIPROD supports institutions in strengthening credit risk systems, processes, and execution—through
+            governance review, portfolio insight, implementation, and ongoing support.
           </p>
           <a href="/contact" class="btn-primary">Request Institutional Discussion →</a>
         </div>
@@ -439,6 +455,13 @@ import BaseLayout from "../layouts/BaseLayout.astro";
           <div class="trust-stat-num">EA</div>
           <div class="trust-stat-label">Kenya first, East Africa focus</div>
         </div>
+      </div>
+      <div style="height: 18px"></div>
+      <div class="trust-logos reveal" aria-label="Client logos (placeholders)">
+        <div class="logo-pill">Client logo</div>
+        <div class="logo-pill">Client logo</div>
+        <div class="logo-pill">Client logo</div>
+        <div class="logo-pill">Client logo</div>
       </div>
       <div class="trust-markets reveal">
         <div class="market-pill"><div class="market-dot"></div> Kenya</div>
@@ -508,3 +531,104 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     </div>
   </section>
 </BaseLayout>
+
+<style>
+  .hero-visual {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(196, 136, 42, 0.2);
+    border-radius: 4px;
+    backdrop-filter: blur(8px);
+    overflow: hidden;
+    opacity: 0;
+    animation: fadeLeft 0.9s 0.7s forwards;
+  }
+  .hero-visual-inner {
+    padding: 36px;
+  }
+  .hero-visual-label {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    color: var(--gold-light);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  .hero-visual-title {
+    font-family: var(--font-display);
+    font-size: 1.35rem;
+    font-weight: 600;
+    color: var(--white);
+    margin-bottom: 10px;
+    line-height: 1.2;
+  }
+  .hero-visual-sub {
+    font-size: 0.86rem;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.55);
+    line-height: 1.6;
+    margin-bottom: 18px;
+  }
+  .hero-visual-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+  .hero-visual-chip {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    padding: 12px 12px;
+    background: rgba(255, 255, 255, 0.04);
+    border-left: 2px solid rgba(196, 136, 42, 0.35);
+  }
+  .chip-dot {
+    width: 8px;
+    height: 8px;
+    margin-top: 7px;
+    border-radius: 50%;
+    background: var(--gold);
+    flex-shrink: 0;
+  }
+  .chip-title {
+    font-family: var(--font-display);
+    font-size: 0.98rem;
+    font-weight: 600;
+    color: var(--white);
+    margin-bottom: 2px;
+  }
+  .chip-desc {
+    font-size: 0.78rem;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.55);
+    line-height: 1.4;
+  }
+
+  .trust-logos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+  }
+  .logo-pill {
+    border: 1px dashed rgba(9, 34, 74, 0.18);
+    background: rgba(9, 34, 74, 0.03);
+    color: rgba(9, 34, 74, 0.55);
+    font-size: 0.8rem;
+    font-weight: 400;
+    padding: 14px 16px;
+    text-align: center;
+  }
+
+  @media (max-width: 1024px) {
+    .hero-visual {
+      display: none;
+    }
+    .trust-logos {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media (max-width: 600px) {
+    .trust-logos {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

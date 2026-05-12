@@ -1,0 +1,176 @@
+3. HOMEPAGE WIREFRAME (FINAL STRUCTURE)
+🧭 OVERVIEW FLOW
+[ HERO ]
+[ PROBLEM ]
+[ SOLUTION ]
+[ MODEL ]
+[ ENGAGEMENT JOURNEY ]
+[ LMS ENTRY ]
+[ PARTNERSHIP CTA ]
+[ TRUST / PROOF ]
+[ FOOTER ]
+
+1. HERO SECTION (TOP OF PAGE)
+
+
+
+
+
+
+
+
+
+
+
+Purpose:
+Immediate clarity + action
+
+Layout:
+LEFT SIDE (Text):
+Headline 
+Subtext 
+2 CTAs 
+RIGHT SIDE:
+clean image (professional / banking / team) 
+
+Content:
+Headline:
+Strengthening Credit Risk Management in Financial Institutions
+Subtext:
+From capability development to system strengthening and institutional partnerships.
+
+CTAs:
+🟢 Start Free Credit Risk Course 
+🔵 Request Institutional Discussion 
+
+2. THE PROBLEM SECTION
+Purpose:
+Make them feel understood
+
+Layout:
+Centered text (narrow width)
+
+Content:
+Headline:
+Why Credit Risk Challenges Persist
+Body:
+Many institutions have strong credit policies, yet still face portfolio deterioration.
+This is often due to:
+weak early risk detection 
+inconsistent monitoring 
+unstructured borrower engagement 
+delayed recovery action 
+
+3. OUR APPROACH
+Purpose:
+Position KIPROD
+
+Layout:
+2 columns
+Left: Text
+Right: simple icon list or graphic
+
+Content:
+Headline:
+A Structured Approach to Credit Risk Management
+Body:
+KIPROD focuses on strengthening how credit risk is managed in practice through structured systems, disciplined monitoring, and consistent decision-making.
+
+4. THE KIPROD MODEL (3 PILLARS)
+Purpose:
+Introduce ecosystem
+
+Layout:
+3 equal boxes horizontally
+
+Boxes:
+🟡 Credit Risk Institute
+Insights and thought leadership
+🔵 Risk Management Academy
+Capability development and LMS
+🔴 Institutional Partnerships
+System strengthening and execution
+
+5. ENGAGEMENT JOURNEY (VERY IMPORTANT)
+Purpose:
+Explain your Phase 0 → Phase 5 model
+
+Layout:
+Horizontal timeline (or vertical steps)
+
+Flow:
+Learn (LMS) 
+Assess (Credit Rusk Governance Review) 
+Understand (Portfolio Insight) 
+Strengthen (Implementation) 
+Sustain (Support) 
+
+👉 This is your core differentiator
+
+6. LMS ENTRY SECTION (CONVERSION ENGINE)
+
+
+
+
+
+
+Purpose:
+Drive Phase 0 entry
+
+Layout:
+2 columns
+Left: Text
+Right: LMS image
+
+Content:
+Headline:
+Start with Capability Development
+Body:
+Access our LMS-based programme and build foundational credit risk capability across your team.
+
+CTA:
+🟢 Start Free Course
+
+7. PARTNERSHIP SECTION
+Purpose:
+Convert institutions
+
+Layout:
+Centered strong section
+
+Content:
+Headline:
+Move from Learning to System Strengthening
+Body:
+KIPROD supports institutions in strengthening credit risk systems, processes, and execution.
+
+CTA:
+🔵 Request Institutional Discussion
+
+8. TRUST / PROOF SECTION
+Purpose:
+Build credibility
+
+Layout:
+Grid
+
+Include:
+client logos 
+short statements 
+training stats 
+
+9. FOOTER
+Include:
+contact 
+links 
+short positioning line 
+
+CRITICAL DESIGN RULES
+1. Always show TWO PATHS
+
+2. Keep spacing clean
+Lots of white space
+No clutter
+
+3. One message per section
+No mixing ideas
