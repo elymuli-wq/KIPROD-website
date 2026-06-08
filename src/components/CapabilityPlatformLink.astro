@@ -1,0 +1,18 @@
+---
+import { getCapabilityPlatformLink } from "../config/site";
+
+interface Props {
+  class?: string;
+}
+
+const { class: className } = Astro.props;
+const { href, external } = getCapabilityPlatformLink();
+---
+
+<a
+  href={href}
+  class={className}
+  {...external ? { target: "_blank", rel: "noreferrer" } : {}}
+>
+  <slot />
+</a>

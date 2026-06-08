@@ -1,0 +1,8 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+# Set in Netlify UI when LMS launches (Phase 5):
+# PUBLIC_SITE_URL=https://kiprodrisk.co.ke
+# PUBLIC_CAPABILITY_PLATFORM_URL=https://learn.kiprodrisk.co.ke
+# PUBLIC_CAPABILITY_PLATFORM_LIVE=true

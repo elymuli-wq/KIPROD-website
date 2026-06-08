@@ -1,62 +1,120 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import CapabilityPlatformLink from "../components/CapabilityPlatformLink.astro";
 ---
 
 <BaseLayout
-  title="Institutional Partnerships – KIPROD"
-  description="KIPROD supports financial institutions in strengthening credit risk systems, processes, and execution through governance reviews, portfolio diagnostics, implementation, and continuous support."
+  title="RMS Institutional Partnerships – KIPROD"
+  description="RMS Institutional Partnerships deliver operational strengthening and continuous ecosystem support—from governance visibility through portfolio risk visibility to long-term institutional strengthening."
   activePath="/partnerships"
 >
   <section class="hero" style="min-height: 56vh">
     <div class="hero-grid"></div>
     <div class="hero-inner" style="grid-template-columns: 1fr; padding-bottom: 80px">
-      <h1 class="hero-heading">Institutional Credit Risk <em>Strengthening</em></h1>
+      <h1 class="hero-heading">RMS Institutional <em>Partnerships</em></h1>
       <p class="hero-sub">
-        KIPROD supports financial institutions in strengthening credit risk systems, processes, and execution. The focus
-        is on improving how credit risk is managed in practice.
+        The operational strengthening pillar of the KIPROD ecosystem—supporting institutions from governance visibility
+        through structured operational execution and continuous ecosystem support.
       </p>
       <div class="hero-actions">
-        <a href="/contact" class="btn-primary">Request Institutional Discussion →</a>
-        <a href="https://learning.kiprodrisk.com/" class="btn-secondary" target="_blank" rel="noreferrer">
-          Start with Capability (LMS) →
-        </a>
+        <a href="/contact" class="btn-primary">Start Institutional Discussion →</a>
+        <CapabilityPlatformLink class="btn-secondary">Start Free Programme →</CapabilityPlatformLink>
       </div>
     </div>
   </section>
 
   <section class="about">
     <div class="section-inner">
-      <div class="section-tag reveal">Engagement model</div>
-      <h2 class="section-heading reveal">A structured pathway from <em>learning</em> to execution.</h2>
+      <div class="section-tag reveal">Operational strengthening</div>
+      <h2 class="section-heading reveal">Structured support across the <em>engagement phases</em></h2>
       <p class="section-sub reveal">
-        Institutions typically engage with KIPROD through a phased model—starting with capability development and moving
-        into governance review, portfolio insight, and implementation.
+        RMS Institutional Partnerships guide institutions through a progressive model—building on capability entry and
+        governance visibility into portfolio risk visibility, operational strengthening, and continuous ecosystem
+        support.
       </p>
 
+      <div class="journey-track reveal" style="margin-top: 48px">
+        <div class="journey-node">
+          <div class="node-dot">0</div>
+          <div class="node-title">Phase 0 · Capability Entry</div>
+          <div class="node-desc">LMS capability entry &amp; institutional visibility.</div>
+        </div>
+        <div class="journey-node">
+          <div class="node-dot">1</div>
+          <div class="node-title">Phase 1 · Governance Visibility</div>
+          <div class="node-desc">Structured governance visibility review.</div>
+        </div>
+        <div class="journey-node">
+          <div class="node-dot">2</div>
+          <div class="node-title">Phase 2 · Portfolio Visibility</div>
+          <div class="node-desc">Portfolio risk visibility and emerging signals.</div>
+        </div>
+        <div class="journey-node">
+          <div class="node-dot">3</div>
+          <div class="node-title">Phase 3 · Operational Strengthening</div>
+          <div class="node-desc">Structured operational strengthening engagements.</div>
+        </div>
+        <div class="journey-node">
+          <div class="node-dot">4</div>
+          <div class="node-title">Phase 4 · Continuous Support</div>
+          <div class="node-desc">Continuous ecosystem support and reinforcement.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="about" style="background: var(--cream)">
+    <div class="section-inner">
+      <div class="section-tag reveal">Engagement detail</div>
+      <h2 class="section-heading reveal">What each phase <em>delivers</em></h2>
+
+      <div class="arms-grid" style="margin-top: 40px">
+        <div class="arm-card reveal">
+          <div class="arm-tag">Phase 0–1</div>
+          <div class="arm-name">Capability &amp; governance visibility</div>
+          <div class="arm-desc">
+            Entry through the capability platform, followed by structured governance visibility review across systems,
+            policies, and execution discipline.
+          </div>
+        </div>
+        <div class="arm-card reveal">
+          <div class="arm-tag">Phase 2</div>
+          <div class="arm-name">Portfolio risk visibility</div>
+          <div class="arm-desc">
+            High-level portfolio analysis, emerging risk signals, and monitoring discipline—supporting executive and
+            board-level decision-making.
+          </div>
+        </div>
+        <div class="arm-card reveal">
+          <div class="arm-tag">Phase 3–4</div>
+          <div class="arm-name">Operational strengthening &amp; support</div>
+          <div class="arm-desc">
+            Framework development, operational execution support, and continuous ecosystem advisory—sustaining
+            institutional strengthening over time.
+          </div>
+        </div>
+      </div>
+
+      <div style="height: 24px"></div>
       <div class="about-grid" style="grid-template-columns: 1fr 1fr">
-        <div class="mini-panel reveal" style="background: var(--cream)">
-          <div class="mini-title">Phases</div>
+        <div class="mini-panel reveal" style="background: var(--white)">
+          <div class="mini-title">What we support</div>
           <ul class="bullets" style="margin-top: 14px">
-            <li><span class="dot"></span>Phase 0: Capability Development (LMS-based learning and institutional insight)</li>
-            <li><span class="dot"></span>Phase 1: Governance Review (assessment of systems and processes)</li>
-            <li><span class="dot"></span>Phase 2: Portfolio Insight (high-level portfolio analysis)</li>
-            <li><span class="dot"></span>Phase 3: Implementation (frameworks, tools, system strengthening)</li>
-            <li><span class="dot"></span>Phase 4: Capacity Strengthening (role-based capability development)</li>
-            <li><span class="dot"></span>Phase 5: Continuous Support (ongoing advisory and portfolio review)</li>
+            <li><span class="dot"></span>Structured governance visibility reviews</li>
+            <li><span class="dot"></span>Portfolio risk visibility</li>
+            <li><span class="dot"></span>Framework and system strengthening</li>
+            <li><span class="dot"></span>Operational execution support</li>
+            <li><span class="dot"></span>Continuous ecosystem advisory</li>
           </ul>
         </div>
-        <div class="mini-panel reveal" style="background: var(--cream)">
-          <div class="mini-title">What we do</div>
-          <ul class="bullets" style="margin-top: 14px">
-            <li><span class="dot"></span>Credit risk governance reviews</li>
-            <li><span class="dot"></span>Portfolio diagnostics</li>
-            <li><span class="dot"></span>Framework development</li>
-            <li><span class="dot"></span>Tool deployment</li>
-            <li><span class="dot"></span>Advisory support</li>
-          </ul>
-          <p style="margin-top: 14px" class="mini-note">
-            <strong>Outcome:</strong> improved portfolio monitoring, stronger decision-making, better recovery outcomes,
-            and enhanced resilience.
+        <div class="mini-panel reveal" style="background: var(--white)">
+          <div class="mini-title">Institutional outcomes</div>
+          <p class="mini-note" style="margin-top: 14px">
+            Improved portfolio monitoring, stronger decision-making, better recovery outcomes, and enhanced
+            institutional resilience across the lending lifecycle.
+          </p>
+          <p style="margin-top: 18px">
+            <a href="/contact" class="btn-primary">Start Institutional Discussion →</a>
           </p>
         </div>
       </div>
@@ -74,16 +132,24 @@ import BaseLayout from "../layouts/BaseLayout.astro";
   >
     <div class="section-inner">
       <div class="section-tag reveal">Next</div>
-      <h2 class="section-heading reveal">Stay informed with <em>leadership insight</em>.</h2>
+      <h2 class="section-heading reveal">Stay informed with <em>executive insight</em></h2>
       <p class="section-sub reveal">
-        The Institute provides briefs and reports that help executives and boards stay ahead of changing risk dynamics.
+        The Institute provides governance perspectives and briefs that help executives and boards stay ahead of changing
+        risk dynamics.
       </p>
       <div style="margin-top: 18px" class="reveal">
-        <a class="nav-cta" href="/institute" style="text-decoration: none">Next: Credit Risk Institute →</a>
+        <a class="nav-cta" href="/institute" style="text-decoration: none">Explore the Institute →</a>
         <span style="display:inline-block; width: 10px"></span>
-        <a href="/contact" class="arm-link">Or: Request a meeting →</a>
+        <a href="/insights" class="arm-link">Read insights →</a>
       </div>
     </div>
   </section>
 </BaseLayout>
 
+<style>
+  .about .journey-track {
+    background: var(--navy);
+    padding: 36px 28px;
+    border-radius: 4px;
+  }
+</style>

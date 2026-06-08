@@ -1,176 +1,331 @@
-3. HOMEPAGE WIREFRAME (FINAL STRUCTURE)
-🧭 OVERVIEW FLOW
-[ HERO ]
-[ PROBLEM ]
-[ SOLUTION ]
-[ MODEL ]
-[ ENGAGEMENT JOURNEY ]
-[ LMS ENTRY ]
-[ PARTNERSHIP CTA ]
-[ TRUST / PROOF ]
-[ FOOTER ]
+HOMEPAGE WIREFRAME — MASTER IMPLEMENTATION BLUEPRINT v1
+Governing reference: KIPROD WEBSITE MASTER IMPLEMENTATION BLUEPRINT v1.pdf
 
-1. HERO SECTION (TOP OF PAGE)
+================================================================================
+OVERVIEW FLOW (REQUIRED ORDER)
+================================================================================
 
+[ 1. HERO ]
+[ 2. EXECUTIVE INSIGHT STRIP ]
+[ 3. INSTITUTIONAL CHALLENGE ]
+[ 4. OUR APPROACH ]
+[ 5. KIPROD ECOSYSTEM ]
+[ 6. INSTITUTIONAL ENGAGEMENT JOURNEY ]
+[ 7. LMS CAPABILITY ENTRY ]
+[ 8. OPERATIONAL STRENGTHENING ]
+[ 9. TRUST & AUTHORITY ]
+[ 10. INSIGHTS ]
+[ 11. FINAL POSITIONING ]
+[ 12. FOOTER ]
 
+Downloads do NOT appear on the homepage. Institutional assets live on /resources.
 
-
-
-
-
-
-
-
+================================================================================
+1. HERO SECTION
+================================================================================
 
 Purpose:
-Immediate clarity + action
+Immediately establish authority, ecosystem positioning, institutional maturity,
+and progression pathways.
 
 Layout:
-LEFT SIDE (Text):
-Headline 
-Subtext 
-2 CTAs 
-RIGHT SIDE:
-clean image (professional / banking / team) 
+- Primary text block (headline, subtext, CTAs)
+- Optional supporting visual (pathway / ecosystem summary — not marketing clutter)
+- Executive tone; premium spacing; no fintech hype
 
 Content:
+
 Headline:
-Strengthening Credit Risk Management in Financial Institutions
+Strengthening Credit Risk. Building Resilient Institutions.
+
 Subtext:
-From capability development to system strengthening and institutional partnerships.
+From institutional capability development to governance visibility, operational
+strengthening, and long-term portfolio resilience.
 
-CTAs:
-🟢 Start Free Credit Risk Course 
-🔵 Request Institutional Discussion 
+Executive insight line (may sit in hero or flow directly into Section 2):
+Strong portfolio performance requires more than policy. It requires governance
+visibility, structured systems, and disciplined execution.
 
-2. THE PROBLEM SECTION
+CTAs (NON-NEGOTIABLE — TWO PATHWAYS ALWAYS VISIBLE):
+
+  Capability Pathway     → Start Free Credit Risk Programme
+  Institutional Pathway  → Start Institutional Discussion
+
+================================================================================
+2. EXECUTIVE INSIGHT STRIP
+================================================================================
+
 Purpose:
-Make them feel understood
+Establish thought leadership, governance maturity, and executive positioning
+immediately after the hero.
 
 Layout:
-Centered text (narrow width)
+- Narrow, high-contrast strip or band
+- Single focused message — no secondary CTAs competing with hero pathways
 
 Content:
-Headline:
-Why Credit Risk Challenges Persist
-Body:
-Many institutions have strong credit policies, yet still face portfolio deterioration.
-This is often due to:
-weak early risk detection 
-inconsistent monitoring 
-unstructured borrower engagement 
-delayed recovery action 
+Strong credit policies alone do not guarantee portfolio quality. Many portfolio
+challenges emerge where monitoring, governance, escalation, and operational
+systems are not sufficiently structured.
 
-3. OUR APPROACH
+================================================================================
+3. INSTITUTIONAL CHALLENGE
+================================================================================
+
 Purpose:
-Position KIPROD
+Demonstrate understanding of institutional operational realities.
 
 Layout:
-2 columns
-Left: Text
-Right: simple icon list or graphic
+- Centered or balanced text block
+- Theme list (five items) — scannable, institutional tone
 
 Content:
+
 Headline:
-A Structured Approach to Credit Risk Management
-Body:
-KIPROD focuses on strengthening how credit risk is managed in practice through structured systems, disciplined monitoring, and consistent decision-making.
+Why Portfolio Deterioration Often Happens Late
 
-4. THE KIPROD MODEL (3 PILLARS)
+Themes:
+- Delayed risk visibility
+- Inconsistent monitoring
+- Weak escalation discipline
+- Fragmented restructuring
+- Reactive recovery systems
+
+================================================================================
+4. OUR APPROACH
+================================================================================
+
 Purpose:
-Introduce ecosystem
+Position KIPROD as an institutional strengthening ecosystem — not consultancy,
+not a training company.
 
 Layout:
-3 equal boxes horizontally
+- Text-led section; optional supporting graphic
+- One clear positioning statement
 
-Boxes:
-🟡 Credit Risk Institute
-Insights and thought leadership
-🔵 Risk Management Academy
-Capability development and LMS
-🔴 Institutional Partnerships
-System strengthening and execution
+Content:
 
-5. ENGAGEMENT JOURNEY (VERY IMPORTANT)
+Positioning statement:
+KIPROD supports financial institutions in strengthening governance visibility,
+operational execution, and institutional credit risk maturity across the lending
+lifecycle.
+
+================================================================================
+5. KIPROD ECOSYSTEM
+================================================================================
+
 Purpose:
-Explain your Phase 0 → Phase 5 model
+Present the integrated three-pillar ecosystem structure.
 
 Layout:
-Horizontal timeline (or vertical steps)
+- Three equal pillars (cards or columns)
+- Tagline below pillars
+
+Pillars:
+
+  KIPROD Credit Risk Institute
+  → Insight & Governance Visibility
+  → Link: /institute
+
+  KIPROD Risk Management Academy
+  → Capability Development & Institutional Intelligence
+  → Link: /academy
+
+  RMS Institutional Partnerships
+  → Operational Strengthening & Continuous Support
+  → Link: /partnerships
+
+Tagline (below pillars):
+From Insight → Capability → Execution
+
+Note: This section is the anchor target for nav item "Our Ecosystem" (#ecosystem).
+
+================================================================================
+6. INSTITUTIONAL ENGAGEMENT JOURNEY
+================================================================================
+
+Purpose:
+Show progressive institutional strengthening logic — core differentiator.
+
+Layout:
+- Horizontal timeline or vertical step flow
+- Phase labels aligned to blueprint (Phase 0–4)
 
 Flow:
-Learn (LMS) 
-Assess (Credit Rusk Governance Review) 
-Understand (Portfolio Insight) 
-Strengthen (Implementation) 
-Sustain (Support) 
+  Capability Entry
+    ↓
+  Governance Visibility
+    ↓
+  Operational Insight
+    ↓
+  Institutional Strengthening
+    ↓
+  Continuous Ecosystem Support
 
-👉 This is your core differentiator
+Engagement phases:
 
-6. LMS ENTRY SECTION (CONVERSION ENGINE)
+  Phase 0  LMS capability entry & institutional visibility
+  Phase 1  Structured governance visibility review
+  Phase 2  Portfolio risk visibility
+  Phase 3  Operational strengthening
+  Phase 4  Continuous ecosystem support
 
-
-
-
-
+================================================================================
+7. LMS CAPABILITY ENTRY
+================================================================================
 
 Purpose:
-Drive Phase 0 entry
+Drive capability pathway entry. Position LMS as institutional intelligence
+infrastructure — NOT generic e-learning or "online courses."
 
 Layout:
-2 columns
-Left: Text
-Right: LMS image
+- Two columns: programme detail + pathway context / CTA
+- Featured programme block prominent
 
 Content:
-Headline:
-Start with Capability Development
-Body:
-Access our LMS-based programme and build foundational credit risk capability across your team.
+
+Framing:
+The capability platform supports capability development, governance visibility,
+operational maturity identification, institutional participation insight, and
+structured learning consistency.
+
+Featured programme:
+Fundamentals of Credit Risk Management (Institutional Edition)
 
 CTA:
-🟢 Start Free Course
+Start Free Programme
 
-7. PARTNERSHIP SECTION
+Avoid:
+- "Training", "course", "online learning" as primary framing
+- Training-company tone
+
+================================================================================
+8. OPERATIONAL STRENGTHENING
+================================================================================
+
 Purpose:
-Convert institutions
+Transition institutions from capability → institutional strengthening (RMS pillar).
 
 Layout:
-Centered strong section
+- Strong institutional section
+- Clear link to institutional pathway / Contact
 
 Content:
-Headline:
-Move from Learning to System Strengthening
-Body:
-KIPROD supports institutions in strengthening credit risk systems, processes, and execution.
+
+Positioning:
+As institutions strengthen capability and governance visibility, KIPROD supports
+the transition into structured operational strengthening engagements.
 
 CTA:
-🔵 Request Institutional Discussion
+Start Institutional Discussion  →  /contact
 
-8. TRUST / PROOF SECTION
+================================================================================
+9. TRUST & AUTHORITY
+================================================================================
+
 Purpose:
-Build credibility
+Establish institutional confidence, ecosystem credibility, and governance maturity.
 
 Layout:
-Grid
+- Grid or stat band + supporting elements
+- Minimal, executive tone — avoid marketing-heavy testimonials
 
 Include:
-client logos 
-short statements 
-training stats 
+- Institutional participation indicators
+- Institutional partner categories (not "clients")
+- Governance engagements
+- Academy participation
+- Testimonials (minimal, executive)
+- Sector representation
 
-9. FOOTER
+Avoid:
+- Aggressive social proof
+- Startup or fintech-hype styling
+
+================================================================================
+10. INSIGHTS
+================================================================================
+
+Purpose:
+Position continuous thought leadership — executive governance intelligence,
+NOT a generic blog.
+
+Layout:
+- 2–3 featured insight cards linking to /insights
+- Optional link: View all insights
+
+Content types:
+- Governance perspectives
+- Portfolio risk observations
+- Sector intelligence
+- Operational discussions
+- Executive reflections
+
+Tone:
+Executive, institutional, decision-useful.
+
+================================================================================
+11. FINAL POSITIONING
+================================================================================
+
+Purpose:
+Close the homepage with the ecosystem's governing principle.
+
+Layout:
+- Centered closing statement
+- No competing CTAs (pathways already established in hero and key sections)
+
+Content:
+
+The website must feel like institutional operating infrastructure supporting
+financial institutions in strengthening credit risk governance, capability,
+operational execution, and portfolio resilience.
+
+Closing line:
+From Insight → Capability → Execution.
+
+================================================================================
+12. FOOTER
+================================================================================
+
 Include:
-contact 
-links 
-short positioning line 
+- Contact details
+- Key links (About, Ecosystem pillars, Academy, Institute, Insights, Contact)
+- RMS via ecosystem / partnerships link (not required as top-nav duplicate)
+- Short positioning line:
+  Strengthening Credit Risk. Building Resilient Institutions.
 
-CRITICAL DESIGN RULES
-1. Always show TWO PATHS
+================================================================================
+CRITICAL DESIGN & CONTENT RULES
+================================================================================
 
-2. Keep spacing clean
-Lots of white space
-No clutter
+1. ALWAYS show TWO PATHWAYS (Capability + Institutional) — especially in hero.
 
-3. One message per section
-No mixing ideas
+2. Brand language (use → avoid):
+   Capability Development        not  Training
+   Institutional Strengthening   not  Consulting
+   Governance Visibility         not  Diagnostics
+   Institutional Partners        not  Clients
+   Capability Platform           not  Online Courses
+
+3. Site must feel:
+   executive, institutional, governance-oriented, operationally intelligent,
+   strategically mature, premium, structured
+
+4. Site must NOT feel:
+   startup, aggressive marketing, fintech hype, training company, consultancy
+   brochure, services catalogue
+
+5. One message per section. Generous white space. No clutter.
+
+6. Downloads belong on /resources only — not on the homepage.
+
+================================================================================
+NAVIGATION (GLOBAL — FOR REFERENCE)
+================================================================================
+
+Home | About KIPROD | Our Ecosystem | Academy | Institute | Insights | Contact
+
+Nav CTA: Start Free Programme
+
+RMS (/partnerships) is reached via ecosystem section, journey, and in-page links.

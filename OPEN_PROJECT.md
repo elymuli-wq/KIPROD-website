@@ -2,6 +2,8 @@
 
 This repo is an **Astro** website. You run it locally using **Node.js + npm**.
 
+The site is governed by **KIPROD Website Master Implementation Blueprint v1** (see `IMPLEMENTATION_PLAN.md` and `PROJECT_HANDOVER.md`).
+
 ## 1) Prerequisites
 
 - Install **Node.js** (recommended: LTS)
@@ -48,7 +50,6 @@ In the terminal, press:
 
 If you see an error about scripts being disabled, use **Command Prompt (cmd)** instead of PowerShell.
 
-### Repo root confusion
+### Repo root
 
-The active website project is **this folder** (`solar-series/`). The parent folder contains archived/legacy materials.
-
+The active website project is **this folder** (`solar-series/`). Brand assets and the master blueprint live in the parent `KIPROD WEBSITE/` folder.

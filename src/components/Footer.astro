@@ -1,10 +1,13 @@
 ---
+import CapabilityPlatformLink from "./CapabilityPlatformLink.astro";
+
 const links = [
-  { href: "/", label: "Homepage" },
+  { href: "/", label: "Home" },
   { href: "/about", label: "About KIPROD" },
-  { href: "/academy", label: "Risk Management Academy" },
-  { href: "/partnerships", label: "Institutional Partnerships" },
-  { href: "/institute", label: "Credit Risk Institute" },
+  { href: "/#ecosystem", label: "Our Ecosystem" },
+  { href: "/academy", label: "Academy" },
+  { href: "/institute", label: "Institute" },
+  { href: "/insights", label: "Insights" },
   { href: "/contact", label: "Contact" },
 ];
 ---
@@ -23,8 +26,7 @@ const links = [
           />
         </div>
         <div class="footer-brand-desc">
-          KIPROD supports financial institutions in moving from credit risk knowledge to structured execution and
-          sustainable portfolio performance.
+          Strengthening Credit Risk. Building Resilient Institutions. From Insight → Capability → Execution.
         </div>
       </div>
 
@@ -40,19 +42,19 @@ const links = [
       </div>
 
       <div>
-        <div class="footer-col-title">Resources</div>
+        <div class="footer-col-title">Ecosystem</div>
         <ul class="footer-links">
           <li>
-            <a href="https://learning.kiprodrisk.com/" target="_blank" rel="noreferrer">Start Free Course</a>
+            <a href="/partnerships">RMS Institutional Partnerships</a>
           </li>
           <li>
-            <a href="/insights">Publications</a>
+            <CapabilityPlatformLink>Start Free Programme</CapabilityPlatformLink>
           </li>
           <li>
-            <a href="/resources">Downloads</a>
+            <a href="/resources">Resources &amp; Downloads</a>
           </li>
           <li>
-            <a href="/contact">Request a meeting</a>
+            <a href="/contact">Start Institutional Discussion</a>
           </li>
         </ul>
       </div>
@@ -60,10 +62,10 @@ const links = [
       <div>
         <div class="footer-col-title">Markets</div>
         <ul class="footer-links">
-          <li><a href="/#problem">Kenya</a></li>
-          <li><a href="/#problem">Uganda</a></li>
-          <li><a href="/#problem">Tanzania</a></li>
-          <li><a href="/#problem">East Africa</a></li>
+          <li><a href="/#trust">Kenya</a></li>
+          <li><a href="/#trust">Uganda</a></li>
+          <li><a href="/#trust">Tanzania</a></li>
+          <li><a href="/#trust">East Africa</a></li>
         </ul>
       </div>
     </div>
@@ -74,4 +76,3 @@ const links = [
     </div>
   </div>
 </footer>
-

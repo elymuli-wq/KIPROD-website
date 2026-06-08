@@ -1,18 +1,18 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import { getCollection, render } from "astro:content";
+import { insightSlug, topicLabel } from "../../lib/insights";
 
 export async function getStaticPaths() {
   const posts = await getCollection("insights", ({ data }) => !data.draft);
-  const toSlug = (entry) => entry.id.replace(/\.mdx?$/i, "").split("/").pop();
-  return posts.map((post) => ({ params: { slug: toSlug(post) }, props: { post } }));
+  return posts.map((post) => ({ params: { slug: insightSlug(post) }, props: { post } }));
 }
 
 const { post } = Astro.props;
 const { Content } = await render(post);
 ---
 
-<BaseLayout title={`${post.data.title} – KIPROD`} description={post.data.description} activePath="/institute">
+<BaseLayout title={`${post.data.title} – KIPROD`} description={post.data.description} activePath="/insights">
   <section class="hero" style="min-height: 46vh">
     <div class="hero-grid"></div>
     <div class="hero-inner" style="grid-template-columns: 1fr; padding-bottom: 70px">
@@ -22,7 +22,7 @@ const { Content } = await render(post);
       <p class="hero-sub">{post.data.description}</p>
       <div class="hero-actions">
         <a href="/insights" class="btn-primary">Back to Insights →</a>
-        <a href="/contact" class="btn-secondary">Request a meeting →</a>
+        <a href="/contact" class="btn-secondary">Start Institutional Discussion →</a>
       </div>
     </div>
   </section>
@@ -30,7 +30,7 @@ const { Content } = await render(post);
   <section class="about" style="background: var(--white); padding-top: 90px">
     <div class="section-inner">
       <div class="section-tag reveal">
-        Published {post.data.date.toLocaleDateString("en-US", { year: "numeric", month: "long", day: "2-digit" })}
+        {topicLabel(post.data.topic)} · {post.data.date.toLocaleDateString("en-US", { year: "numeric", month: "long", day: "2-digit" })}
       </div>
 
       <article class="reveal kiprod-article">
@@ -42,11 +42,11 @@ const { Content } = await render(post);
       <div class="mini-panel reveal" style="background: var(--cream)">
         <div class="mini-title">Next step</div>
         <div class="mini-note">
-          If you’d like to discuss how this applies to your institution’s portfolio and governance routines, request a
-          short confidential meeting.
+          If you'd like to discuss how this applies to your institution's portfolio and governance routines, start an
+          institutional discussion.
         </div>
         <div style="margin-top: 16px">
-          <a class="btn-primary" href="/contact">Request a meeting →</a>
+          <a class="btn-primary" href="/contact">Start Institutional Discussion →</a>
           <span style="display:inline-block;width:10px"></span>
           <a class="btn-secondary" href="/partnerships">See engagement model →</a>
         </div>

@@ -1,0 +1,70 @@
+---
+import CapabilityPlatformLink from "./CapabilityPlatformLink.astro";
+import { CAPABILITY_PLATFORM_LIVE } from "../config/site";
+
+interface Props {
+  variant?: "homepage" | "academy";
+}
+
+const { variant = "homepage" } = Astro.props;
+const isHomepage = variant === "homepage";
+---
+
+<div class={isHomepage ? "lms-inner" : "lms-programme-block"}>
+  <div class={`${isHomepage ? "lms-visual" : "lms-programme-main"} reveal`}>
+    <div class="lms-badge">
+      <span style="width:6px;height:6px;border-radius:50%;background:var(--gold-light);display:inline-block"></span>
+      Featured Programme{CAPABILITY_PLATFORM_LIVE ? " · Live Now" : ""}
+    </div>
+    <div class="lms-course-title">Fundamentals of Credit Risk Management (Institutional Edition)</div>
+    <div class="lms-meta">
+      <span class="lms-meta-item">Self-paced</span>
+      <span class="lms-meta-item">Certificate available</span>
+      <span class="lms-meta-item">Open to institutional teams</span>
+    </div>
+    <div class="lms-modules">
+      <div class="lms-module"><span class="lms-module-num">M0</span>Institutional credit risk context</div>
+      <div class="lms-module"><span class="lms-module-num">M1</span>Credit risk foundations</div>
+      <div class="lms-module"><span class="lms-module-num">M2</span>Early warning signals &amp; emerging borrower stress</div>
+      <div class="lms-module"><span class="lms-module-num">M3</span>Portfolio monitoring &amp; watchlist systems</div>
+      <div class="lms-module"><span class="lms-module-num">M4</span>Distressed borrower management</div>
+      <div class="lms-module"><span class="lms-module-num">M5</span>Recovery &amp; legal escalation</div>
+      <div class="lms-module lms-module-sim"><span class="lms-module-num">→</span>Integrated credit risk simulation</div>
+    </div>
+  </div>
+
+  <div class="reveal">
+    <div class="mini-panel" style={isHomepage ? undefined : "background: var(--cream)"}>
+      <div class="mini-title">Capability &amp; institutional intelligence infrastructure</div>
+      <div class="mini-note">
+        The capability platform supports institutional capability development, governance visibility, operational
+        maturity identification, institutional participation insight, and structured learning consistency.
+      </div>
+      <ul class="bullets" style="margin-top: 14px">
+        <li><span class="dot"></span>Capability development across lending teams</li>
+        <li><span class="dot"></span>Governance visibility through structured learning</li>
+        <li><span class="dot"></span>Operational maturity gap identification</li>
+        <li><span class="dot"></span>Institutional participation insight</li>
+        <li><span class="dot"></span>Structured learning consistency</li>
+      </ul>
+      {
+        !CAPABILITY_PLATFORM_LIVE && (
+          <p class="lms-enrolment-note">Enrolment opens at coordinated launch on learn.kiprodrisk.co.ke.</p>
+        )
+      }
+      <div style="margin-top: 18px">
+        <CapabilityPlatformLink class="btn-primary">Start Free Programme →</CapabilityPlatformLink>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .lms-enrolment-note {
+    margin-top: 14px;
+    font-size: 0.82rem;
+    font-weight: 400;
+    color: rgba(9, 34, 74, 0.62);
+    line-height: 1.5;
+  }
+</style>

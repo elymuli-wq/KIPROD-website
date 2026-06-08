@@ -1,39 +1,41 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import CapabilityPlatformLink from "../../components/CapabilityPlatformLink.astro";
 ---
 
-<BaseLayout title="Resources – KIPROD" description="Downloads, tools, and resources from KIPROD." activePath="/">
+<BaseLayout
+  title="Resources – KIPROD"
+  description="Institutional resources and downloads from KIPROD—organised by ecosystem pillar: Institute, Academy, and RMS Partnerships."
+  activePath="/resources"
+>
   <section class="hero" style="min-height: 46vh">
     <div class="hero-grid"></div>
     <div class="hero-inner" style="grid-template-columns: 1fr; padding-bottom: 70px">
       <h1 class="hero-heading">Resources &amp; <em>Downloads</em></h1>
       <p class="hero-sub">
-        This hub will host publications, one‑pagers, templates, and tools. For now, you can access the Phase 1
-        placeholder downloads from the homepage.
+        Institutional assets across the KIPROD ecosystem—organised by pillar. Governance visibility materials, capability
+        platform resources, and RMS partnership documents.
       </p>
       <div class="hero-actions">
-        <a href="/#resources" class="btn-primary">Open downloads on homepage →</a>
-        <a href="/contact" class="btn-secondary">Request a pack →</a>
+        <a href="/contact" class="btn-primary">Start Institutional Discussion →</a>
+        <CapabilityPlatformLink class="btn-secondary">Start Free Programme →</CapabilityPlatformLink>
       </div>
     </div>
   </section>
 
-  <section class="about" style="background: var(--cream)">
+  <section class="about" style="background: var(--white)">
     <div class="section-inner">
-      <div class="section-tag reveal">Phase 1</div>
-      <h2 class="section-heading reveal">Downloads (placeholders)</h2>
-      <p class="section-sub reveal">
-        These are the current placeholder PDFs already used on the homepage. Phase 2 will replace these with final
-        branded assets and a proper resource library.
-      </p>
+      <div class="section-tag reveal">RMS Partnerships</div>
+      <h2 class="section-heading reveal">Operational strengthening <em>materials</em></h2>
+      <p class="section-sub reveal">Documents supporting institutional partnership discussions and engagement planning.</p>
 
       <div class="download-grid">
         <div class="download-card reveal">
-          <div class="pill">Partnerships</div>
+          <div class="pill">RMS</div>
           <div class="download-title">
             <img class="icon" src="/assets/icons/partnerships.svg" alt="" />Institutional Partnership Brochure
           </div>
-          <div class="download-desc">Explains the engagement model, diagnostics, and partnership structure.</div>
+          <div class="download-desc">Engagement model, governance visibility review, and partnership structure.</div>
           <a
             class="arm-link"
             href="/downloads/Institutional_Credit_Risk_Strengthening_Partnership_Brochure_PLACEHOLDER.pdf"
@@ -43,31 +45,8 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
             Download PDF →
           </a>
         </div>
-
         <div class="download-card reveal">
-          <div class="pill">Lead-gen</div>
-          <div class="download-title">
-            <img class="icon" src="/assets/icons/governance.svg" alt="" />Governance Review One‑Pager
-          </div>
-          <div class="download-desc">A simple explainer: “What is a Credit Risk Governance Review?”</div>
-          <a class="arm-link" href="/downloads/Credit_Risk_Governance_Review_One_Pager_PLACEHOLDER.pdf" target="_blank" rel="noreferrer">
-            Download PDF →
-          </a>
-        </div>
-
-        <div class="download-card reveal">
-          <div class="pill">LMS</div>
-          <div class="download-title">
-            <img class="icon" src="/assets/icons/lms.svg" alt="" />LMS Welcome Pack
-          </div>
-          <div class="download-desc">Onboarding pack for institutions enrolling staff into the LMS.</div>
-          <a class="arm-link" href="/downloads/LMS_Welcome_Pack_For_Institutions_PLACEHOLDER.pdf" target="_blank" rel="noreferrer">
-            Download PDF →
-          </a>
-        </div>
-
-        <div class="download-card reveal">
-          <div class="pill">Proof</div>
+          <div class="pill">RMS</div>
           <div class="download-title">
             <img class="icon" src="/assets/icons/monitoring.svg" alt="" />Case Study Template
           </div>
@@ -79,5 +58,46 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
       </div>
     </div>
   </section>
-</BaseLayout>
 
+  <section class="about" style="background: var(--cream)">
+    <div class="section-inner">
+      <div class="section-tag reveal">Credit Risk Institute</div>
+      <h2 class="section-heading reveal">Governance visibility <em>resources</em></h2>
+      <p class="section-sub reveal">Executive briefs and one-pagers supporting governance conversations.</p>
+
+      <div class="download-grid">
+        <div class="download-card reveal">
+          <div class="pill">Institute</div>
+          <div class="download-title">
+            <img class="icon" src="/assets/icons/governance.svg" alt="" />Governance Visibility One‑Pager
+          </div>
+          <div class="download-desc">What is a structured governance visibility review?</div>
+          <a class="arm-link" href="/downloads/Credit_Risk_Governance_Review_One_Pager_PLACEHOLDER.pdf" target="_blank" rel="noreferrer">
+            Download PDF →
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="about" style="background: var(--white); padding-bottom: 110px">
+    <div class="section-inner">
+      <div class="section-tag reveal">Risk Management Academy</div>
+      <h2 class="section-heading reveal">Capability platform <em>resources</em></h2>
+      <p class="section-sub reveal">Onboarding and enrolment materials for institutional capability development.</p>
+
+      <div class="download-grid">
+        <div class="download-card reveal">
+          <div class="pill">Academy</div>
+          <div class="download-title">
+            <img class="icon" src="/assets/icons/lms.svg" alt="" />Capability Platform Welcome Pack
+          </div>
+          <div class="download-desc">Onboarding pack for institutions enrolling staff into the capability platform.</div>
+          <a class="arm-link" href="/downloads/LMS_Welcome_Pack_For_Institutions_PLACEHOLDER.pdf" target="_blank" rel="noreferrer">
+            Download PDF →
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

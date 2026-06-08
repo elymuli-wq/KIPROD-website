@@ -1,12 +1,15 @@
 ---
+import CapabilityPlatformLink from "./CapabilityPlatformLink.astro";
+
 const { activePath = "/" } = Astro.props;
 
 const links = [
-  { href: "/", label: "Homepage" },
+  { href: "/", label: "Home" },
   { href: "/about", label: "About KIPROD" },
-  { href: "/academy", label: "Risk Management Academy" },
-  { href: "/partnerships", label: "Institutional Partnerships" },
-  { href: "/institute", label: "Credit Risk Institute" },
+  { href: "/#ecosystem", label: "Our Ecosystem" },
+  { href: "/academy", label: "Academy" },
+  { href: "/institute", label: "Institute" },
+  { href: "/insights", label: "Insights" },
   { href: "/contact", label: "Contact" },
 ];
 ---
@@ -32,10 +35,7 @@ const links = [
       ))
     }
     <li>
-      <a href="https://learning.kiprodrisk.com/" class="nav-cta" target="_blank" rel="noreferrer">
-        Start Free Course →
-      </a>
+      <CapabilityPlatformLink class="nav-cta">Start Free Programme →</CapabilityPlatformLink>
     </li>
   </ul>
 </nav>
-

@@ -1,11 +1,16 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import CapabilityPlatformLink from "../components/CapabilityPlatformLink.astro";
+import InsightGrid from "../components/InsightGrid.astro";
+import LmsProgrammeBlock from "../components/LmsProgrammeBlock.astro";
+import { getPublishedInsights } from "../lib/insights";
 
+const featuredInsights = (await getPublishedInsights()).slice(0, 3);
 ---
 
 <BaseLayout
-  title="KIPROD – Strengthening Credit Risk Management in Financial Institutions"
-  description="KIPROD strengthens credit risk management in financial institutions—from capability development to system strengthening and long-term institutional partnerships."
+  title="KIPROD – Strengthening Credit Risk. Building Resilient Institutions."
+  description="KIPROD is an integrated institutional credit risk ecosystem focused on governance visibility, capability development, operational strengthening, and portfolio resilience."
   activePath="/"
 >
   <section class="hero" id="top">
@@ -28,69 +33,74 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     <div class="hero-inner">
       <div class="hero-text">
         <h1 class="hero-heading">
-          Strengthening <em>Credit Risk Management</em><br />
-          in Financial Institutions
+          Strengthening Credit Risk.<br />
+          Building <em>Resilient Institutions</em>.
         </h1>
         <p class="hero-sub">
-          From capability development to system strengthening and long-term institutional partnerships.
+          From institutional capability development to governance visibility, operational strengthening, and
+          long-term portfolio resilience.
+        </p>
+        <p class="hero-insight">
+          Strong portfolio performance requires more than policy. It requires governance visibility, structured
+          systems, and disciplined execution.
         </p>
         <div class="hero-actions">
-          <a href="https://learning.kiprodrisk.com/" class="btn-primary" target="_blank" rel="noreferrer">
-            Start Free Credit Risk Course <span class="btn-arrow">→</span>
-          </a>
+          <CapabilityPlatformLink class="btn-primary">
+            Start Free Credit Risk Programme <span class="btn-arrow">→</span>
+          </CapabilityPlatformLink>
           <a href="/contact" class="btn-secondary">
-            Request Institutional Discussion <span class="btn-arrow">→</span>
+            Start Institutional Discussion <span class="btn-arrow">→</span>
           </a>
         </div>
       </div>
 
       <div class="hero-visual" aria-label="KIPROD overview visual">
         <div class="hero-visual-inner">
-          <div class="hero-visual-label">A simple pathway</div>
-          <div class="hero-visual-title">Capability → Systems → Outcomes</div>
+          <div class="hero-visual-label">Institutional pathways</div>
+          <div class="hero-visual-title">From Insight → Capability → Execution</div>
           <div class="hero-visual-sub">Designed for banks, SACCOs, microfinance institutions, and fintech lenders.</div>
 
           <div class="hero-visual-grid" role="list">
             <div class="hero-visual-chip" role="listitem">
               <div class="chip-dot"></div>
               <div>
-                <div class="chip-title">Learn</div>
-                <div class="chip-desc">LMS capability development</div>
+                <div class="chip-title">Insight</div>
+                <div class="chip-desc">Governance visibility &amp; executive intelligence</div>
               </div>
             </div>
             <div class="hero-visual-chip" role="listitem">
               <div class="chip-dot"></div>
               <div>
-                <div class="chip-title">Assess</div>
-                <div class="chip-desc">Credit Risk Governance Review</div>
+                <div class="chip-title">Capability</div>
+                <div class="chip-desc">Institutional capability development</div>
               </div>
             </div>
             <div class="hero-visual-chip" role="listitem">
               <div class="chip-dot"></div>
               <div>
-                <div class="chip-title">Understand</div>
-                <div class="chip-desc">Portfolio insight &amp; signals</div>
+                <div class="chip-title">Visibility</div>
+                <div class="chip-desc">Structured governance visibility review</div>
               </div>
             </div>
             <div class="hero-visual-chip" role="listitem">
               <div class="chip-dot"></div>
               <div>
                 <div class="chip-title">Strengthen</div>
-                <div class="chip-desc">Implementation support</div>
+                <div class="chip-desc">Operational strengthening support</div>
               </div>
             </div>
             <div class="hero-visual-chip" role="listitem">
               <div class="chip-dot"></div>
               <div>
                 <div class="chip-title">Sustain</div>
-                <div class="chip-desc">Ongoing support &amp; rhythm</div>
+                <div class="chip-desc">Continuous ecosystem support</div>
               </div>
             </div>
             <div class="hero-visual-chip" role="listitem">
               <div class="chip-dot"></div>
               <div>
-                <div class="chip-title">Two paths</div>
-                <div class="chip-desc">Course entry + institutional discussion</div>
+                <div class="chip-title">Two pathways</div>
+                <div class="chip-desc">Programme entry + institutional discussion</div>
               </div>
             </div>
           </div>
@@ -99,66 +109,72 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     </div>
   </section>
 
-  <section class="about" id="problem">
+  <section class="executive-insight-strip" aria-label="Executive insight">
     <div class="section-inner">
-      <div class="section-tag reveal">The problem</div>
-      <h2 class="section-heading reveal">Why credit risk challenges persist</h2>
+      <p class="executive-insight-text reveal">
+        Strong credit policies alone do not guarantee portfolio quality. Many portfolio challenges emerge where
+        monitoring, governance, escalation, and operational systems are not sufficiently structured.
+      </p>
+    </div>
+  </section>
+
+  <section class="about" id="institutional-challenge">
+    <div class="section-inner">
+      <div class="section-tag reveal">Institutional challenge</div>
+      <h2 class="section-heading reveal">Why Portfolio Deterioration Often Happens Late</h2>
       <p class="section-sub reveal">
-        Many institutions have strong credit policies, yet still face portfolio deterioration. This is often due to
-        execution gaps—especially in detection, monitoring, engagement, and recovery.
+        Demonstrating understanding of institutional operational realities—where execution gaps undermine portfolio
+        quality despite sound policy frameworks.
       </p>
 
       <div class="about-grid">
         <div class="about-text reveal">
           <ul class="bullets">
-            <li><span class="dot"></span>Weak early risk detection</li>
-            <li><span class="dot"></span>Inconsistent portfolio monitoring</li>
-            <li><span class="dot"></span>Unstructured borrower engagement</li>
-            <li><span class="dot"></span>Delayed recovery action</li>
+            <li><span class="dot"></span>Delayed risk visibility</li>
+            <li><span class="dot"></span>Inconsistent monitoring</li>
+            <li><span class="dot"></span>Weak escalation discipline</li>
+            <li><span class="dot"></span>Fragmented restructuring</li>
+            <li><span class="dot"></span>Reactive recovery systems</li>
           </ul>
-          <p style="margin-top: 18px">These gaps reduce portfolio quality and recovery outcomes.</p>
         </div>
 
         <div class="mini-panel reveal">
-          <div class="mini-title">Who it’s for</div>
+          <div class="mini-title">Who we serve</div>
           <div class="mini-note">
             Banks, SACCOs, microfinance institutions, and fintech lenders—starting in Kenya and East Africa.
             <br /><br />
-            Primary: institutions &amp; executives. Secondary: learners (entry via LMS).
+            Primary audience: institutions and executives. Capability pathway entry via the Academy capability platform.
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="about" id="solution" style="background: var(--cream)">
+  <section class="about" id="approach" style="background: var(--cream)">
     <div class="section-inner">
       <div class="section-tag reveal">Our approach</div>
-      <h2 class="section-heading reveal">A structured approach to credit risk management</h2>
+      <h2 class="section-heading reveal">An institutional strengthening <em>ecosystem</em></h2>
       <p class="section-sub reveal">
-        KIPROD focuses on strengthening how credit risk is managed in practice through structured systems, disciplined
-        monitoring, and consistent decision-making.
+        KIPROD supports financial institutions in strengthening governance visibility, operational execution, and
+        institutional credit risk maturity across the lending lifecycle.
       </p>
 
       <div class="about-grid">
         <div class="about-text reveal">
-          <p>We strengthen execution across the credit lifecycle:</p>
-          <ul class="bullets">
-            <li><span class="dot"></span>Early identification of emerging risk</li>
-            <li><span class="dot"></span>Disciplined portfolio monitoring</li>
-            <li><span class="dot"></span>Structured decision-making frameworks</li>
-            <li><span class="dot"></span>Effective borrower engagement, restructuring, and recovery</li>
-          </ul>
+          <p>
+            KIPROD operates as integrated institutional operating infrastructure—not isolated interventions or generic
+            advisory engagements.
+          </p>
         </div>
         <div class="mini-panel reveal">
-          <div class="mini-title">Two easy entry points</div>
+          <div class="mini-title">Two entry pathways</div>
           <div class="mini-note">
-            Start with capability development through the free course, then progress into governance review and system
-            strengthening.
+            Start with capability development through the free programme, then progress into governance visibility
+            review and operational strengthening.
             <br /><br />
-            <a class="arm-link" href="/academy">Start with the Academy →</a>
+            <a class="arm-link" href="/academy">Explore the Academy →</a>
             <br />
-            <a class="arm-link" href="/contact">Request an institutional discussion →</a>
+            <a class="arm-link" href="/contact">Start Institutional Discussion →</a>
           </div>
         </div>
       </div>
@@ -167,31 +183,31 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
   <section class="arms" id="ecosystem">
     <div class="section-inner">
-      <div class="section-tag reveal">The three-part ecosystem</div>
-      <h2 class="section-heading reveal">Institute. <em>Academy.</em> Partnerships.</h2>
+      <div class="section-tag reveal">The KIPROD ecosystem</div>
+      <h2 class="section-heading reveal">Institute. <em>Academy.</em> RMS.</h2>
       <p class="section-sub reveal">
-        One ecosystem with three integrated components: think (insight), train (capability), execute (system
-        strengthening).
+        One integrated ecosystem with three pillars—supporting institutions from insight through capability to
+        operational execution.
       </p>
 
       <div class="arms-grid">
         <div class="arm-card reveal">
-          <div class="arm-tag">Think</div>
+          <div class="arm-tag">Insight</div>
           <div class="arm-name">Credit Risk Institute</div>
-          <div class="arm-desc">Thought leadership, briefs, and reports that support executive decision-making.</div>
+          <div class="arm-desc">Insight and governance visibility—executive briefs and decision-useful intelligence.</div>
           <a class="arm-link" href="/institute">Explore the Institute →</a>
         </div>
         <div class="arm-card reveal">
-          <div class="arm-tag">Train</div>
+          <div class="arm-tag">Capability</div>
           <div class="arm-name">Risk Management Academy</div>
-          <div class="arm-desc">LMS learning, certification, masterclasses, and role-based programmes for teams.</div>
-          <a class="arm-link" href="/academy">See Academy programmes →</a>
+          <div class="arm-desc">Capability development and institutional intelligence through the capability platform.</div>
+          <a class="arm-link" href="/academy">Explore the Academy →</a>
         </div>
         <div class="arm-card reveal">
-          <div class="arm-tag">Execute</div>
-          <div class="arm-name">Institutional Partnerships</div>
-          <div class="arm-desc">Governance review, diagnostics, implementation support, and continuous advisory.</div>
-          <a class="arm-link" href="/partnerships">How partnerships work →</a>
+          <div class="arm-tag">Execution</div>
+          <div class="arm-name">RMS Institutional Partnerships</div>
+          <div class="arm-desc">Operational strengthening and continuous support for institutional partners.</div>
+          <a class="arm-link" href="/partnerships">Explore RMS Partnerships →</a>
         </div>
       </div>
 
@@ -263,7 +279,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
             font-size="12"
             fill="#64748B"
           >
-            Insight • Research • Briefs
+            Insight • Governance Visibility
           </text>
 
           <rect x="320" y="140" width="280" height="90" rx="6" fill="#F7F4EE" stroke="#C4882A" stroke-opacity="0.35" />
@@ -286,7 +302,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
             font-size="12"
             fill="#64748B"
           >
-            Capability • LMS • Certification
+            Capability • Intelligence • Platform
           </text>
 
           <rect x="570" y="140" width="280" height="90" rx="6" fill="#F7F4EE" stroke="#C4882A" stroke-opacity="0.35" />
@@ -299,7 +315,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
             fill="#09224A"
             font-weight="600"
           >
-            Institutional Partnerships
+            RMS Partnerships
           </text>
           <text
             x="710"
@@ -309,13 +325,13 @@ import BaseLayout from "../layouts/BaseLayout.astro";
             font-size="12"
             fill="#64748B"
           >
-            Diagnostics • Implementation • Support
+            Operational Strengthening • Support
           </text>
         </svg>
 
         <div class="arch-caption">
-          The three arms are service divisions under one brand. Institutions typically enter through the Academy (LMS)
-          and progress into governance review and long‑term system strengthening partnerships.
+          From Insight → Capability → Execution. Institutions typically enter through the Academy capability platform
+          and progress into governance visibility review and long-term operational strengthening.
         </div>
       </div>
     </div>
@@ -323,38 +339,38 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
   <section class="journey" id="journey">
     <div class="section-inner">
-      <div class="section-tag reveal">Engagement journey</div>
-      <h2 class="section-heading reveal">A clear pathway from <em>LMS</em> to institutional strengthening.</h2>
+      <div class="section-tag reveal">Institutional engagement journey</div>
+      <h2 class="section-heading reveal">Progressive institutional <em>strengthening</em></h2>
       <p class="section-sub reveal">
-        Institutions typically engage with KIPROD through a structured pathway that builds capability first, then
-        strengthens systems and execution.
+        A structured pathway from capability entry through governance visibility to operational strengthening and
+        continuous ecosystem support.
       </p>
 
       <div class="journey-track reveal">
         <div class="journey-node">
-          <div class="node-dot">01</div>
-          <div class="node-title">LMS (Capability)</div>
-          <div class="node-desc">Start with shared learning and practical scenarios.</div>
+          <div class="node-dot">0</div>
+          <div class="node-title">Phase 0 · Capability Entry</div>
+          <div class="node-desc">LMS capability entry &amp; institutional visibility.</div>
         </div>
         <div class="journey-node">
-          <div class="node-dot">02</div>
-          <div class="node-title">Governance Review</div>
-          <div class="node-desc">Assess systems, policies, and execution discipline.</div>
+          <div class="node-dot">1</div>
+          <div class="node-title">Phase 1 · Governance Visibility</div>
+          <div class="node-desc">Structured governance visibility review.</div>
         </div>
         <div class="journey-node">
-          <div class="node-dot">03</div>
-          <div class="node-title">Portfolio Insight</div>
-          <div class="node-desc">High-level portfolio analysis and emerging risk signals.</div>
+          <div class="node-dot">2</div>
+          <div class="node-title">Phase 2 · Portfolio Visibility</div>
+          <div class="node-desc">Portfolio risk visibility and emerging signals.</div>
         </div>
         <div class="journey-node">
-          <div class="node-dot">04</div>
-          <div class="node-title">Implementation</div>
-          <div class="node-desc">Frameworks, tools, and system strengthening support.</div>
+          <div class="node-dot">3</div>
+          <div class="node-title">Phase 3 · Operational Strengthening</div>
+          <div class="node-desc">Structured operational strengthening engagements.</div>
         </div>
         <div class="journey-node">
-          <div class="node-dot">05</div>
-          <div class="node-title">Support</div>
-          <div class="node-desc">Ongoing advisory, monitoring rhythms, and reinforcement.</div>
+          <div class="node-dot">4</div>
+          <div class="node-title">Phase 4 · Continuous Support</div>
+          <div class="node-desc">Continuous ecosystem support and reinforcement.</div>
         </div>
       </div>
     </div>
@@ -362,73 +378,42 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
   <section class="lms-section" id="lms">
     <div class="section-inner">
-      <div class="section-tag reveal">LMS entry</div>
-      <h2 class="section-heading reveal">Start with capability development.</h2>
+      <div class="section-tag reveal">LMS capability entry</div>
+      <h2 class="section-heading reveal">Capability and institutional <em>intelligence</em></h2>
       <p class="section-sub reveal">
-        Build foundational credit risk capability across your team with LMS-based learning, practical scenarios, and
-        assessments.
+        The capability platform is institutional intelligence infrastructure—it supports capability development,
+        governance visibility, operational maturity identification, institutional participation insight, and structured
+        learning consistency.
       </p>
 
-      <div class="lms-inner">
-        <div class="lms-visual reveal">
-          <div class="lms-badge">
-            <span style="width:6px;height:6px;border-radius:50%;background:var(--gold-light);display:inline-block"></span>
-            Free Course · Live Now
-          </div>
-          <div class="lms-course-title">Fundamentals of Credit Risk Management (Institutional Edition)</div>
-          <div class="lms-meta">
-            <span class="lms-meta-item">Self-paced</span>
-            <span class="lms-meta-item">Certificate available</span>
-            <span class="lms-meta-item">Open to teams</span>
-          </div>
-          <div class="lms-modules">
-            <div class="lms-module"><span class="lms-module-num">M1</span>Credit risk context in African institutions</div>
-            <div class="lms-module"><span class="lms-module-num">M2</span>Assessment frameworks and decision discipline</div>
-            <div class="lms-module"><span class="lms-module-num">M3</span>Classification, provisioning, early warning</div>
-            <div class="lms-module"><span class="lms-module-num">M4</span>Portfolio monitoring and reporting rhythms</div>
-            <div class="lms-module"><span class="lms-module-num">M5</span>Governance and risk culture</div>
-          </div>
-        </div>
-
-        <div class="reveal">
-          <div class="mini-panel">
-            <div class="mini-title">The easiest place to start</div>
-            <div class="mini-note">
-              The free course is the entry point into the full engagement model. It helps teams build shared language
-              and surface gaps that can later be addressed through governance review and system strengthening.
-            </div>
-            <div style="margin-top: 18px">
-              <a class="btn-primary" href="https://learning.kiprodrisk.com/" target="_blank" rel="noreferrer">
-                Start Free Course →
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
+      <LmsProgrammeBlock variant="homepage" />
     </div>
   </section>
 
-  <section class="institutional" id="institutional">
+  <section class="institutional" id="operational-strengthening">
     <div class="section-inner">
       <div class="institutional-inner">
         <div class="reveal">
-          <div class="section-tag">Institutional partnerships</div>
-          <h2 class="section-heading">Move from learning to <em>system strengthening</em>.</h2>
+          <div class="section-tag">Operational strengthening</div>
+          <h2 class="section-heading">From capability to <em>institutional strengthening</em></h2>
           <p class="inst-desc">
-            KIPROD supports institutions in strengthening credit risk systems, processes, and execution—through
-            governance review, portfolio insight, implementation, and ongoing support.
+            As institutions strengthen capability and governance visibility, KIPROD supports the transition into
+            structured operational strengthening engagements through RMS Institutional Partnerships.
           </p>
-          <a href="/contact" class="btn-primary">Request Institutional Discussion →</a>
+          <div class="hero-actions" style="margin-top: 24px">
+            <a href="/contact" class="btn-primary">Start Institutional Discussion →</a>
+            <a href="/partnerships" class="btn-secondary">Explore RMS Partnerships →</a>
+          </div>
         </div>
         <div class="inst-form reveal" style="padding: 34px">
-          <div class="form-heading">What institutions gain</div>
-          <div class="form-sub">Practical outcomes that improve portfolio performance.</div>
+          <div class="form-heading">RMS institutional partners gain</div>
+          <div class="form-sub">Structured support across the engagement phases.</div>
           <ul class="bullets" style="margin-top: 0">
-            <li><span class="dot"></span>Earlier identification of credit risk</li>
-            <li><span class="dot"></span>Improved monitoring discipline</li>
-            <li><span class="dot"></span>More structured borrower engagement</li>
-            <li><span class="dot"></span>Better restructuring and recovery decisions</li>
-            <li><span class="dot"></span>Stronger portfolio performance</li>
+            <li><span class="dot"></span>Governance visibility across lending operations</li>
+            <li><span class="dot"></span>Portfolio risk visibility and monitoring discipline</li>
+            <li><span class="dot"></span>Operational execution and system strengthening</li>
+            <li><span class="dot"></span>Structured borrower engagement and recovery</li>
+            <li><span class="dot"></span>Continuous ecosystem advisory support</li>
           </ul>
         </div>
       </div>
@@ -437,32 +422,69 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
   <section class="trust" id="trust">
     <div class="section-inner">
-      <div class="trust-label reveal">Trust signals</div>
+      <div class="trust-label reveal">Trust &amp; authority</div>
+      <p class="trust-intro reveal">
+        KIPROD is a new institutional credit risk ecosystem—building confidence through structured governance
+        engagements, faculty-led capability development, and operational strengthening pathways.
+      </p>
+
       <div class="trust-stats">
         <div class="trust-stat reveal">
-          <div class="trust-stat-num">1<span>K+</span></div>
-          <div class="trust-stat-label">Learners reached through capability pathways</div>
+          <div class="trust-stat-num">3</div>
+          <div class="trust-stat-label">Integrated ecosystem pillars — Institute, Academy, RMS</div>
         </div>
         <div class="trust-stat reveal">
-          <div class="trust-stat-num">30<span>+</span></div>
-          <div class="trust-stat-label">Credit risk learning modules and programmes</div>
+          <div class="trust-stat-num">7</div>
+          <div class="trust-stat-label">Structured pathway — Modules 0–5 plus integrated simulation</div>
         </div>
         <div class="trust-stat reveal">
-          <div class="trust-stat-num">4<span>×</span></div>
-          <div class="trust-stat-label">Core execution gaps addressed (detect · monitor · decide · recover)</div>
+          <div class="trust-stat-num">5</div>
+          <div class="trust-stat-label">RMS engagement phases — from governance review to continuous advisory</div>
         </div>
         <div class="trust-stat reveal">
           <div class="trust-stat-num">EA</div>
-          <div class="trust-stat-label">Kenya first, East Africa focus</div>
+          <div class="trust-stat-label">Kenya first, East Africa sector focus</div>
         </div>
       </div>
-      <div style="height: 18px"></div>
-      <div class="trust-logos reveal" aria-label="Client logos (placeholders)">
-        <div class="logo-pill">Client logo</div>
-        <div class="logo-pill">Client logo</div>
-        <div class="logo-pill">Client logo</div>
-        <div class="logo-pill">Client logo</div>
+
+      <div class="trust-grid reveal">
+        <div class="trust-panel">
+          <div class="trust-panel-title">Institutional partner categories</div>
+          <ul class="trust-panel-list">
+            <li>Commercial &amp; community banks</li>
+            <li>SACCOs &amp; deposit-taking cooperatives</li>
+            <li>Microfinance institutions</li>
+            <li>Fintech &amp; digital lenders</li>
+          </ul>
+        </div>
+        <div class="trust-panel">
+          <div class="trust-panel-title">Governance engagements</div>
+          <ul class="trust-panel-list">
+            <li>Structured governance visibility reviews</li>
+            <li>Executive and board-level briefings</li>
+            <li>Portfolio risk visibility assessments</li>
+            <li>Operational strengthening support</li>
+          </ul>
+        </div>
+        <div class="trust-panel">
+          <div class="trust-panel-title">Engagement types</div>
+          <ul class="trust-panel-list">
+            <li>Capability platform programmes</li>
+            <li>Executive masterclasses and briefings</li>
+            <li>Governance visibility reviews</li>
+            <li>RMS institutional partnerships</li>
+          </ul>
+        </div>
       </div>
+
+      <div class="trust-faculty reveal">
+        <p>
+          Faculty and institutional specialists lead capability development, governance engagements, and operational
+          strengthening support across the ecosystem.
+        </p>
+        <a href="/academy#faculty" class="btn-secondary">Meet the faculty →</a>
+      </div>
+
       <div class="trust-markets reveal">
         <div class="market-pill"><div class="market-dot"></div> Kenya</div>
         <div class="market-pill"><div class="market-dot"></div> Uganda</div>
@@ -472,62 +494,33 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     </div>
   </section>
 
-  <section class="about" id="resources" style="background: var(--cream)">
+  <section class="about" id="insights" style="background: var(--cream)">
     <div class="section-inner">
-      <div class="section-tag reveal">Brand & sales assets</div>
-      <h2 class="section-heading reveal">Downloads (placeholders)</h2>
+      <div class="section-tag reveal">Insights</div>
+      <h2 class="section-heading reveal">Executive governance <em>intelligence</em></h2>
       <p class="section-sub reveal">
-        These are Phase 1 priority assets referenced by the client. Final branded versions will replace these
-        placeholders.
+        Continuous thought leadership—governance perspectives, portfolio risk observations, and sector intelligence. Not
+        a generic blog. Decision-useful insight for institutional leaders.
       </p>
 
-      <div class="download-grid">
-        <div class="download-card reveal">
-          <div class="pill">Partnerships</div>
-          <div class="download-title">
-            <img class="icon" src="/assets/icons/partnerships.svg" alt="" />Institutional Partnership Brochure
-          </div>
-          <div class="download-desc">Explains the engagement model, diagnostics, and partnership structure.</div>
-          <a
-            class="arm-link"
-            href="/downloads/Institutional_Credit_Risk_Strengthening_Partnership_Brochure_PLACEHOLDER.pdf"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Download PDF →
-          </a>
-        </div>
-        <div class="download-card reveal">
-          <div class="pill">Lead-gen</div>
-          <div class="download-title">
-            <img class="icon" src="/assets/icons/governance.svg" alt="" />Governance Review One‑Pager
-          </div>
-          <div class="download-desc">A simple explainer: “What is a Credit Risk Governance Review?”</div>
-          <a class="arm-link" href="/downloads/Credit_Risk_Governance_Review_One_Pager_PLACEHOLDER.pdf" target="_blank" rel="noreferrer">
-            Download PDF →
-          </a>
-        </div>
-        <div class="download-card reveal">
-          <div class="pill">LMS</div>
-          <div class="download-title">
-            <img class="icon" src="/assets/icons/lms.svg" alt="" />LMS Welcome Pack
-          </div>
-          <div class="download-desc">Onboarding pack for institutions enrolling staff into the LMS.</div>
-          <a class="arm-link" href="/downloads/LMS_Welcome_Pack_For_Institutions_PLACEHOLDER.pdf" target="_blank" rel="noreferrer">
-            Download PDF →
-          </a>
-        </div>
-        <div class="download-card reveal">
-          <div class="pill">Proof</div>
-          <div class="download-title">
-            <img class="icon" src="/assets/icons/monitoring.svg" alt="" />Case Study Template
-          </div>
-          <div class="download-desc">Standard structure: challenge → gaps → intervention → outcome.</div>
-          <a class="arm-link" href="/downloads/Case_Study_Template_PLACEHOLDER.pdf" target="_blank" rel="noreferrer">
-            Download PDF →
-          </a>
-        </div>
+      <InsightGrid posts={featuredInsights} columns={3} />
+
+      <div style="margin-top: 28px" class="reveal">
+        <a href="/insights" class="btn-secondary">View all insights →</a>
       </div>
+    </div>
+  </section>
+
+  <section class="final-positioning" id="final-positioning" aria-label="Final positioning">
+    <div class="section-inner">
+      <p class="final-positioning-text reveal">
+        KIPROD is institutional operating infrastructure—supporting financial institutions in strengthening credit risk
+        governance, capability, operational execution, and portfolio resilience.
+      </p>
+      <p class="final-positioning-tagline reveal">From Insight → Capability → Execution.</p>
+      <p class="final-positioning-closer reveal">
+        Strengthening Credit Risk. Building Resilient Institutions.
+      </p>
     </div>
   </section>
 </BaseLayout>
@@ -603,32 +596,28 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     line-height: 1.4;
   }
 
-  .trust-logos {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 8px;
+  .trust-faculty {
+    margin-top: 28px;
+    padding: 28px 32px;
+    background: rgba(9, 34, 74, 0.04);
+    border: 1px solid rgba(9, 34, 74, 0.08);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
   }
-  .logo-pill {
-    border: 1px dashed rgba(9, 34, 74, 0.18);
-    background: rgba(9, 34, 74, 0.03);
-    color: rgba(9, 34, 74, 0.55);
-    font-size: 0.8rem;
-    font-weight: 400;
-    padding: 14px 16px;
-    text-align: center;
+  .trust-faculty p {
+    margin: 0;
+    max-width: 640px;
+    font-size: 0.92rem;
+    line-height: 1.6;
+    color: rgba(9, 34, 74, 0.72);
   }
 
   @media (max-width: 1024px) {
     .hero-visual {
       display: none;
-    }
-    .trust-logos {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-  @media (max-width: 600px) {
-    .trust-logos {
-      grid-template-columns: 1fr;
     }
   }
 </style>

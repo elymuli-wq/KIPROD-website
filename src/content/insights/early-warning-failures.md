@@ -2,6 +2,7 @@
 title: "Early Warning Failures in Financial Institutions"
 description: "Why emerging risk is missed, and how to build a simple early warning discipline that teams follow."
 date: 2026-05-08
+topic: portfolio-risk
 tags: ["early warning", "monitoring", "portfolio"]
 draft: false
 ---

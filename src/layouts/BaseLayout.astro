@@ -2,12 +2,16 @@
 import "../styles/global.css";
 import Nav from "../components/Nav.astro";
 import Footer from "../components/Footer.astro";
+import { SITE_URL } from "../config/site";
 
 const {
   title = "KIPROD",
-  description = "KIPROD strengthens credit risk management in financial institutions—from capability development to system strengthening and long-term institutional partnerships.",
+  description = "KIPROD strengthens credit risk governance, capability development, and operational execution across financial institutions—from insight to capability to execution.",
   activePath = "/",
+  canonicalPath,
 } = Astro.props;
+
+const canonical = new URL(canonicalPath ?? Astro.url.pathname, SITE_URL).href;
 ---
 
 <html lang="en">
@@ -16,6 +20,15 @@ const {
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{title}</title>
     <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="KIPROD" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="icon" type="image/png" href="/assets/kiprod-logo-2026.png" />
     <link rel="apple-touch-icon" href="/assets/kiprod-logo-2026.png" />

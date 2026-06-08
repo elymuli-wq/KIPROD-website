@@ -1,0 +1,87 @@
+---
+import { getCollection, render } from "astro:content";
+
+const allFaculty = await getCollection("faculty", ({ data }) => !data.draft);
+const faculty = allFaculty.sort((a, b) => a.data.order - b.data.order);
+
+const rendered = await Promise.all(
+  faculty.map(async (member) => ({
+    member,
+    Content: (await render(member)).Content,
+  }))
+);
+
+const associateAreas = [
+  "Financial management",
+  "Governance",
+  "Strategic planning",
+  "Audit and compliance",
+  "Human capital development",
+  "Legal and recovery support",
+  "Institutional research",
+  "Operational systems strengthening",
+];
+---
+
+<section class="about faculty-section" id="faculty">
+  <div class="section-inner">
+    <div class="section-tag reveal">Who supports the ecosystem</div>
+    <h2 class="section-heading reveal">Faculty &amp; <em>Institutional Specialists</em></h2>
+    <p class="section-sub reveal">
+      KIPROD brings together multidisciplinary expertise across banking, credit risk management, governance visibility,
+      operational strengthening, restructuring, recovery management, negotiation, and institutional capability
+      development—supporting commercial banks, SACCOs, microfinance institutions, and digital lenders through practical
+      institutional engagement.
+    </p>
+
+    <div class="faculty-grid">
+      {
+        rendered.map(({ member, Content }) => (
+          <article class="faculty-card reveal">
+            <div class="faculty-card-header">
+              <h3 class="faculty-name">{member.data.name}</h3>
+              {member.data.subtitle && <div class="faculty-subtitle">{member.data.subtitle}</div>}
+              <div class="faculty-role">{member.data.role}</div>
+            </div>
+            <div class="faculty-bio">
+              <Content />
+            </div>
+            <div class="faculty-spec-label">Specialization areas</div>
+            <ul class="faculty-specs">
+              {member.data.specializations.map((item) => (
+                <li>{item}</li>
+              ))}
+            </ul>
+            <div class="faculty-strength">
+              <span class="faculty-strength-label">Key strength</span>
+              <p>{member.data.keyStrength}</p>
+            </div>
+          </article>
+        ))
+      }
+    </div>
+
+    <div class="faculty-associates reveal">
+      <h3 class="faculty-associates-title">Associate Specialists &amp; Technical Advisors</h3>
+      <p class="faculty-associates-intro">
+        KIPROD also works with associate specialists and technical advisors across complementary institutional
+        strengthening areas—supporting broader engagements depending on assignment scope and institutional requirements.
+      </p>
+      <ul class="faculty-associates-list">
+        {associateAreas.map((area) => (
+          <li>{area}</li>
+        ))}
+      </ul>
+    </div>
+
+    <div class="faculty-approach reveal">
+      <div class="faculty-approach-tag">The KIPROD approach</div>
+      <p class="faculty-approach-text">
+        KIPROD's faculty and institutional specialists operate within one integrated institutional strengthening
+        philosophy—focused on governance visibility, operational consistency, institutional capability alignment,
+        system-driven credit risk management, and sustainable portfolio resilience.
+      </p>
+      <p class="faculty-approach-tagline">From Insight → Capability → Execution.</p>
+    </div>
+  </div>
+</section>

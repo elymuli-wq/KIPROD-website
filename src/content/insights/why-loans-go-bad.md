@@ -2,6 +2,7 @@
 title: "Why Loans Go Bad Despite Strong Credit Policies"
 description: "A practical look at the execution gaps that cause portfolio deterioration even when policies exist."
 date: 2026-05-08
+topic: governance-perspective
 tags: ["governance", "monitoring", "execution"]
 draft: false
 ---
@@ -24,5 +25,5 @@ Focus less on writing policies and more on building a repeatable system:
 - Strengthen **borrower engagement** practices before arrears accelerate
 - Create **recovery playbooks** that teams can actually follow
 
-If you’d like, we can walk through a short governance review discussion and map the practical gaps in your institution.
+If you'd like to discuss how this applies to your institution, [start an institutional discussion](/contact).
 
