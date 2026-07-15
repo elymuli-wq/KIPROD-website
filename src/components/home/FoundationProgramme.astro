@@ -1,0 +1,153 @@
+import CapabilityPlatformLink from "../CapabilityPlatformLink.astro";
+
+
+<section class="foundation-programme" id="foundation-programme">
+
+    <div class="section-inner">
+
+        <div class="section-tag reveal">
+            Start Here
+        </div>
+
+        <h2 class="section-heading reveal">
+            Fundamentals of Credit Risk Management
+            <em>Institutional Edition</em>
+        </h2>
+
+        <p class="section-sub reveal">
+            Begin your KIPROD journey through our flagship Foundation Programme.
+            Develop practical institutional credit risk knowledge through
+            structured learning, real-world case studies and digital assessments.
+        </p>
+
+        <div class="foundation-grid">
+
+            <div class="foundation-card reveal">
+
+                <h3>Foundation Programme</h3>
+
+                <ul class="foundation-features">
+
+                    <li>✓ 8 CPD Points</li>
+
+                    <li>✓ Certificate of Completion</li>
+
+                    <li>✓ Interactive LMS Access</li>
+
+                    <li>✓ Institutional Case Studies</li>
+
+                    <li>✓ Self-paced Learning</li>
+
+                    <li>✓ Practical Assessments</li>
+
+                </ul>
+
+                <div class="hero-actions">
+
+                    <CapabilityPlatformLink class="btn-primary">
+                        Enrol Now →
+                    </CapabilityPlatformLink>
+
+                    <a href="/academy" class="btn-secondary">
+                        Explore Academy →
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="foundation-side reveal">
+
+                <h3>Why Start Here?</h3>
+
+                <p>
+                    The Foundation Programme is the recommended entry point
+                    into the KIPROD ecosystem.
+                </p>
+
+                <p>
+                    It equips professionals with the essential principles of
+                    governance, institutional credit risk, portfolio management,
+                    operational excellence and decision-making before progressing
+                    into advanced Academy programmes.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<style>
+
+.foundation-programme{
+    background:#f7f4ee;
+    padding:90px 0;
+}
+
+.foundation-grid{
+    display:grid;
+    grid-template-columns:2fr 1fr;
+    gap:40px;
+    margin-top:50px;
+}
+
+.foundation-card{
+    background:#fff;
+    padding:40px;
+    border-radius:10px;
+    border:1px solid rgba(196,136,42,.2);
+    box-shadow:0 12px 40px rgba(0,0,0,.05);
+}
+
+.foundation-card h3{
+    color:#09224A;
+    margin-bottom:25px;
+}
+
+.foundation-features{
+    list-style:none;
+    padding:0;
+    margin:0;
+}
+
+.foundation-features li{
+    padding:12px 0;
+    border-bottom:1px solid rgba(0,0,0,.06);
+}
+
+.foundation-side{
+    background:#09224A;
+    color:white;
+    padding:35px;
+    border-radius:10px;
+}
+
+.foundation-side h3{
+    color:#E8B455;
+    margin-bottom:20px;
+}
+
+.foundation-side p{
+    line-height:1.8;
+    color:rgba(255,255,255,.8);
+}
+
+.hero-actions{
+    margin-top:30px;
+    display:flex;
+    gap:16px;
+    flex-wrap:wrap;
+}
+
+@media(max-width:900px){
+
+.foundation-grid{
+    grid-template-columns:1fr;
+}
+
+}
+
+</style>
