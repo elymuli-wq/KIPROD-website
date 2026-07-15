@@ -1,3 +1,6 @@
+---
+import CapabilityPlatformLink from "../CapabilityPlatformLink.astro";
+---
 <section class="hero" id="top">
     <video
       class="hero-video"
@@ -93,3 +96,79 @@ Institute • Academy • LMS • RMS Partnerships
       </div>
     </div>
   </section>
+
+  <style>
+  .hero-visual {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(196, 136, 42, 0.2);
+    border-radius: 4px;
+    backdrop-filter: blur(8px);
+    overflow: hidden;
+    opacity: 0;
+    animation: fadeLeft 0.9s 0.7s forwards;
+  }
+  .hero-visual-inner {
+    padding: 36px;
+  }
+  .hero-visual-label {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    color: var(--gold-light);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  .hero-visual-title {
+    font-family: var(--font-display);
+    font-size: 1.35rem;
+    font-weight: 600;
+    color: var(--white);
+    margin-bottom: 10px;
+    line-height: 1.2;
+  }
+  .hero-visual-sub {
+    font-size: 0.86rem;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.55);
+    line-height: 1.6;
+    margin-bottom: 18px;
+  }
+  .hero-visual-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+  .hero-visual-chip {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    padding: 12px 12px;
+    background: rgba(255, 255, 255, 0.04);
+    border-left: 2px solid rgba(196, 136, 42, 0.35);
+  }
+  .chip-dot {
+    width: 8px;
+    height: 8px;
+    margin-top: 7px;
+    border-radius: 50%;
+    background: var(--gold);
+    flex-shrink: 0;
+  }
+  .chip-title {
+    font-family: var(--font-display);
+    font-size: 0.98rem;
+    font-weight: 600;
+    color: var(--white);
+    margin-bottom: 2px;
+  }
+  .chip-desc {
+    font-size: 0.78rem;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.55);
+    line-height: 1.4;
+  }
+  @media (max-width: 1024px) {
+    .hero-visual {
+      display: none;
+    }
+  }
