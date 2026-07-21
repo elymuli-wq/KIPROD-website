@@ -1,0 +1,40 @@
+---
+
+const images = [
+{
+src: 'https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1200&q=80',
+alt: 'Executive training session',
+},
+{
+src: 'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1200&q=80',
+alt: 'Institutional collaboration workshop',
+},
+{
+src: 'https://images.unsplash.com/photo-1551836022-deb4988cc6c0?auto=format&fit=crop&w=1200&q=80',
+alt: 'Financial leadership discussion',
+},
+];
+---
+
+<section class="about reveal" style="padding-top: 0;">
+  <div class="section-inner">
+    <div class="section-tag">Institutional Impact</div>
+    <h2 class="section-heading">Capability in Action</h2>
+    <p class="section-sub">
+      KIPROD programmes are designed around real executive conversations,
+      institutional transformation workshops, and applied learning environments
+      that translate strategy into measurable operational execution.
+    </p>
+
+```
+<div class="impact-gallery">
+  {images.map((img) => (
+    <figure class="impact-card">
+      <img src={img.src} alt={img.alt} loading="lazy" />
+    </figure>
+  ))}
+</div>
+```
+
+  </div>
+</section>
