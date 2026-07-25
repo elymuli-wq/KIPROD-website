@@ -1,155 +1,274 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
-import CapabilityPlatformLink from "../components/CapabilityPlatformLink.astro";
+
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const currentPartners = [
+'National Industrial Training Authority (NITA)',
+'Commercial banks and regulated financial institutions',
+'Microfinance institutions',
+'SACCOs and cooperative financial organizations',
+'Credit and risk management associations',
+'Executive leadership and governance forums',
+];
+
+const collaborationAreas = [
+  {
+    title: 'Governance Execution',
+    text: 'Implementation of governance recommendations, policy frameworks, board visibility mechanisms, accountability structures, and executive performance oversight.',
+  },
+  {
+    title: 'Operational Strengthening',
+    text: 'Credit process redesign, collections optimization, recovery workflow improvement, portfolio monitoring discipline, and operational performance enhancement.',
+  },
+  {
+    title: 'Performance Transformation',
+    text: 'Execution support aligned to ICAR findings, strategic priorities, capability roadmaps, and continuous institutional performance improvement objectives.',
+  },
+];
+
+const evidence = [
+'Executive training programmes',
+'Credit risk capability workshops',
+'Collections and recovery improvement sessions',
+'Governance and board advisory engagements',
+'Operational execution and performance initiatives',
+'Institutional learning partnerships',
+];
 ---
 
 <BaseLayout
-  title="RMS Institutional Partnerships – KIPROD"
-  description="RMS Institutional Partnerships deliver operational strengthening and continuous ecosystem support—from governance visibility through portfolio risk visibility to long-term institutional strengthening."
+  title="RMS — Implementation & Operational Strengthening | KIPROD"
+  description="RMS is the implementation and operational strengthening pillar of the KIPROD Institutional Engagement Methodology, supporting governance execution, portfolio visibility, collections optimization, operational redesign, and continuous institutional performance improvement."
   activePath="/partnerships"
 >
-  <section class="hero" style="min-height: 56vh">
-    <div class="hero-grid"></div>
-    <div class="hero-inner" style="grid-template-columns: 1fr; padding-bottom: 80px">
-      <h1 class="hero-heading">RMS Institutional <em>Partnerships</em></h1>
-      <p class="hero-sub">
-        The operational strengthening pillar of the KIPROD ecosystem—supporting institutions from governance visibility
-        through structured operational execution and continuous ecosystem support.
-      </p>
-      <div class="hero-actions">
-        <a href="/contact" class="btn-primary">Start Institutional Discussion →</a>
-        <CapabilityPlatformLink class="btn-secondary">Start Free Programme →</CapabilityPlatformLink>
-      </div>
+
+  <section class="about reveal">
+    <div class="section-inner">
+      <div class="section-tag">Stage 6 · RMS Implementation</div>
+
+<h1 class="section-heading">
+  Implementation & <em>Operational Strengthening</em>
+</h1>
+
+<p class="section-sub">
+  RMS is the implementation pillar of the KIPROD Institutional Engagement
+  Methodology. Following ILCA, ICDF, ICAR, and roadmap development, RMS
+  supports institutions in translating assessment findings into governance
+  action, operational execution, portfolio visibility, collections improvement,
+  policy implementation, and measurable institutional performance outcomes.
+</p>
+
+```
+  <div class="trust-grid" style="margin-top: 42px;">
+    <div class="trust-panel">
+      <div class="trust-panel-title">Training & Accreditation</div>
+      <ul class="trust-panel-list">
+        <li>NITA-aligned capability programmes</li>
+        <li>Workplace learning initiatives</li>
+        <li>Professional development pathways</li>
+      </ul>
     </div>
+
+    <div class="trust-panel">
+      <div class="trust-panel-title">Financial Institutions</div>
+      <ul class="trust-panel-list">
+        <li>Commercial banking organizations</li>
+        <li>Microfinance institutions</li>
+        <li>SACCO and cooperative finance teams</li>
+      </ul>
+    </div>
+
+    <div class="trust-panel">
+      <div class="trust-panel-title">Governance & Leadership</div>
+      <ul class="trust-panel-list">
+        <li>Board and executive advisory forums</li>
+        <li>Risk governance initiatives</li>
+        <li>Performance and execution leadership</li>
+      </ul>
+    </div>
+  </div>
+</div>
+```
+
   </section>
 
-  <section class="about">
+  <section class="arms reveal" style="padding-top: 0;">
     <div class="section-inner">
-      <div class="section-tag reveal">Operational strengthening</div>
-      <h2 class="section-heading reveal">Structured support across the <em>engagement phases</em></h2>
-      <p class="section-sub reveal">
-        RMS Institutional Partnerships guide institutions through a progressive model—building on capability entry and
-        governance visibility into portfolio risk visibility, operational strengthening, and continuous ecosystem
-        support.
+      <div class="section-tag">Current Collaborations</div>
+      <h2 class="section-heading">Confirmed Partners</h2>
+      <p class="section-sub">
+        The following institutions and stakeholder groups represent KIPROD’s active
+        collaboration network. You can expand this list anytime as additional
+        organizations are confirmed.
       </p>
 
-      <div class="journey-track reveal" style="margin-top: 48px">
-        <div class="journey-node">
-          <div class="node-dot">0</div>
-          <div class="node-title">Phase 0 · Capability Entry</div>
-          <div class="node-desc">LMS capability entry &amp; institutional visibility.</div>
-        </div>
-        <div class="journey-node">
-          <div class="node-dot">1</div>
-          <div class="node-title">Phase 1 · Governance Visibility</div>
-          <div class="node-desc">Structured governance visibility review.</div>
-        </div>
-        <div class="journey-node">
-          <div class="node-dot">2</div>
-          <div class="node-title">Phase 2 · Portfolio Visibility</div>
-          <div class="node-desc">Portfolio risk visibility and emerging signals.</div>
-        </div>
-        <div class="journey-node">
-          <div class="node-dot">3</div>
-          <div class="node-title">Phase 3 · Operational Strengthening</div>
-          <div class="node-desc">Structured operational strengthening engagements.</div>
-        </div>
-        <div class="journey-node">
-          <div class="node-dot">4</div>
-          <div class="node-title">Phase 4 · Continuous Support</div>
-          <div class="node-desc">Continuous ecosystem support and reinforcement.</div>
-        </div>
+```
+  <div class="download-grid" style="margin-top: 34px;">
+    {currentPartners.map((partner) => (
+      <div class="download-card">
+        <div class="pill">Partner</div>
+        <div class="download-title">{partner}</div>
       </div>
-    </div>
+    ))}
+  </div>
+
+  <div class="trust-quote" style="margin-top: 38px;">
+    <p>
+      “KIPROD is designed to bridge insight, capability, and execution — ensuring
+      that institutional learning translates into measurable operational performance.”
+    </p>
+    <footer>KIPROD Partnership Framework</footer>
+  </div>
+</div>
+```
+
   </section>
 
-  <section class="about" style="background: var(--cream)">
+  <section class="solution reveal">
     <div class="section-inner">
-      <div class="section-tag reveal">Engagement detail</div>
-      <h2 class="section-heading reveal">What each phase <em>delivers</em></h2>
+      <div class="section-tag">How We Collaborate</div>
+      <h2 class="section-heading">Partnership Areas</h2>
+      <p class="section-sub">
+  RMS engagements are structured around implementation outcomes, operational
+  execution, governance reinforcement, and measurable institutional performance
+  improvement—not one-off training events.
+</p>
 
-      <div class="arms-grid" style="margin-top: 40px">
-        <div class="arm-card reveal">
-          <div class="arm-tag">Phase 0–1</div>
-          <div class="arm-name">Capability &amp; governance visibility</div>
-          <div class="arm-desc">
-            Entry through the capability platform, followed by structured governance visibility review across systems,
-            policies, and execution discipline.
-          </div>
-        </div>
-        <div class="arm-card reveal">
-          <div class="arm-tag">Phase 2</div>
-          <div class="arm-name">Portfolio risk visibility</div>
-          <div class="arm-desc">
-            High-level portfolio analysis, emerging risk signals, and monitoring discipline—supporting executive and
-            board-level decision-making.
-          </div>
-        </div>
-        <div class="arm-card reveal">
-          <div class="arm-tag">Phase 3–4</div>
-          <div class="arm-name">Operational strengthening &amp; support</div>
-          <div class="arm-desc">
-            Framework development, operational execution support, and continuous ecosystem advisory—sustaining
-            institutional strengthening over time.
-          </div>
-        </div>
+```
+  <div class="solution-model">
+    {collaborationAreas.map((area) => (
+      <div class="model-step">
+        <div class="model-label">Engagement</div>
+        <div class="model-title">{area.title}</div>
+        <div class="model-desc">{area.text}</div>
       </div>
+    ))}
+  </div>
+</div>
+```
 
-      <div style="height: 24px"></div>
-      <div class="about-grid" style="grid-template-columns: 1fr 1fr">
-        <div class="mini-panel reveal" style="background: var(--white)">
-          <div class="mini-title">What we support</div>
-          <ul class="bullets" style="margin-top: 14px">
-            <li><span class="dot"></span>Structured governance visibility reviews</li>
-            <li><span class="dot"></span>Portfolio risk visibility</li>
-            <li><span class="dot"></span>Framework and system strengthening</li>
-            <li><span class="dot"></span>Operational execution support</li>
-            <li><span class="dot"></span>Continuous ecosystem advisory</li>
-          </ul>
-        </div>
-        <div class="mini-panel reveal" style="background: var(--white)">
-          <div class="mini-title">Institutional outcomes</div>
-          <p class="mini-note" style="margin-top: 14px">
-            Improved portfolio monitoring, stronger decision-making, better recovery outcomes, and enhanced
-            institutional resilience across the lending lifecycle.
-          </p>
-          <p style="margin-top: 18px">
-            <a href="/contact" class="btn-primary">Start Institutional Discussion →</a>
-          </p>
-        </div>
-      </div>
-    </div>
   </section>
 
-  <section
-    class="about"
-    style="
-      padding-top: 70px;
-      padding-bottom: 70px;
-      background: var(--gold-pale);
-      border-top: 1px solid rgba(196, 136, 42, 0.2);
-    "
-  >
+  <section class="about reveal">
     <div class="section-inner">
-      <div class="section-tag reveal">Next</div>
-      <h2 class="section-heading reveal">Stay informed with <em>executive insight</em></h2>
-      <p class="section-sub reveal">
-        The Institute provides governance perspectives and briefs that help executives and boards stay ahead of changing
-        risk dynamics.
-      </p>
-      <div style="margin-top: 18px" class="reveal">
-        <a class="nav-cta" href="/institute" style="text-decoration: none">Explore the Institute →</a>
-        <span style="display:inline-block; width: 10px"></span>
-        <a href="/insights" class="arm-link">Read insights →</a>
-      </div>
+      <div class="section-tag">Evidence of Work</div>
+      <h2 class="section-heading">Engagements Delivered</h2>
+
+```
+  <div class="about-grid" style="margin-top: 40px;">
+    <div class="about-text">
+      <p>
+  These engagements represent implementation activity across the KIPROD
+  methodology—where assessment findings, capability priorities, governance
+  observations, and operational recommendations are translated into practical
+  institutional strengthening interventions.
+</p>
+
+      <ul class="bullets">
+        {evidence.map((item) => (
+          <li><span class="dot"></span>{item}</li>
+        ))}
+      </ul>
     </div>
+
+    <div class="mini-panel">
+  <div class="mini-title">Implementation evidence</div>
+  <p class="mini-note">
+    Replace the placeholder content with confirmed institutional case studies,
+    implementation outcomes, governance transformation examples, collections
+    improvement evidence, executive workshop photos, partner logos, and RMS
+    engagement results. This section is designed to become the evidence layer of
+    the KIPROD methodology.
+  </p>
+</div>
+  </div>
+</div>
+```
+
+  </section>
+
+  <section class="institutional reveal">
+    <div class="section-inner">
+      <div class="institutional-inner">
+        <div>
+          <div class="section-tag">Stage 6 · RMS Engagement</div>
+
+<h2 class="section-heading">
+  Begin an <em>Implementation Engagement</em>
+</h2>
+
+<p class="inst-desc">
+  RMS engagements are designed for institutions that have identified governance,
+  capability, operational, collections, portfolio, or performance priorities and
+  are ready to progress into structured implementation, execution support, and
+  continuous institutional improvement.
+</p>
+
+```
+      <ul class="bullets">
+  <li><span class="dot"></span>Governance recommendation implementation</li>
+  <li><span class="dot"></span>Credit and collections transformation</li>
+  <li><span class="dot"></span>Operational process redesign</li>
+  <li><span class="dot"></span>Portfolio visibility and performance monitoring</li>
+  <li><span class="dot"></span>Continuous performance improvement support</li>
+</ul>
+    </div>
+
+    <div class="inst-form">
+      <div class="form-heading">Partnership Request</div>
+      <p class="form-sub">
+  Tell us about the governance, operational, collections, portfolio, or
+  performance priorities your institution is seeking to implement.
+</p>
+
+      <form>
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">Institution</label>
+            <input class="form-input" type="text" placeholder="Organization name" />
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Contact Person</label>
+            <input class="form-input" type="text" placeholder="Full name" />
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">Email</label>
+            <input class="form-input" type="email" placeholder="name@institution.com" />
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Partnership Area</label>
+            <select class="form-select">
+              <option>Governance Implementation</option>
+<option>Credit & Portfolio Transformation</option>
+<option>Collections & Recovery Optimization</option>
+<option>Operational Strengthening</option>
+<option>Performance & Execution Support</option>
+<option>Continuous Improvement Engagement</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Partnership Goals</label>
+          <textarea
+            class="form-textarea"
+            placeholder="Describe the capability, governance, credit, collections, or execution outcomes your institution is pursuing."
+          ></textarea>
+        </div>
+
+        <button class="form-submit" type="submit">
+          Submit Partnership Inquiry
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+```
+
   </section>
 </BaseLayout>
-
-<style>
-  .about .journey-track {
-    background: var(--navy);
-    padding: 36px 28px;
-    border-radius: 4px;
-  }
-</style>

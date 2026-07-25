@@ -1,4 +1,5 @@
 ---
+import ImpactGallery from '../components/home/ImpactGallery.astro';
 import BaseLayout from "../layouts/BaseLayout.astro";
 
 import InsightGrid from "../components/InsightGrid.astro";
@@ -31,6 +32,10 @@ const featuredInsights = (await getPublishedInsights()).slice(0, 3);
   <WhyKiprod />
 
   <EcosystemSection />
+
+  <TrustSection />
+
+  <ImpactGallery />
   
 
   <ExecutiveInsightSection />

@@ -14,54 +14,82 @@ const insights = await getPublishedInsights();
   <section class="hero" style="min-height: 56vh">
     <div class="hero-grid"></div>
     <div class="hero-inner" style="grid-template-columns: 1fr; padding-bottom: 80px">
-      <h1 class="hero-heading">Credit Risk <em>Institute</em></h1>
+      <h1 class="hero-heading">
+  Institutional Insight &amp; <em>Capability Discovery</em>
+</h1>
       <p class="hero-sub">
-        Governance visibility and executive insight for financial institutions—supporting leadership with decision-useful
-        intelligence across governance perspectives, portfolio observations, and sector developments.
-      </p>
+  The Institute is the insight engine of the KIPROD Institutional Engagement
+  Methodology. Through structured discovery, governance analysis, portfolio
+  intelligence, operational assessment, and executive research, we help
+  institutions understand their current capability before recommending learning,
+  advisory, or implementation interventions.
+</p>
       <div class="hero-actions">
-        <a href="/insights" class="btn-primary">Read Insights →</a>
-        <a href="/contact" class="btn-secondary">Start Institutional Discussion →</a>
-      </div>
+  <a href="/contact?assessment=ilca" class="btn-primary">
+    Start Institutional Capability Assessment →
+  </a>
+
+  <a href="/insights" class="btn-secondary">
+    Explore Institute Insights →
+  </a>
+</div>
     </div>
   </section>
 
   <section class="about">
     <div class="section-inner">
-      <div class="section-tag reveal">Overview</div>
-      <h2 class="section-heading reveal">Governance visibility for <em>executives and boards</em></h2>
+      <div class="section-tag reveal">ICDF + ICAR</div>
+<h2 class="section-heading reveal">
+  How KIPROD Generates <em>Institutional Insight</em>
+</h2>
       <p class="section-sub reveal">
-        The Institute focuses on governance perspectives, portfolio risk observations, sector intelligence, and executive
-        reflections—delivered as practical briefs and publications through the Insights hub.
-      </p>
+  The Institute conducts Institutional Capability Discovery Framework (ICDF)
+  engagements and produces Institutional Capability Assessment Reports (ICAR),
+  combining governance analysis, portfolio observations, operational discovery,
+  people capability assessment, and executive intelligence to generate
+  evidence-based institutional recommendations.
+</p>
 
       <div class="about-grid" style="grid-template-columns: 1fr 1fr">
         <div class="mini-panel reveal" style="background: var(--cream)">
           <div class="mini-title">Focus areas</div>
           <ul class="bullets" style="margin-top: 14px">
-            <li><span class="dot"></span>Governance perspectives</li>
-            <li><span class="dot"></span>Portfolio risk observations</li>
-            <li><span class="dot"></span>Sector intelligence</li>
-            <li><span class="dot"></span>Executive reflections</li>
+            <li><span class="dot"></span>Governance & board effectiveness</li>
+<li><span class="dot"></span>Credit & portfolio capability</li>
+<li><span class="dot"></span>Collections & operational execution</li>
+<li><span class="dot"></span>People, learning & capability maturity</li>
+<li><span class="dot"></span>Systems, visibility & performance intelligence</li>
           </ul>
         </div>
         <div class="mini-panel reveal" style="background: var(--cream)">
           <div class="mini-title">Purpose</div>
           <div class="mini-note">
-            To support leadership teams in understanding evolving risk dynamics and making informed decisions—with an
-            executive, institutional tone. Not generic commentary or blog-style content.
-            <br /><br />
-            <a class="arm-link" href="/insights">Explore the Insights hub →</a>
-          </div>
+  ICAR engagements produce evidence-based institutional findings, capability
+  gap analysis, strategic priorities, governance observations, operational
+  insights, and executive recommendations that inform the Learning & Advisory
+  Roadmap.
+
+  <br /><br />
+
+  <a class="arm-link" href="/insights">
+    Explore the Institute Insights hub →
+  </a>
+</div>
         </div>
       </div>
 
       <div style="height: 20px"></div>
       <div class="section-tag reveal">Publications</div>
-      <h2 class="section-heading reveal">Executive briefs &amp; insight series</h2>
+      <h2 class="section-heading reveal">
+  Begin with <em>Institutional Understanding</em>
+</h2>
       <p class="section-sub reveal">
-        Decision-useful governance intelligence from the Institute—linked directly to the Insights collection.
-      </p>
+  The Institute is the starting point of the KIPROD methodology. Through ILCA,
+  ICDF, and ICAR engagements, institutions gain a structured understanding of
+  governance, capability, operational, and strategic priorities before
+  progressing into learning, advisory, implementation, and continuous
+  performance support.
+</p>
 
       <InsightGrid posts={insights} columns={2} />
 
@@ -96,10 +124,20 @@ const insights = await getPublishedInsights();
         institution, the next step is a confidential institutional discussion.
       </p>
       <div style="margin-top: 18px" class="reveal">
-        <a class="nav-cta" href="/contact" style="text-decoration: none">Start Institutional Discussion →</a>
-        <span style="display:inline-block; width: 10px"></span>
-        <a href="/academy" class="arm-link">Or: Explore the Academy →</a>
-      </div>
+  <a
+    class="nav-cta"
+    href="/contact?assessment=ilca"
+    style="text-decoration: none"
+  >
+    Start Institutional Capability Assessment →
+  </a>
+
+  <span style="display:inline-block; width: 10px"></span>
+
+  <a href="/academy" class="arm-link">
+    Continue to the Academy →
+  </a>
+</div>
     </div>
   </section>
 </BaseLayout>
