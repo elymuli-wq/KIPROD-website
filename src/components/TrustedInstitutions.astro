@@ -1,0 +1,103 @@
+---
+const institutions = {
+  banks: [
+    "GT Bank",
+    "Credit Bank",
+    "Absa Bank",
+    "ABC Bank",
+    "Bank of India",
+    "First Community Bank",
+    "Agricultural Finance Corporation",
+    "National Bank",
+    "Housing Finance",
+    "I&M Bank"
+  ],
+
+  uganda: [
+    "Bank of Uganda",
+    "Finance Trust Bank",
+    "Centenary Bank",
+    "Post Bank Uganda",
+    "Pride Microfinance"
+  ],
+
+  saccos: [
+    "UNAITAS",
+    "Mwalimu National SACCO",
+    "Stima SACCO",
+    "Tower SACCO",
+    "Kenya Bankers SACCO",
+    "Safaricom SACCO",
+    "Police SACCO",
+    "Ukulima SACCO"
+  ]
+};
+---
+
+<section class="trusted-section reveal">
+
+    <div class="section-heading">
+
+        <span class="section-kicker">
+            Trusted Across East Africa
+        </span>
+
+        <h2>
+            Institutions We've Worked With
+        </h2>
+
+        <p>
+            KIPROD has partnered with banks, SACCOs, regulators,
+            development finance institutions and government agencies
+            across East Africa.
+        </p>
+
+    </div>
+
+    <div class="trusted-grid">
+
+        <div class="trusted-card">
+
+            <h3>Banks</h3>
+
+            <ul>
+                {institutions.banks.map(bank => (
+                    <li>{bank}</li>
+                ))}
+            </ul>
+
+        </div>
+
+        <div class="trusted-card">
+
+            <h3>Uganda Institutions</h3>
+
+            <ul>
+                {institutions.uganda.map(org => (
+                    <li>{org}</li>
+                ))}
+            </ul>
+
+        </div>
+
+        <div class="trusted-card">
+
+            <h3>SACCOs</h3>
+
+            <ul>
+                {institutions.saccos.map(sacco => (
+                    <li>{sacco}</li>
+                ))}
+            </ul>
+
+        </div>
+
+    </div>
+    <div class="trusted-action">
+        <a href="/partners" class="btn-secondary">
+            View Full Institutional Portfolio →
+        </a>
+    </div>
+
+
+</section>

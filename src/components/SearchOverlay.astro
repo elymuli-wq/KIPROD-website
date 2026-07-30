@@ -1,0 +1,116 @@
+---
+import { searchData } from "../data/searchData";
+---
+
+<div id="search-overlay" class="search-overlay">
+
+  <div class="search-backdrop"></div>
+
+  <div class="search-modal">
+
+    <button
+      id="search-close"
+      class="search-close"
+      aria-label="Close Search"
+    >
+      ×
+    </button>
+
+    <h2>Search KIPROD</h2>
+
+    <p>
+      Search insights, methodology, academy programmes,
+      RMS implementation, and institutional resources.
+    </p>
+
+    <input
+      id="search-input"
+      type="search"
+      placeholder="Search KIPROD..."
+    />
+
+    <div id="search-results" class="search-results"></div>
+
+  </div>
+
+  <script
+  id="search-data"
+  type="application/json"
+  set:html={JSON.stringify(searchData)}
+></script>
+
+</div>
+<script is:inline>
+
+const overlay = document.getElementById("search-overlay");
+const openBtn = document.getElementById("search-toggle");
+const closeBtn = document.getElementById("search-close");
+const input = document.getElementById("search-input");
+const results = document.getElementById("search-results");
+
+const data = JSON.parse(
+  document.getElementById("search-data").textContent
+);
+
+function closeSearch() {
+  overlay.classList.remove("active");
+  input.value = "";
+  results.innerHTML = "";
+}
+
+openBtn?.addEventListener("click", () => {
+  overlay.classList.add("active");
+  input.focus();
+});
+
+closeBtn?.addEventListener("click", closeSearch);
+
+overlay
+  ?.querySelector(".search-backdrop")
+  ?.addEventListener("click", closeSearch);
+
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") closeSearch();
+});
+
+input?.addEventListener("input", () => {
+
+  const query = input.value.trim().toLowerCase();
+
+  if (!query) {
+    results.innerHTML = "";
+    return;
+  }
+
+  const matches = data.filter(item =>
+      item.title.toLowerCase().includes(query) ||
+      item.description.toLowerCase().includes(query)
+  );
+
+  if (matches.length === 0) {
+
+      results.innerHTML = `
+        <div class="search-empty">
+            No results found.
+        </div>
+      `;
+
+      return;
+
+  }
+
+  results.innerHTML = matches.map(item => `
+
+      <a class="search-result" href="${item.url}">
+
+          <h4>${item.title}</h4>
+
+          <p>${item.description}</p>
+
+      </a>
+
+  `).join("");
+
+});
+
+</script>

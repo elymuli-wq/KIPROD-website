@@ -1,20 +1,31 @@
 ---
-import CapabilityPlatformLink from "./CapabilityPlatformLink.astro";
 
-const { activePath = "/" } = Astro.props;
+import CapabilityPlatformLink from './CapabilityPlatformLink.astro';
+
+const { activePath = '/' } = Astro.props;
 
 const links = [
   { href: "/", label: "Home" },
-  { href: "/about", label: "About KIPROD" },
-  { href: "/#ecosystem", label: "Our Ecosystem" },
-  { href: "/academy", label: "Academy" },
+
+  { href: "/#approach", label: "Methodology" },
+
   { href: "/institute", label: "Institute" },
+
+  { href: "/academy", label: "Academy" },
+
+  { href: "/partnerships", label: "RMS" },
+
+  { href: "/command-centre", label: "Command Centre" },
+
   { href: "/insights", label: "Insights" },
+
+  { href: "/about", label: "About" },
+
   { href: "/contact", label: "Contact" },
 ];
 ---
 
-<nav>
+<nav class="site-nav">
   <a class="nav-logo" href="/" aria-label="KIPROD home">
     <img
       src="/assets/kiprod-logo-2026.png"
@@ -24,18 +35,81 @@ const links = [
       decoding="async"
     />
   </a>
+
+  <!-- Desktop -->
+
   <ul class="nav-links">
-    {
-      links.map((l) => (
-        <li>
-          <a href={l.href} class={activePath === l.href ? "nav-link-active" : undefined}>
-            {l.label}
-          </a>
-        </li>
-      ))
-    }
+  {links.map((l) => (
     <li>
-      <CapabilityPlatformLink class="nav-cta">Start Free Programme →</CapabilityPlatformLink>
+      <a
+        href={l.href}
+        class={
+  activePath === l.href ||
+  (l.href === "/#approach" && activePath === "/")
+    ? "nav-link-active"
+    : undefined
+}
+      >
+        {l.label}
+      </a>
     </li>
-  </ul>
+  ))}
+
+  <li>
+    <button
+  id="search-toggle"
+  class="nav-search-btn"
+  aria-label="Search"
+>
+  <svg
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2"
+  >
+    <circle cx="11" cy="11" r="7"></circle>
+    <path d="M20 20l-3.5-3.5"></path>
+  </svg>
+</button>
+  </li>
+
+    <li class="nav-cta-wrapper">
+    <a href="/contact" class="nav-cta">
+  Start Institutional Assessment →
+</a>
+  </li>
+</ul>
+
+  <!-- Mobile hamburger -->
+
+  <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+  <!-- Mobile menu -->
+
+  <div class="mobile-menu">
+    <div class="mobile-search">
+      <input type="search" placeholder="Search KIPROD…" />
+    </div>
+
+```
+<ul>
+  {
+    links.map((l) => (
+      <li>
+        <a href={l.href}>{l.label}</a>
+      </li>
+    ))
+  }
+
+  <li class="mobile-cta">
+    <CapabilityPlatformLink>Start Assessment →</CapabilityPlatformLink>
+  </li>
+</ul>
+```
+
+  </div>
 </nav>

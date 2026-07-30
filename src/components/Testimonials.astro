@@ -1,0 +1,61 @@
+---
+const videos = [
+  {
+    title: "Institutional Success Story",
+    id: "u4DTl_0AYd0"
+  },
+  {
+    title: "How KIPROD Strengthens Financial Institutions",
+    id: "7VfeeHqbAeY"
+  },
+  {
+    title: "Executive Credit Risk Training Programme",
+    id: "2zCQtv5XnTY"
+    
+  }
+];
+---
+
+<section class="testimonials reveal">
+
+    <div class="section-heading">
+
+        <span class="section-kicker">
+            Success Stories
+        </span>
+
+        <h2>
+            Hear From Institutions We've Worked With
+        </h2>
+
+        <p>
+            Real experiences from professionals, institutions and
+            organizations that have partnered with KIPROD.
+        </p>
+
+    </div>
+
+    <div class="testimonial-grid">
+
+        {
+            videos.map(video => (
+
+                <div class="video-card">
+
+                    <iframe
+                        src={`https://www.youtube.com/embed/${video.id}`}
+                        title={video.title}
+                        loading="lazy"
+                        allowfullscreen>
+                    </iframe>
+
+                    <h3>{video.title}</h3>
+
+                </div>
+
+            ))
+        }
+
+    </div>
+
+</section>

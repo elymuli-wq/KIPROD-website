@@ -1,0 +1,87 @@
+---
+const contributions = [
+  {
+    title: "Agricultural Finance & Value Chain Development",
+    description:
+      "Capacity building, agricultural risk management, product development and financial inclusion across institutions, cooperatives and producer groups."
+  },
+
+  {
+    title: "SME & Enterprise Capacity Development",
+    description:
+      "Practical programmes covering business management, financial discipline, enterprise planning and access-to-finance readiness."
+  },
+
+  {
+    title: "Financial Product & Business Model Development",
+    description:
+      "Customer segmentation, product design, pricing strategy, channel development and institutional sustainability."
+  },
+
+  {
+    title: "Credit Risk & Portfolio Strengthening",
+    description:
+      "Credit appraisal, early-warning systems, recovery strategies and concentration-risk monitoring."
+  },
+
+  {
+    title: "Institutional Learning & Capability Methodology",
+    description:
+      "Implementation of the ILCA → ICDF → ICAR capability journey that guides institutions from assessment to execution."
+  },
+
+  {
+    title: "Governance, Policy & Advisory",
+    description:
+      "Governance strengthening, board oversight, institutional policy development, reporting and execution discipline."
+  },
+
+  {
+    title: "AI-Driven Credit Risk Analysis",
+    description:
+      "Modern portfolio analytics, AI-assisted decision support, monitoring tools and data-driven institutional intelligence."
+  }
+];
+---
+
+<section class="contributions reveal">
+
+    <div class="section-heading">
+
+        <span class="section-kicker">
+            Selected Relevant Contributions
+        </span>
+
+        <h2>
+            Expertise Built Across Financial Institutions
+        </h2>
+
+        <p>
+            Our work spans institutional capability development,
+            governance, credit risk, product innovation and
+            sustainable organizational growth.
+        </p>
+
+    </div>
+
+    <div class="contribution-grid">
+
+        {contributions.map((item, index) => (
+
+            <article class="contribution-card">
+
+                <div class="contribution-number">
+                    {(index + 1).toString().padStart(2,"0")}
+                </div>
+
+                <h3>{item.title}</h3>
+
+                <p>{item.description}</p>
+
+            </article>
+
+        ))}
+
+    </div>
+
+</section>

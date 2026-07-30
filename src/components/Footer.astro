@@ -1,38 +1,56 @@
----
-import CapabilityPlatformLink from "./CapabilityPlatformLink.astro";
 
+---
 const links = [
   { href: "/", label: "Home" },
-  { href: "/about", label: "About KIPROD" },
-  { href: "/#ecosystem", label: "Our Ecosystem" },
-  { href: "/academy", label: "Academy" },
+  { href: "/#approach", label: "Methodology" },
+  { href: "/about", label: "About" },
   { href: "/institute", label: "Institute" },
+  { href: "/academy", label: "Academy" },
+  { href: "/partnerships", label: "Partnerships" },
+  { href: "/command-centre", label: "Command Centre" },
+  { href: "/resources", label: "Resources" },
   { href: "/insights", label: "Insights" },
+  { href: "/media", label: "Media Centre" },
+  { href: "/partners", label: "Partners" },
   { href: "/contact", label: "Contact" },
 ];
 ---
 
 <footer>
+
   <div class="footer-inner">
+
     <div class="footer-top">
+
+      <!-- Brand -->
+
       <div>
+
         <div class="footer-brand-logo">
           <img
             src="/assets/kiprod-logo-2026.png"
             alt="KIPROD"
             class="brand-logo-img"
-            loading="lazy"
-            decoding="async"
           />
         </div>
+
         <div class="footer-brand-desc">
-  Strengthening Credit Risk. Building Resilient Institutions.
-  Through insight, capability, governance visibility, and disciplined execution.
+  KIPROD is an institutional ecosystem supporting governance, risk,
+  capability development, executive education, implementation support,
+  research, and continuous institutional performance improvement across
+  financial institutions.
 </div>
+
       </div>
 
+      <!-- Navigation -->
+
       <div>
-        <div class="footer-col-title">Navigation</div>
+
+        <div class="footer-col-title">
+          Explore
+        </div>
+
         <ul class="footer-links">
           {links.map((l) => (
             <li>
@@ -40,40 +58,109 @@ const links = [
             </li>
           ))}
         </ul>
+
       </div>
 
-      <div>
-        <div class="footer-col-title">Ecosystem</div>
-        <ul class="footer-links">
-          <li>
-            <a href="/partnerships">RMS Institutional Partnerships</a>
-          </li>
-          <li>
-            <CapabilityPlatformLink>Start Free Programme</CapabilityPlatformLink>
-          </li>
-          <li>
-            <a href="/resources">Resources &amp; Downloads</a>
-          </li>
-          <li>
-            <a href="/contact">Start Institutional Discussion</a>
-          </li>
-        </ul>
-      </div>
+      <!-- Journey -->
 
       <div>
-        <div class="footer-col-title">Markets</div>
-        <ul class="footer-links">
-          <li><a href="/#trust">Kenya</a></li>
-          <li><a href="/#trust">Uganda</a></li>
-          <li><a href="/#trust">Tanzania</a></li>
-          <li><a href="/#trust">East Africa</a></li>
-        </ul>
+
+        <div class="footer-col-title">
+          Methodology
+        </div>
+
+        <div class="footer-journey">
+
+<div>① ILCA</div>
+
+<span>↓</span>
+
+<div>② ICDF</div>
+
+<span>↓</span>
+
+<div>③ ICAR</div>
+
+<span>↓</span>
+
+<div>④ Roadmap</div>
+
+<span>↓</span>
+
+<div>⑤ Academy</div>
+
+<span>↓</span>
+
+<div>⑥ RMS</div>
+
+<span>↓</span>
+
+<div>⑦ Command Centre</div>
+
+</div>
+
       </div>
+
+      <!-- Focus -->
+
+      <div>
+
+        <div class="footer-col-title">
+          Institution Types
+        </div>
+
+        <div class="footer-badges">
+
+          <span>Banks</span>
+<span>SACCOs</span>
+<span>MFIs</span>
+<span>Credit Providers</span>
+<span>DFIs</span>
+<span>Co-operatives</span>
+<span>Government</span>
+<span>Regulators</span>
+
+        </div>
+
+      </div>
+
     </div>
+
+    <div class="footer-divider"></div>
+
+    <div class="footer-cta">
+
+      <h3>
+        Ready to strengthen institutional performance?
+      </h3>
+
+      <p>
+        Whether your institution requires governance strengthening,
+capability development, executive learning or implementation
+support, our engagement begins with understanding your current
+institutional capability.
+      </p>
+
+      <a href="/contact" class="btn-primary">
+        Start Institutional Capability Assessment →
+      </a>
+
+    </div>
+
+    <div class="footer-divider"></div>
 
     <div class="footer-bottom">
-      <div class="footer-copy">© 2026 KIPROD. All rights reserved.</div>
-      <div class="footer-markets">Banks · SACCOs · Microfinance · Fintech</div>
-    </div>
+
+<div class="footer-copy">
+© 2026 KIPROD Institute. All Rights Reserved.
+</div>
+
+<div class="footer-markets">
+Governance • Capability Development • Executive Learning • Implementation • Institutional Intelligence
+</div>
+
+</div>
+
   </div>
+
 </footer>

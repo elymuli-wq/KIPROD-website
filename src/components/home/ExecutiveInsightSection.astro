@@ -1,10 +1,57 @@
-...
-...
+---
+
+---
 
 <section class="executive-insight-strip" aria-label="Executive insight">
-    <div class="section-inner">
-      <p class="executive-insight-text reveal">
-        Strong institutions are built through effective governance, capable people, structured systems, continuous learning, and a culture of sound risk management.
+  <div class="section-inner">
+    <div class="executive-insight-stack reveal">
+      <p class="executive-insight-text">
+        Strong institutions are built through effective governance, capable
+        people, structured systems, continuous learning, and a culture of
+        sound risk management.
       </p>
-    </div>
-  </section>
+
+```
+  <p class="executive-insight-bridge">
+    At KIPROD, we believe sustainable institutional improvement begins by
+    understanding these realities before prescribing learning, advisory, or
+    implementation solutions. That is why every institutional engagement
+    starts with an <strong>Institutional Learning & Capability Assessment (ILCA)</strong>—
+    a structured process that helps institutions identify capability gaps,
+    strategic priorities, governance strengths, operational constraints, and
+    the most appropriate pathway for long-term institutional strengthening.
+  </p>
+</div>
+```
+
+  </div>
+</section>
+
+<style>
+  .executive-insight-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 980px;
+    margin: 0 auto;
+  }
+
+  .executive-insight-bridge {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.82);
+    font-weight: 300;
+  }
+
+  .executive-insight-bridge strong {
+    color: var(--gold-light);
+    font-weight: 600;
+  }
+
+  @media (max-width: 768px) {
+    .executive-insight-bridge {
+      font-size: 0.95rem;
+      line-height: 1.75;
+    }
+  }
+</style>
