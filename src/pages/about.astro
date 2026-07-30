@@ -9,9 +9,12 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 >
   <section class="hero" style="min-height: 56vh">
     <div class="hero-grid"></div>
-    <div class="hero-glow" style="top: -260px; right: -220px"></div>
-    <div class="hero-inner" style="grid-template-columns: 1fr; padding-bottom: 80px">
+    <div class="hero-glow hero-glow-left"></div>
+
+<div class="hero-glow hero-glow-right"></div>
+    <div class="hero-inner hero-single">
       <h1 class="hero-heading">About <em>KIPROD</em></h1>
+      <div class="hero-divider"></div>
       <p class="hero-sub">
         The institutional identity behind an integrated credit risk ecosystem—governance visibility, capability
         development, operational strengthening, and portfolio resilience.
@@ -36,20 +39,36 @@ import BaseLayout from "../layouts/BaseLayout.astro";
       <div class="about-grid" style="grid-template-columns: 1.1fr 0.9fr">
         <div class="reveal">
           <div class="mini-panel" style="background: var(--cream)">
-            <div class="mini-title">Vision</div>
-            <div class="mini-note">
-              To be a leading partner in strengthening credit risk management systems across financial institutions,
-              enabling resilient lending and sustainable portfolio performance.
-            </div>
-          </div>
+  <div class="mini-title">
+    Why KIPROD Exists
+  </div>
+
+  <div class="mini-note">
+    Financial institutions rarely struggle because they lack policies,
+    training, or technical knowledge. They struggle when governance,
+    capability, operational execution, monitoring, and accountability
+    become disconnected.
+
+    KIPROD was established to reconnect those elements through one
+    structured institutional methodology.
+  </div>
+</div>
           <div style="height: 14px"></div>
           <div class="mini-panel" style="background: var(--cream)">
-            <div class="mini-title">Mission</div>
-            <div class="mini-note">
-              To support financial institutions in building strong credit risk management systems through practical
-              capability development, structured frameworks, and ongoing institutional partnership.
-            </div>
-          </div>
+            <div class="mini-panel" style="background: var(--cream)">
+  <div class="mini-title">
+    Our Institutional Philosophy
+  </div>
+
+  <div class="mini-note">
+    Strong institutions are built through disciplined governance,
+    capable people, structured systems, continuous learning,
+    measurable execution, and ongoing performance visibility.
+
+    Every KIPROD engagement is designed around strengthening those
+    institutional foundations.
+  </div>
+</div>
         </div>
 
         <div class="reveal">
@@ -68,185 +87,478 @@ import BaseLayout from "../layouts/BaseLayout.astro";
         </div>
       </div>
 
-      <div class="arch-wrap reveal" aria-label="KIPROD brand architecture" style="margin-top: 24px">
-        <svg class="arch-svg" viewBox="0 0 920 260" role="img" aria-label="KIPROD with three integrated components">
-          <defs>
-            <linearGradient id="archStrokeAbout" x1="0" x2="1">
-              <stop offset="0" stop-color="#C4882A" stop-opacity="0.85" />
-              <stop offset="1" stop-color="#E8B455" stop-opacity="0.85" />
-            </linearGradient>
-          </defs>
-          <rect x="310" y="20" width="300" height="70" rx="6" fill="#09224A" />
-          <text
-            x="460"
-            y="55"
-            text-anchor="middle"
-            font-family="DM Sans, Arial, sans-serif"
-            font-size="18"
-            fill="#FFFFFF"
-            font-weight="600"
-          >
-            KIPROD
-          </text>
-          <text
-            x="460"
-            y="76"
-            text-anchor="middle"
-            font-family="DM Mono, Arial, monospace"
-            font-size="10"
-            fill="#E8B455"
-            letter-spacing="2"
-          >
-            ONE ECOSYSTEM
-          </text>
+     <div class="reveal" style="margin-top:50px;">
 
-          <path d="M460 90 V120" stroke="url(#archStrokeAbout)" stroke-width="2.2" stroke-linecap="round" />
-          <path
-            d="M210 120 H710"
-            stroke="url(#archStrokeAbout)"
-            stroke-width="2.2"
-            stroke-linecap="round"
-            stroke-dasharray="6 6"
-          />
-          <path d="M210 120 V140" stroke="url(#archStrokeAbout)" stroke-width="2.2" stroke-linecap="round" />
-          <path d="M460 120 V140" stroke="url(#archStrokeAbout)" stroke-width="2.2" stroke-linecap="round" />
-          <path d="M710 120 V140" stroke="url(#archStrokeAbout)" stroke-width="2.2" stroke-linecap="round" />
+  <div class="section-tag">
+    Institutional Engagement Methodology
+  </div>
 
-          <rect x="70" y="140" width="280" height="90" rx="6" fill="#F7F4EE" stroke="#C4882A" stroke-opacity="0.35" />
-          <text
-            x="210"
-            y="175"
-            text-anchor="middle"
-            font-family="Cormorant Garamond, Georgia, serif"
-            font-size="20"
-            fill="#09224A"
-            font-weight="600"
-          >
-            Credit Risk Institute
-          </text>
-          <text
-            x="210"
-            y="202"
-            text-anchor="middle"
-            font-family="DM Sans, Arial, sans-serif"
-            font-size="12"
-            fill="#64748B"
-          >
-            Insight • Research • Briefs
-          </text>
+  <h2 class="section-heading">
+    One structured pathway from <em>assessment to continuous improvement</em>
+  </h2>
 
-          <rect x="320" y="140" width="280" height="90" rx="6" fill="#F7F4EE" stroke="#C4882A" stroke-opacity="0.35" />
-          <text
-            x="460"
-            y="175"
-            text-anchor="middle"
-            font-family="Cormorant Garamond, Georgia, serif"
-            font-size="20"
-            fill="#09224A"
-            font-weight="600"
-          >
-            Risk Management Academy
-          </text>
-          <text
-            x="460"
-            y="202"
-            text-anchor="middle"
-            font-family="DM Sans, Arial, sans-serif"
-            font-size="12"
-            fill="#64748B"
-          >
-            Capability • Intelligence • Platform
-          </text>
+  <p class="section-sub">
+    Every institutional engagement follows a structured methodology that helps
+    organizations understand their current capability, identify governance and
+    operational priorities, strengthen institutional performance, and sustain
+    continuous improvement over time.
+  </p>
 
-          <rect x="570" y="140" width="280" height="90" rx="6" fill="#F7F4EE" stroke="#C4882A" stroke-opacity="0.35" />
-          <text
-            x="710"
-            y="175"
-            text-anchor="middle"
-            font-family="Cormorant Garamond, Georgia, serif"
-            font-size="20"
-            fill="#09224A"
-            font-weight="600"
-          >
-            RMS Partnerships
-          </text>
-          <text
-            x="710"
-            y="202"
-            text-anchor="middle"
-            font-family="DM Sans, Arial, sans-serif"
-            font-size="12"
-            fill="#64748B"
-          >
-            Operational Strengthening • Support
-          </text>
-        </svg>
-        <div class="arch-caption">
-          KIPROD operates as one integrated ecosystem: Institute (insight), Academy (capability), RMS Partnerships
-          (operational strengthening). From Insight → Capability → Execution.
-        </div>
+  <div class="journey-track" style="margin-top:50px;">
+
+    <div class="journey-node">
+      <div class="node-dot">1</div>
+      <div class="node-title">ILCA</div>
+      <div class="node-desc">
+        Institutional Lending Capability Assessment.
+      </div>
+    </div>
+
+    <div class="journey-node">
+      <div class="node-dot">2</div>
+      <div class="node-title">ICDF</div>
+      <div class="node-desc">
+        Institutional Capability Diagnostic Framework.
+      </div>
+    </div>
+
+    <div class="journey-node">
+      <div class="node-dot">3</div>
+      <div class="node-title">ICAR</div>
+      <div class="node-desc">
+        Institutional Capability Assessment & Review.
+      </div>
+    </div>
+
+    <div class="journey-node">
+      <div class="node-dot">4</div>
+      <div class="node-title">Roadmap</div>
+      <div class="node-desc">
+        Strategic implementation roadmap based on assessment findings.
+      </div>
+    </div>
+
+    <div class="journey-node">
+      <div class="node-dot">5</div>
+      <div class="node-title">Academy</div>
+      <div class="node-desc">
+        Capability development and institutional learning.
+      </div>
+    </div>
+
+    <div class="journey-node">
+      <div class="node-dot">6</div>
+      <div class="node-title">RMS</div>
+      <div class="node-desc">
+        Operational strengthening and implementation support.
+      </div>
+    </div>
+
+    <div class="journey-node">
+      <div class="node-dot">7</div>
+      <div class="node-title">Command Centre</div>
+      <div class="node-desc">
+        Continuous performance monitoring and governance visibility.
+      </div>
+    </div>
+
+  </div>
+
+</div>
+<div
+  class="mini-panel reveal"
+  style="
+    margin-top:40px;
+    background:var(--gold-pale);
+    border-left:4px solid var(--gold);
+  "
+>
+
+  <div class="mini-title">
+    Why this methodology matters
+  </div>
+
+  <div class="mini-note">
+    Rather than delivering isolated training programmes or standalone advisory
+    engagements, KIPROD follows a structured institutional methodology that
+    connects assessment, governance visibility, capability development,
+    implementation, and continuous performance improvement into one integrated
+    journey.
+  </div>
+
+</div>
       </div>
     </div>
   </section>
 
   <section class="institutional">
     <div class="section-inner">
-      <div class="section-tag reveal">Core values</div>
-      <h2 class="section-heading reveal">Corporate, practical, and execution-focused.</h2>
+      <div class="section-tag reveal">
+  Leadership Principles
+</div>
+      <h2 class="section-heading reveal">
+  Principles that guide every
+  <em>institutional engagement</em>
+</h2>
       <p class="section-sub reveal">
-        The tone is corporate and professional, with a modern and approachable feel—clear, practical, and easy to
-        understand.
-      </p>
+  Every KIPROD engagement is guided by principles that strengthen governance,
+  capability, execution, and long-term institutional performance rather than
+  short-term interventions.
+</p>
 
       <div class="arms-grid" style="grid-template-columns: repeat(3, 1fr); margin-top: 50px">
-        <div class="arm-card reveal" style="padding: 38px 32px">
-          <div class="arm-tag">01</div>
-          <div class="arm-name" style="font-size: 1.2rem">Integrity in decision-making</div>
-          <div class="arm-desc">We do what is right, ensuring our work supports sound credit practices and responsible lending.</div>
-        </div>
-        <div class="arm-card reveal" style="padding: 38px 32px">
-          <div class="arm-tag">02</div>
-          <div class="arm-name" style="font-size: 1.2rem">Execution excellence</div>
-          <div class="arm-desc">We deliver practical, structured, and effective solutions that work in real institutional environments.</div>
-        </div>
-        <div class="arm-card reveal" style="padding: 38px 32px">
-          <div class="arm-tag">03</div>
-          <div class="arm-name" style="font-size: 1.2rem">Professional respect</div>
-          <div class="arm-desc">We engage institutional partners and stakeholders with respect, working collaboratively to strengthen outcomes.</div>
-        </div>
-        <div class="arm-card reveal" style="padding: 38px 32px">
-          <div class="arm-tag">04</div>
-          <div class="arm-name" style="font-size: 1.2rem">Practical impact</div>
-          <div class="arm-desc">We measure success by improvement in credit risk systems and portfolio performance.</div>
-        </div>
-        <div class="arm-card reveal" style="padding: 38px 32px">
-          <div class="arm-tag">05</div>
-          <div class="arm-name" style="font-size: 1.2rem">Partnership mindset</div>
-          <div class="arm-desc">We work with institutions as long-term partners, supporting continuous strengthening.</div>
-        </div>
-        <div class="arm-card reveal" style="padding: 38px 32px">
-          <div class="arm-tag">06</div>
-          <div class="arm-name" style="font-size: 1.2rem">One ecosystem</div>
-          <div class="arm-desc">Institute (insight), Academy (capability), RMS Partnerships (operational strengthening)—one integrated ecosystem.</div>
-        </div>
-      </div>
-    </div>
-  </section>
+        <div class="arm-card reveal" style="padding:38px 32px">
 
-  <section class="about" style="padding-top: 70px; padding-bottom: 70px">
-    <div class="section-inner">
-      <div class="section-tag reveal">Next</div>
-      <h2 class="section-heading reveal">Start with <em>capability</em></h2>
-      <p class="section-sub reveal">
-        The simplest entry into the KIPROD ecosystem is through the Academy capability platform—build shared language,
-        then progress into operational strengthening.
-      </p>
-      <div style="margin-top: 18px" class="reveal">
-        <a class="nav-cta" href="/academy" style="text-decoration: none">Explore the Academy →</a>
-        <span style="display:inline-block; width: 10px"></span>
-        <a href="/" class="arm-link">Back to Homepage →</a>
+  <div class="arm-tag">01</div>
+
+  <div class="arm-name" style="font-size:1.2rem">
+    Institution Before Intervention
+  </div>
+
+  <div class="arm-desc">
+    Every recommendation begins with understanding the institution's context,
+    governance environment, operating model, and strategic priorities.
+  </div>
+
+</div>
+        <div class="arm-card reveal" style="padding:38px 32px">
+
+  <div class="arm-tag">02</div>
+
+  <div class="arm-name" style="font-size:1.2rem">
+    Governance Before Growth
+  </div>
+
+  <div class="arm-desc">
+    Sustainable growth depends on disciplined governance, accountability,
+    structured decision-making, and effective oversight.
+  </div>
+
+</div>
+        <div class="arm-card reveal" style="padding:38px 32px">
+
+  <div class="arm-tag">03</div>
+
+  <div class="arm-name" style="font-size:1.2rem">
+    Capability Before Complexity
+  </div>
+
+  <div class="arm-desc">
+    Strong institutional capability provides the foundation for managing
+    increasingly complex lending environments.
+  </div>
+
+</div>
+        <div class="arm-card reveal" style="padding:38px 32px">
+
+  <div class="arm-tag">04</div>
+
+  <div class="arm-name" style="font-size:1.2rem">
+    Execution Before Activity
+  </div>
+
+  <div class="arm-desc">
+    Institutional performance improves through disciplined execution,
+    measurable implementation, and operational consistency—not activity alone.
+  </div>
+
+</div>
+        <div class="arm-card reveal" style="padding:38px 32px">
+
+  <div class="arm-tag">05</div>
+
+  <div class="arm-name" style="font-size:1.2rem">
+    Evidence Before Opinion
+  </div>
+
+  <div class="arm-desc">
+    Assessments, governance observations, operational decisions, and
+    recommendations are grounded in structured evidence and institutional data.
+  </div>
+
+</div>
+        <div class="arm-card reveal" style="padding:38px 32px">
+
+  <div class="arm-tag">06</div>
+
+  <div class="arm-name" style="font-size:1.2rem">
+    Continuous Improvement
+  </div>
+
+  <div class="arm-desc">
+    Institutional strengthening is an ongoing journey supported by continuous
+    monitoring, learning, governance reinforcement, and performance visibility.
+  </div>
+
+</div>
       </div>
     </div>
   </section>
+  <div
+  class="trust-quote reveal"
+  style="margin-top:55px;"
+>
+
+<p>
+
+KIPROD engagements are designed around institutions—not products.
+
+Every methodology, assessment, capability programme, and implementation
+engagement is tailored to the governance environment, operational maturity,
+and strategic priorities of each institution.
+
+</p>
+
+<footer>
+
+Institutional Engagement Philosophy
+
+</footer>
+
+</div>
+
+  <section class="institutional reveal">
+
+  <div class="section-inner">
+
+    <div class="institutional-inner">
+
+      <div>
+
+        <div class="section-tag">
+          Begin the Journey
+        </div>
+
+        <h2 class="section-heading">
+          Every stronger institution begins with
+          <em>understanding itself</em>
+        </h2>
+
+        <p class="inst-desc">
+
+          Sustainable institutional performance doesn't begin with training,
+          software, or consulting.
+
+          It begins with understanding governance maturity, capability gaps,
+          operational effectiveness, and strategic priorities.
+
+          KIPROD provides a structured methodology that guides institutions
+          from assessment through implementation and long-term performance
+          reinforcement.
+
+        </p>
+
+        <ul class="bullets">
+
+          <li>
+            <span class="dot"></span>
+            Institutional Learning & Capability Assessment (ILCA)
+          </li>
+
+          <li>
+            <span class="dot"></span>
+            Institutional Capability Development Framework (ICDF)
+          </li>
+
+          <li>
+            <span class="dot"></span>
+            Institutional Capability Assessment Report (ICAR)
+          </li>
+
+          <li>
+            <span class="dot"></span>
+            Institutional Roadmap Development
+          </li>
+
+          <li>
+            <span class="dot"></span>
+            Academy Capability Programmes
+          </li>
+
+          <li>
+            <span class="dot"></span>
+            RMS Implementation
+          </li>
+
+          <li>
+            <span class="dot"></span>
+            Command Centre Performance Monitoring
+          </li>
+
+        </ul>
+
+      </div>
+
+      <div class="inst-form">
+
+        <div class="form-heading">
+
+          Start an Institutional Discussion
+
+        </div>
+
+        <p class="form-sub">
+
+          Tell us about your institution and we'll recommend the most
+          appropriate entry point into the KIPROD methodology.
+
+        </p>
+
+        <div style="display:flex;flex-direction:column;gap:18px;">
+
+          <a
+            href="/contact"
+            class="btn-primary"
+            style="text-align:center;"
+          >
+            Schedule an Executive Discussion →
+          </a>
+
+          <a
+            href="/resources"
+            class="btn-secondary"
+            style="text-align:center;"
+          >
+            Explore Resources →
+          </a>
+
+          <a
+            href="/academy"
+            class="btn-secondary"
+            style="text-align:center;"
+          >
+            Explore the Academy →
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+  <section class="about" style="background:var(--white);">
+
+  <div class="section-inner">
+
+    <div class="section-tag reveal">
+      Institutional Focus
+    </div>
+
+    <h2 class="section-heading reveal">
+      Built for institutions that manage
+      <em>credit risk at scale</em>
+    </h2>
+
+    <p class="section-sub reveal">
+      KIPROD supports organizations responsible for lending, credit
+      governance, portfolio management, institutional capability, and
+      financial sector oversight across Kenya and the wider East African
+      region.
+    </p>
+
+    <div
+      class="arms-grid"
+      style="grid-template-columns:repeat(3,1fr);margin-top:55px;"
+    >
+
+      <div class="arm-card reveal">
+
+        <div class="arm-tag">01</div>
+
+        <div class="arm-name">
+          Commercial Banks
+        </div>
+
+        <div class="arm-desc">
+          Credit governance, portfolio quality, lending capability,
+          collections optimisation, and executive oversight.
+        </div>
+
+      </div>
+
+      <div class="arm-card reveal">
+
+        <div class="arm-tag">02</div>
+
+        <div class="arm-name">
+          SACCOs
+        </div>
+
+        <div class="arm-desc">
+          Institutional capability development, governance reinforcement,
+          operational improvement, and portfolio resilience.
+        </div>
+
+      </div>
+
+      <div class="arm-card reveal">
+
+        <div class="arm-tag">03</div>
+
+        <div class="arm-name">
+          Microfinance Institutions
+        </div>
+
+        <div class="arm-desc">
+          Lending operations, recovery performance, governance visibility,
+          and institutional strengthening.
+        </div>
+
+      </div>
+
+      <div class="arm-card reveal">
+
+        <div class="arm-tag">04</div>
+
+        <div class="arm-name">
+          Development Finance Institutions
+        </div>
+
+        <div class="arm-desc">
+          Institutional diagnostics, programme capability, governance,
+          implementation support, and operational effectiveness.
+        </div>
+
+      </div>
+
+      <div class="arm-card reveal">
+
+        <div class="arm-tag">05</div>
+
+        <div class="arm-name">
+          Regulators
+        </div>
+
+        <div class="arm-desc">
+          Credit risk capability initiatives, governance standards,
+          industry learning, and institutional excellence.
+        </div>
+
+      </div>
+
+      <div class="arm-card reveal">
+
+        <div class="arm-tag">06</div>
+
+        <div class="arm-name">
+          Government Agencies
+        </div>
+
+        <div class="arm-desc">
+          Capacity building, institutional performance improvement,
+          governance strengthening, and implementation support.
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
 </BaseLayout>
 

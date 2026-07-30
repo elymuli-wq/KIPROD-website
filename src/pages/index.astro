@@ -16,6 +16,10 @@ import ApproachSection from "../components/home/ApproachSection.astro";
 import InstitutionalSection from "../components/home/InstitutionalSection.astro";
 import FinalPositioningSection from "../components/home/FinalPositioningSection.astro";
 import ExecutiveInsightSection from "../components/home/ExecutiveInsightSection.astro";
+import TrustedInstitutions from "../components/TrustedInstitutions.astro";
+import RelevantContributions from "../components/RelevantContributions.astro";
+import Testimonials from "../components/Testimonials.astro";
+import MediaPreview from "../components/home/MediaPreview.astro";
 
 const featuredInsights = (await getPublishedInsights()).slice(0, 3);
 ---
@@ -37,26 +41,23 @@ const featuredInsights = (await getPublishedInsights()).slice(0, 3);
 
   <ImpactGallery />
   
-
   <ExecutiveInsightSection />
 
-  
+  <TrustedInstitutions />
+
+<RelevantContributions />
+
+  <MediaPreview />
 
   <ApproachSection />
 
   <JourneySection />
 
-  
-
   <LmsSection />
 
   <InstitutionalSection />
 
+<FinalPositioningSection />
 
-  
-
-  
-
-  <FinalPositioningSection />
 </BaseLayout>
 

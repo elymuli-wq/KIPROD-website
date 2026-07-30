@@ -26,6 +26,44 @@ const collaborationAreas = [
   },
 ];
 
+const implementationDomains = [
+  {
+    stage: "01",
+    title: "Governance Reinforcement",
+    text: "Implementation of governance recommendations, accountability structures, executive oversight, and board reporting mechanisms."
+  },
+  {
+    stage: "02",
+    title: "Operational Redesign",
+    text: "Review and strengthening of lending processes, workflows, approvals, and operational controls."
+  },
+  {
+    stage: "03",
+    title: "Portfolio Visibility",
+    text: "Development of monitoring frameworks, portfolio dashboards, and early warning visibility."
+  },
+  {
+    stage: "04",
+    title: "Collections Optimisation",
+    text: "Improving borrower engagement, recovery strategies, collections processes, and performance."
+  },
+  {
+    stage: "05",
+    title: "Policy Implementation",
+    text: "Embedding institutional policies, governance standards, and execution frameworks."
+  },
+  {
+    stage: "06",
+    title: "Performance Monitoring",
+    text: "Executive reporting, operational KPIs, institutional scorecards, and continuous review."
+  },
+  {
+    stage: "07",
+    title: "Continuous Improvement",
+    text: "Long-term advisory support that helps institutions sustain capability and performance."
+  }
+];
+
 const evidence = [
 'Executive training programmes',
 'Credit risk capability workshops',
@@ -94,31 +132,85 @@ const evidence = [
 
   <section class="arms reveal" style="padding-top: 0;">
     <div class="section-inner">
-      <div class="section-tag">Current Collaborations</div>
-      <h2 class="section-heading">Confirmed Partners</h2>
+      <div class="section-tag">
+Implementation Network
+</div>
+
+<h2 class="section-heading">
+Where RMS Delivers <em>Institutional Change</em>
+</h2>
       <p class="section-sub">
-        The following institutions and stakeholder groups represent KIPROD’s active
-        collaboration network. You can expand this list anytime as additional
-        organizations are confirmed.
-      </p>
+RMS works alongside leadership teams to implement governance
+recommendations, strengthen operational execution, redesign lending
+processes, improve collections performance, reinforce policy compliance,
+and embed sustainable institutional performance practices.
+</p>
 
 ```
   <div class="download-grid" style="margin-top: 34px;">
-    {currentPartners.map((partner) => (
-      <div class="download-card">
-        <div class="pill">Partner</div>
-        <div class="download-title">{partner}</div>
-      </div>
-    ))}
+    <div class="download-card">
+    <div class="pill">01</div>
+    <div class="download-title">
+      Governance Implementation
+    </div>
   </div>
 
-  <div class="trust-quote" style="margin-top: 38px;">
-    <p>
-      “KIPROD is designed to bridge insight, capability, and execution — ensuring
-      that institutional learning translates into measurable operational performance.”
-    </p>
-    <footer>KIPROD Partnership Framework</footer>
+  <div class="download-card">
+    <div class="pill">02</div>
+    <div class="download-title">
+      Portfolio Performance Improvement
+    </div>
   </div>
+
+  <div class="download-card">
+    <div class="pill">03</div>
+    <div class="download-title">
+      Credit Process Redesign
+    </div>
+  </div>
+
+  <div class="download-card">
+    <div class="pill">04</div>
+    <div class="download-title">
+      Collections & Recovery Optimisation
+    </div>
+  </div>
+
+  <div class="download-card">
+    <div class="pill">05</div>
+    <div class="download-title">
+      Operational Policy Implementation
+    </div>
+  </div>
+
+  <div class="download-card">
+    <div class="pill">06</div>
+    <div class="download-title">
+      Executive Performance Support
+    </div>
+  </div>
+
+  <div class="download-card">
+    <div class="pill">07</div>
+    <div class="download-title">
+      Continuous Institutional Improvement
+    </div>
+  </div>
+
+</div>
+  </div>
+
+  <div class="trust-quote" style="margin-top:38px;">
+  <p>
+    RMS transforms assessment findings into measurable institutional
+    improvement by supporting governance implementation, operational
+    strengthening, and continuous performance execution.
+  </p>
+
+  <footer>
+    Stage 6 • KIPROD Institutional Engagement Methodology
+  </footer>
+</div>
 </div>
 ```
 
@@ -126,8 +218,13 @@ const evidence = [
 
   <section class="solution reveal">
     <div class="section-inner">
-      <div class="section-tag">How We Collaborate</div>
-      <h2 class="section-heading">Partnership Areas</h2>
+      <div class="section-tag">
+Implementation Domains
+</div>
+
+<h2 class="section-heading">
+Institutions We Support
+</h2>
       <p class="section-sub">
   RMS engagements are structured around implementation outcomes, operational
   execution, governance reinforcement, and measurable institutional performance
@@ -215,7 +312,7 @@ const evidence = [
     </div>
 
     <div class="inst-form">
-      <div class="form-heading">Partnership Request</div>
+      <div class="form-heading">Implementation Inquiry</div>
       <p class="form-sub">
   Tell us about the governance, operational, collections, portfolio, or
   performance priorities your institution is seeking to implement.
@@ -262,7 +359,7 @@ const evidence = [
         </div>
 
         <button class="form-submit" type="submit">
-          Submit Partnership Inquiry
+          Begin Implementation Discussion
         </button>
       </form>
     </div>
@@ -271,4 +368,150 @@ const evidence = [
 ```
 
   </section>
+  <section class="about reveal">
+  <div class="section-inner">
+
+    <div class="section-tag">
+      RMS Implementation
+    </div>
+
+    <h2 class="section-heading">
+      Implementation <em>Domains</em>
+    </h2>
+
+    <p class="section-sub">
+      RMS transforms assessment findings into structured implementation across
+      governance, operations, portfolio management, collections, and continuous
+      institutional performance improvement.
+    </p>
+
+    <div class="implementation-grid">
+
+      {implementationDomains.map((item) => (
+
+        <div class="implementation-card">
+
+          <div class="implementation-number">
+            {item.stage}
+          </div>
+
+          <h3>{item.title}</h3>
+
+          <p>{item.text}</p>
+
+        </div>
+
+      ))}
+
+    </div>
+
+  </div>
+</section>
+  <section
+class="about"
+style="
+background:var(--gold-pale);
+padding:80px 0;
+"
+>
+
+<div class="section-inner">
+
+<div class="section-tag">
+Continue the Journey
+</div>
+
+<h2 class="section-heading">
+
+The KIPROD Methodology Doesn't End With
+<em>Implementation</em>
+
+</h2>
+
+<p class="section-sub">
+
+Following implementation, institutions continue to receive
+performance monitoring, advisory support, executive learning,
+and continuous improvement through the KIPROD Command Centre.
+
+</p>
+
+<div style="margin-top:30px;">
+
+<a
+href="/command-centre"
+class="btn-primary"
+>
+
+Explore the Command Centre →
+
+</a>
+
+</div>
+
+</div>
+
+</section>
 </BaseLayout>
+<style>
+
+.implementation-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:22px;
+margin-top:50px;
+}
+
+.implementation-card{
+
+background:white;
+
+padding:28px;
+
+border-radius:8px;
+
+border:1px solid rgba(196,136,42,.12);
+
+transition:.35s;
+
+}
+
+.implementation-card:hover{
+
+transform:translateY(-5px);
+
+box-shadow:0 18px 40px rgba(0,0,0,.08);
+
+}
+
+.implementation-number{
+
+font-size:.8rem;
+
+font-weight:700;
+
+color:var(--gold);
+
+letter-spacing:.12em;
+
+margin-bottom:16px;
+
+}
+
+.implementation-card h3{
+
+font-size:1.15rem;
+
+margin-bottom:14px;
+
+}
+
+.implementation-card p{
+
+color:#666;
+
+line-height:1.7;
+
+}
+
+</style>

@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import CapabilityPlatformLink from "../../components/CapabilityPlatformLink.astro";
+import AnimatedCounter from "../components/AnimatedCounter.astro";
 ---
 
 <BaseLayout
@@ -8,10 +9,14 @@ import CapabilityPlatformLink from "../../components/CapabilityPlatformLink.astr
   description="Institutional resources and downloads from KIPROD—organised by ecosystem pillar: Institute, Academy, and RMS Partnerships."
   activePath="/resources"
 >
-  <section class="hero" style="min-height: 46vh">
+  <section class="hero hero-single">
     <div class="hero-grid"></div>
+    <div class="hero-glow hero-glow-left"></div>
+
+<div class="hero-glow hero-glow-right"></div>
     <div class="hero-inner" style="grid-template-columns: 1fr; padding-bottom: 70px">
       <h1 class="hero-heading">Resources &amp; <em>Downloads</em></h1>
+      <div class="hero-divider"></div>
       <p class="hero-sub">
         Institutional assets across the KIPROD ecosystem—organised by pillar. Governance visibility materials, capability
         platform resources, and RMS partnership documents.
@@ -25,26 +30,65 @@ import CapabilityPlatformLink from "../../components/CapabilityPlatformLink.astr
 
   <section class="about" style="background: var(--white)">
     <div class="section-inner">
-      <div class="section-tag reveal">RMS Partnerships</div>
-      <h2 class="section-heading reveal">Operational strengthening <em>materials</em></h2>
-      <p class="section-sub reveal">Documents supporting institutional partnership discussions and engagement planning.</p>
+      <div class="section-tag reveal">
+    Corporate Resources
+</div>
+
+<h2 class="section-heading reveal">
+    Corporate <em>Documents</em>
+</h2>
+
+<p class="section-sub reveal">
+    Official institutional publications introducing KIPROD,
+    its methodology, implementation framework and ecosystem.
+</p>
 
       <div class="download-grid">
-        <div class="download-card reveal">
-          <div class="pill">RMS</div>
-          <div class="download-title">
-            <img class="icon" src="/assets/icons/partnerships.svg" alt="" />Institutional Partnership Brochure
-          </div>
-          <div class="download-desc">Engagement model, governance visibility review, and partnership structure.</div>
-          <a
-            class="arm-link"
-            href="/downloads/Institutional_Credit_Risk_Strengthening_Partnership_Brochure_PLACEHOLDER.pdf"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Download PDF →
-          </a>
-        </div>
+
+<div class="download-card reveal">
+
+<div class="pill">
+Corporate
+</div>
+
+<div class="download-title">
+Company Profile
+</div>
+
+<div class="download-desc">
+Overview of KIPROD, institutional methodology,
+services, ecosystem and implementation approach.
+</div>
+
+<a class="arm-link" href="/downloads/company-profile.pdf">
+Download PDF →
+</a>
+
+</div>
+
+<div class="download-card reveal">
+
+<div class="pill">
+Corporate
+</div>
+
+<div class="download-title">
+Institutional Methodology
+</div>
+
+<div class="download-desc">
+ILCA → ICDF → ICAR →
+Roadmap → Academy →
+RMS → Command Centre.
+</div>
+
+<a class="arm-link">
+Coming Soon
+</a>
+
+</div>
+
+</div>
         <div class="download-card reveal">
           <div class="pill">RMS</div>
           <div class="download-title">
@@ -60,44 +104,504 @@ import CapabilityPlatformLink from "../../components/CapabilityPlatformLink.astr
   </section>
 
   <section class="about" style="background: var(--cream)">
-    <div class="section-inner">
-      <div class="section-tag reveal">Credit Risk Institute</div>
-      <h2 class="section-heading reveal">Governance visibility <em>resources</em></h2>
-      <p class="section-sub reveal">Executive briefs and one-pagers supporting governance conversations.</p>
+  <div class="section-inner">
 
-      <div class="download-grid">
-        <div class="download-card reveal">
-          <div class="pill">Institute</div>
-          <div class="download-title">
-            <img class="icon" src="/assets/icons/governance.svg" alt="" />Governance Visibility One‑Pager
-          </div>
-          <div class="download-desc">What is a structured governance visibility review?</div>
-          <a class="arm-link" href="/downloads/Credit_Risk_Governance_Review_One_Pager_PLACEHOLDER.pdf" target="_blank" rel="noreferrer">
-            Download PDF →
-          </a>
-        </div>
-      </div>
+    <div class="section-tag reveal">
+      Executive Briefs
     </div>
-  </section>
 
-  <section class="about" style="background: var(--white); padding-bottom: 110px">
-    <div class="section-inner">
-      <div class="section-tag reveal">Risk Management Academy</div>
-      <h2 class="section-heading reveal">Capability platform <em>resources</em></h2>
-      <p class="section-sub reveal">Onboarding and enrolment materials for institutional capability development.</p>
+    <h2 class="section-heading reveal">
+      Governance & Executive <em>Intelligence</em>
+    </h2>
 
-      <div class="download-grid">
-        <div class="download-card reveal">
-          <div class="pill">Academy</div>
-          <div class="download-title">
-            <img class="icon" src="/assets/icons/lms.svg" alt="" />Capability Platform Welcome Pack
-          </div>
-          <div class="download-desc">Onboarding pack for institutions enrolling staff into the capability platform.</div>
-          <a class="arm-link" href="/downloads/LMS_Welcome_Pack_For_Institutions_PLACEHOLDER.pdf" target="_blank" rel="noreferrer">
-            Download PDF →
-          </a>
+    <p class="section-sub reveal">
+      Executive publications designed to support board oversight, governance
+      visibility, portfolio monitoring, and informed institutional
+      decision-making.
+    </p>
+
+    <div class="download-grid">
+
+      <div class="download-card reveal">
+        <div class="pill">Executive Brief</div>
+
+        <div class="download-title">
+          Governance Visibility Brief
         </div>
+
+        <div class="download-desc">
+          Understanding governance visibility and institutional oversight.
+        </div>
+
+        <a class="arm-link" href="#">
+          Coming Soon →
+        </a>
       </div>
+
+      <div class="download-card reveal">
+        <div class="pill">Executive Brief</div>
+
+        <div class="download-title">
+          Portfolio Risk Brief
+        </div>
+
+        <div class="download-desc">
+          Executive observations on portfolio quality and emerging risk trends.
+        </div>
+
+        <a class="arm-link" href="#">
+          Coming Soon →
+        </a>
+      </div>
+
+      <div class="download-card reveal">
+        <div class="pill">Executive Guide</div>
+
+        <div class="download-title">
+          Board Governance Guide
+        </div>
+
+        <div class="download-desc">
+          Practical governance guidance for directors and executive leadership.
+        </div>
+
+        <a class="arm-link" href="#">
+          Coming Soon →
+        </a>
+      </div>
+
     </div>
-  </section>
+
+  </div>
+</section>
+
+  <section class="about" style="background: var(--white)">
+  <div class="section-inner">
+
+    <div class="section-tag reveal">
+      Capability Development
+    </div>
+
+    <h2 class="section-heading reveal">
+      Academy & Learning <em>Resources</em>
+    </h2>
+
+    <p class="section-sub reveal">
+      Resources supporting institutional capability development,
+      professional learning, and executive education.
+    </p>
+
+    <div class="download-grid">
+
+      <div class="download-card reveal">
+        <div class="pill">Academy</div>
+
+        <div class="download-title">
+          Academy Brochure
+        </div>
+
+        <div class="download-desc">
+          Overview of programmes, learning pathways and certifications.
+        </div>
+
+        <a class="arm-link" href="#">
+          Coming Soon →
+        </a>
+      </div>
+
+      <div class="download-card reveal">
+        <div class="pill">Framework</div>
+
+        <div class="download-title">
+          Capability Development Framework
+        </div>
+
+        <div class="download-desc">
+          Structured institutional capability development methodology.
+        </div>
+
+        <a class="arm-link" href="#">
+          Coming Soon →
+        </a>
+      </div>
+
+      <div class="download-card reveal">
+        <div class="pill">Catalogue</div>
+
+        <div class="download-title">
+          Learning Catalogue
+        </div>
+
+        <div class="download-desc">
+          Complete programme catalogue for institutional teams.
+        </div>
+
+        <a class="arm-link" href="#">
+          Coming Soon →
+        </a>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<section class="about" style="background: var(--cream)">
+  <div class="section-inner">
+
+    <div class="section-tag reveal">
+      Implementation Resources
+    </div>
+
+    <h2 class="section-heading reveal">
+      RMS Implementation <em>Toolkit</em>
+    </h2>
+
+    <p class="section-sub reveal">
+      Resources supporting operational strengthening, governance
+      implementation, portfolio improvement, and institutional execution.
+    </p>
+
+    <div class="download-grid">
+
+      <div class="download-card reveal">
+        <div class="pill">ICAR</div>
+
+        <div class="download-title">
+          ICAR Framework
+        </div>
+
+        <div class="download-desc">
+          Institutional Capability Assessment & Review methodology.
+        </div>
+
+        <a class="arm-link" href="#">
+          Coming Soon →
+        </a>
+      </div>
+
+      <div class="download-card reveal">
+        <div class="pill">Guide</div>
+
+        <div class="download-title">
+          Operational Strengthening Guide
+        </div>
+
+        <div class="download-desc">
+          Supporting institutions through structured implementation.
+        </div>
+
+        <a class="arm-link" href="#">
+          Coming Soon →
+        </a>
+      </div>
+
+      <div class="download-card reveal">
+        <div class="pill">RMS</div>
+
+        <div class="download-title">
+          RMS Implementation Brochure
+        </div>
+
+        <div class="download-desc">
+          Operational strengthening and institutional implementation support.
+        </div>
+
+        <a class="arm-link" href="#">
+          Coming Soon →
+        </a>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<section class="about" style="background: var(--white); padding-bottom:110px;">
+  <div class="section-inner">
+
+    <div class="section-tag reveal">
+      Research & Publications
+    </div>
+
+    <h2 class="section-heading reveal">
+      Knowledge & Institutional <em>Research</em>
+    </h2>
+
+    <p class="section-sub reveal">
+      Publications, research papers, institutional case studies,
+      governance insights, and thought leadership from the KIPROD ecosystem.
+    </p>
+
+    <div class="download-grid">
+
+      <div class="download-card reveal">
+        <div class="pill">Research</div>
+
+        <div class="download-title">
+          White Papers
+        </div>
+
+        <div class="download-desc">
+          In-depth research on governance, risk and institutional performance.
+        </div>
+
+        <a class="arm-link" href="/insights">
+          View Publications →
+        </a>
+      </div>
+
+      <div class="download-card reveal">
+        <div class="pill">Insights</div>
+
+        <div class="download-title">
+          Executive Insights Collection
+        </div>
+
+        <div class="download-desc">
+          Executive articles, governance perspectives and institutional intelligence.
+        </div>
+
+        <a class="arm-link" href="/insights">
+          Explore Insights →
+        </a>
+      </div>
+
+      <div class="download-card reveal">
+        <div class="pill">Case Studies</div>
+
+        <div class="download-title">
+          Institutional Success Stories
+        </div>
+
+        <div class="download-desc">
+          Practical implementation experiences from KIPROD engagements.
+        </div>
+
+        <a class="arm-link" href="#">
+          Coming Soon →
+        </a>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<section class="about reveal">
+
+  <div class="section-inner">
+
+    <div class="section-tag">
+      Latest From KIPROD
+    </div>
+
+    <h2 class="section-heading">
+      Insights in <em>Action</em>
+    </h2>
+
+    <p class="section-sub">
+      Explore executive interviews, institutional conversations,
+      client testimonials and workshop highlights from across the
+      KIPROD ecosystem.
+    </p>
+
+    <div class="download-grid">
+
+      <!-- Video 1 -->
+
+      <div class="video-card">
+
+        <a
+          href="https://www.youtube.com/watch?v=2zCQtv5XnTY"
+          target="_blank"
+          class="video-thumb"
+        >
+
+          <img
+            src="https://img.youtube.com/vi/2zCQtv5XnTY/hqdefault.jpg"
+            alt="Executive Training"
+          />
+
+          <div class="play-icon">▶</div>
+
+        </a>
+
+        <div class="video-body">
+
+          <div class="pill">
+            Training
+          </div>
+
+          <h3>
+            Executive Training
+          </h3>
+
+        </div>
+
+      </div>
+
+      <!-- Video 2 -->
+
+      <div class="video-card">
+
+        <a
+          href="https://www.youtube.com/watch?v=U2tD0JDMHTs"
+          target="_blank"
+          class="video-thumb"
+        >
+
+          <img
+            src="https://img.youtube.com/vi/U2tD0JDMHTs/hqdefault.jpg"
+            alt="Testimonial"
+          />
+
+          <div class="play-icon">▶</div>
+
+        </a>
+
+        <div class="video-body">
+
+          <div class="pill">
+            Testimonial
+          </div>
+
+          <h3>
+            Institutional Experience
+          </h3>
+
+        </div>
+
+      </div>
+
+      <!-- Video 3 -->
+
+      <div class="video-card">
+
+        <a
+          href="https://www.youtube.com/watch?v=7VfeeHqbAeY"
+          target="_blank"
+          class="video-thumb"
+        >
+
+          <img
+            src="https://img.youtube.com/vi/7VfeeHqbAeY/hqdefault.jpg"
+            alt="Workshop"
+          />
+
+          <div class="play-icon">▶</div>
+
+        </a>
+
+        <div class="video-body">
+
+          <div class="pill">
+            Workshop
+          </div>
+
+          <h3>
+            Workshop Highlights
+          </h3>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div
+      style="margin-top:50px; text-align:center;"
+    >
+
+      <a
+        href="/media"
+        class="btn-secondary"
+      >
+
+        Explore the Media Centre →
+
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section class="institutional stats-section">
+
+  <div class="section-inner">
+
+    <div class="section-tag reveal">
+      KIPROD Impact
+    </div>
+
+    <h2 class="section-heading reveal">
+      Building stronger institutions through
+      <em>knowledge, capability and execution</em>
+    </h2>
+
+    <p class="section-sub reveal">
+      Our work focuses on strengthening governance, improving institutional
+      capability and supporting sustainable performance across financial
+      institutions.
+    </p>
+
+    <div class="stats-grid">
+
+  <div class="stat-card reveal">
+    <div class="stat-icon">🏛️</div>
+
+    <div class="stat-title">
+      Institutional Partnerships
+    </div>
+
+    <p class="stat-desc">
+      Collaborating with banks, SACCOs, microfinance institutions,
+      regulators and development partners.
+    </p>
+  </div>
+
+  <div class="stat-card reveal">
+    <div class="stat-icon">🎓</div>
+
+    <div class="stat-title">
+      Executive Capability Development
+    </div>
+
+    <p class="stat-desc">
+      Professional learning, executive education and institutional
+      capability strengthening programmes.
+    </p>
+  </div>
+
+  <div class="stat-card reveal">
+    <div class="stat-icon">📊</div>
+
+    <div class="stat-title">
+      Governance & Risk Advisory
+    </div>
+
+    <p class="stat-desc">
+      Supporting governance excellence, portfolio quality,
+      operational performance and sustainable growth.
+    </p>
+  </div>
+
+  <div class="stat-card reveal">
+    <div class="stat-icon">⚙️</div>
+
+    <div class="stat-title">
+      Seven-Stage Institutional Framework
+    </div>
+
+    <p class="stat-desc">
+      A structured methodology guiding institutions from assessment
+      through implementation and continuous improvement.
+    </p>
+  </div>
+
+</div>
+
+</section>
 </BaseLayout>
