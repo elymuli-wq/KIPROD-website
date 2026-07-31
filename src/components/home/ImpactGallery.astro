@@ -1,18 +1,20 @@
 ---
-
-const images = [
-{
-src: 'https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1200&q=80',
-alt: 'Executive training session',
-},
-{
-src: 'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1200&q=80',
-alt: 'Institutional collaboration workshop',
-},
-{
-src: 'https://images.unsplash.com/photo-1551836022-deb4988cc6c0?auto=format&fit=crop&w=1200&q=80',
-alt: 'Financial leadership discussion',
-},
+const impactCards = [
+  {
+    label: 'Executive Learning',
+    title: 'Practical credit-risk capability sessions',
+    note: 'Workshop-ready layouts can hold Kenyan institution photos once the director sends approved images.',
+  },
+  {
+    label: 'Institutional Collaboration',
+    title: 'Governance conversations with local teams',
+    note: 'No generic stock people are used; this panel is intentionally branded until real Kenyan photos arrive.',
+  },
+  {
+    label: 'Operational Execution',
+    title: 'From assessment to measurable improvement',
+    note: 'Designed for SACCOs, banks, MFIs, credit providers, and public-sector partners in Kenya.',
+  },
 ];
 ---
 
@@ -26,15 +28,15 @@ alt: 'Financial leadership discussion',
       that translate strategy into measurable operational execution.
     </p>
 
-```
-<div class="impact-gallery">
-  {images.map((img) => (
-    <figure class="impact-card">
-      <img src={img.src} alt={img.alt} loading="lazy" />
-    </figure>
-  ))}
-</div>
-```
-
+    <div class="impact-gallery impact-gallery--cards">
+      {impactCards.map((card, index) => (
+        <article class="impact-card impact-card--placeholder">
+          <div class="impact-card-number">0{index + 1}</div>
+          <div class="impact-card-label">{card.label}</div>
+          <h3>{card.title}</h3>
+          <p>{card.note}</p>
+        </article>
+      ))}
+    </div>
   </div>
 </section>
