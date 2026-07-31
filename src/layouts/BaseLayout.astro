@@ -3,6 +3,7 @@ import "../styles/global.css";
 import Nav from "../components/Nav.astro";
 import Footer from "../components/Footer.astro";
 import { SITE_URL } from "../config/site";
+import SearchOverlay from "../components/SearchOverlay.astro";
 
 const {
   title = "KIPROD",
@@ -42,37 +43,66 @@ const canonical = new URL(canonicalPath ?? Astro.url.pathname, SITE_URL).href;
 
   <body>
     <Nav activePath={activePath} />
+
+    <SearchOverlay />
+
     <main>
       <slot />
     </main>
+
     <Footer />
 
     <script>
-      (function () {
-        const reveals = document.querySelectorAll(".reveal");
-        if (reveals.length) {
-          const observer = new IntersectionObserver(
-            (entries) => {
-              entries.forEach((e) => {
-                if (e.isIntersecting) {
-                  e.target.classList.add("visible");
-                  observer.unobserve(e.target);
-                }
-              });
-            },
-            { threshold: 0.12, rootMargin: "0px 0px -40px 0px" }
-          );
-          reveals.forEach((el) => observer.observe(el));
-        }
+  (function () {
+    // Reveal animations
+    const reveals = document.querySelectorAll('.reveal');
 
-        const nav = document.querySelector("nav");
-        if (nav) {
-          window.addEventListener("scroll", () => {
-            nav.style.boxShadow = window.scrollY > 40 ? "0 4px 40px rgba(0,0,0,0.3)" : "none";
+    if (reveals.length) {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((e) => {
+            if (e.isIntersecting) {
+              e.target.classList.add('visible');
+              observer.unobserve(e.target);
+            }
           });
-        }
-      })();
-    </script>
+        },
+        { threshold: 0.12, rootMargin: '0px 0px -40px 0px' }
+      );
+
+      reveals.forEach((el) => observer.observe(el));
+    }
+
+    // Navbar shadow on scroll
+    const nav = document.querySelector('nav');
+
+    if (nav) {
+      window.addEventListener('scroll', () => {
+        nav.style.boxShadow =
+          window.scrollY > 40
+            ? '0 4px 40px rgba(0,0,0,0.3)'
+            : 'none';
+      });
+    }
+
+    // Mobile menu toggle
+    const toggle = document.querySelector('.nav-toggle');
+    const menu = document.querySelector('.mobile-menu');
+
+    if (toggle && menu) {
+      toggle.addEventListener('click', () => {
+        const isOpen = menu.classList.toggle('is-open');
+        toggle.setAttribute('aria-expanded', String(isOpen));
+      });
+
+      menu.querySelectorAll('a').forEach((link) => {
+        link.addEventListener('click', () => {
+          menu.classList.remove('is-open');
+          toggle.setAttribute('aria-expanded', 'false');
+        });
+      });
+    }
+  })();
+</script>
   </body>
 </html>
-
