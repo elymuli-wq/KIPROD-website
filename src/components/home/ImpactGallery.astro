@@ -28,15 +28,13 @@ const impactCards = [
       that translate strategy into measurable operational execution.
     </p>
 
-    <div class="impact-gallery impact-gallery--cards">
-      {impactCards.map((card, index) => (
-        <article class="impact-card impact-card--placeholder">
-          <div class="impact-card-number">0{index + 1}</div>
-          <div class="impact-card-label">{card.label}</div>
-          <h3>{card.title}</h3>
-          <p>{card.note}</p>
-        </article>
-      ))}
-    </div>
+<div class="impact-gallery">
+  {images.map((img) => (
+    <figure class="impact-card">
+      <img src={img.src} alt={img.alt} loading="lazy" />
+    </figure>
+  ))}
+</div>
+
   </div>
 </section>
