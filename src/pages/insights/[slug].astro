@@ -13,18 +13,15 @@ const { Content } = await render(post);
 ---
 
 <BaseLayout title={`${post.data.title} – KIPROD`} description={post.data.description} activePath="/insights">
-  <section class="hero hero-single">
-    <div class="hero-grid"></div>
-    <div class="hero-glow hero-glow-left"></div>
+  <section class="page-header">
 
-<div class="hero-glow hero-glow-right"></div>
-    <div class="hero-inner" style="grid-template-columns: 1fr; padding-bottom: 70px">
-      <h1 class="hero-heading">
+    <div class="page-header-inner">
+      <h1 class="page-heading">
         {post.data.title}
       </h1>
-      <div class="hero-divider"></div>
-      <p class="hero-sub">{post.data.description}</p>
-      <div class="hero-actions">
+      <div class="page-divider"></div>
+      <p class="page-sub">{post.data.description}</p>
+      <div class="page-actions">
         <a href="/insights" class="btn-primary">Back to Insights →</a>
         <a href="/contact" class="btn-secondary">Start Institutional Discussion →</a>
       </div>

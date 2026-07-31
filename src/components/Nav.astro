@@ -4,7 +4,7 @@ import CapabilityPlatformLink from './CapabilityPlatformLink.astro';
 
 const { activePath = '/' } = Astro.props;
 
-const links = [
+const primaryLinks = [
   { href: "/", label: "Home" },
 
   { href: "/#approach", label: "Methodology" },
@@ -15,14 +15,20 @@ const links = [
 
   { href: "/partnerships", label: "RMS" },
 
-  { href: "/command-centre", label: "Command Centre" },
-
   { href: "/insights", label: "Insights" },
-
-  { href: "/about", label: "About" },
 
   { href: "/contact", label: "Contact" },
 ];
+
+const secondaryLinks = [
+  { href: "/command-centre", label: "Command Centre" },
+  { href: "/resources", label: "Resources" },
+  { href: "/media", label: "Media Centre" },
+  { href: "/partners", label: "Partners" },
+  { href: "/about", label: "About" },
+];
+
+const links = [...primaryLinks, ...secondaryLinks];
 ---
 
 <nav class="site-nav">
@@ -39,7 +45,7 @@ const links = [
   <!-- Desktop -->
 
   <ul class="nav-links">
-  {links.map((l) => (
+  {primaryLinks.map((l) => (
     <li>
       <a
         href={l.href}
@@ -54,6 +60,21 @@ const links = [
       </a>
     </li>
   ))}
+  <li class="nav-more">
+    <button class="nav-more-toggle" type="button" aria-haspopup="true">More ▾</button>
+    <ul class="nav-more-menu">
+      {secondaryLinks.map((l) => (
+        <li>
+          <a
+            href={l.href}
+            class={activePath === l.href ? "nav-link-active" : undefined}
+          >
+            {l.label}
+          </a>
+        </li>
+      ))}
+    </ul>
+  </li>
 
   <li>
     <button
@@ -95,7 +116,6 @@ const links = [
       <input type="search" placeholder="Search KIPROD…" />
     </div>
 
-```
 <ul>
   {
     links.map((l) => (
@@ -109,7 +129,6 @@ const links = [
     <CapabilityPlatformLink>Start Assessment →</CapabilityPlatformLink>
   </li>
 </ul>
-```
 
   </div>
 </nav>
