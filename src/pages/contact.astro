@@ -7,21 +7,78 @@ import BaseLayout from "../layouts/BaseLayout.astro";
   description="Start an institutional discussion with KIPROD—governance conversations, capability development, and partnership progression."
   activePath="/contact"
 >
-  <section class="page-header">
-  <section class="page-hero page-hero--compact">
-    <div class="hero-grid"></div>
-    <div class="hero-glow hero-glow-left"></div>
+  <section class="about">
 
-    <div class="page-header-inner">
-      <h1 class="page-heading">
-        Start an <em>Institutional Discussion</em>
-      </h1>
-      <div class="page-divider"></div>
-      <p class="page-sub">
-        Trigger governance conversations, capability discussions, and partnership progression with KIPROD.
-      </p>
-    </div>
-  </section>
+<div class="section-inner">
+
+<div class="section-tag">
+Contact KIPROD
+</div>
+
+<h1 class="section-heading">
+Start an
+<em>Institutional Conversation</em>
+</h1>
+
+<p class="section-sub">
+Every KIPROD engagement begins with understanding your institution's
+governance, operational priorities, capability needs, and strategic
+objectives. Let's discuss how we can support your journey.
+</p>
+
+</div>
+
+</section>
+<section class="about" style="background:var(--cream);">
+
+<div class="section-inner">
+
+<div class="section-tag">
+Engagement Pathways
+</div>
+
+<h2 class="section-heading">
+How We Can
+<em>Support Your Institution</em>
+</h2>
+
+<p class="section-sub">
+Whether you are beginning with institutional discovery or seeking
+long-term performance support, KIPROD provides structured engagement
+pathways aligned to your priorities.
+</p>
+
+<div class="implementation-grid">
+
+<div class="implementation-card">
+<div class="implementation-number">01</div>
+<h3>Institutional Capability Assessment</h3>
+<p>Begin with ILCA and discover your institution's governance and capability priorities.</p>
+</div>
+
+<div class="implementation-card">
+<div class="implementation-number">02</div>
+<h3>Academy Programmes</h3>
+<p>Capability development aligned to assessment findings.</p>
+</div>
+
+<div class="implementation-card">
+<div class="implementation-number">03</div>
+<h3>RMS Implementation</h3>
+<p>Translate recommendations into measurable operational outcomes.</p>
+</div>
+
+<div class="implementation-card">
+<div class="implementation-number">04</div>
+<h3>Command Centre</h3>
+<p>Continuous monitoring, executive visibility and institutional improvement.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
 
   <section class="institutional" style="border-top: 0">
     <div class="section-inner">
@@ -41,8 +98,8 @@ import BaseLayout from "../layouts/BaseLayout.astro";
         </div>
 
         <div class="inst-form reveal">
-          <div class="form-heading">Institutional Discussion Request</div>
-          <div class="form-sub">Share your institution's context and area of interest.</div>
+          <div class="form-heading">Request an Institutional Engagement</div>
+          <div class="form-sub">Complete the form below and our team will arrange a confidential institutional discussion..</div>
 
           <form>
             <div class="form-row">
@@ -76,10 +133,18 @@ import BaseLayout from "../layouts/BaseLayout.astro";
                 <label class="form-label">Type of Institution (Dropdown) *</label>
                 <select class="form-select" name="institution_type" required>
                   <option value="" disabled selected>Select type</option>
-                  <option value="Bank">Bank</option>
+                  <option value="Commercial Bank">Commercial Bank</option>
                   <option value="Sacco">Sacco</option>
-                  <option value="Microfinance">Microfinance</option>
-                  <option value="Fintech">Fintech</option>
+                  <option value="Microfinance Institution">Microfinance Institution</option>
+                  <option value="Development Finance Institution">Development Finance Institution</option>
+                  <option value="Government Institution">Government Institution</option>
+                  <option value="Regulator">Regulator</option>
+                  <option value="Fintech>Fintech</option>
+                  <option value="Insurance Company">Insurance Company</option>
+                  <option value="NGO">NGO</option>
+                  <option value="Corporate Organisation">Corporate Organisation</option>
+                  <option value="Other">Other</option>
+
                 </select>
               </div>
             </div>
@@ -87,26 +152,31 @@ import BaseLayout from "../layouts/BaseLayout.astro";
             <div class="form-group">
               <label class="form-label">Area of Interest (Dropdown) *</label>
               <select class="form-select" name="area_of_interest" required>
-                <option value="" disabled selected>Select area</option>
+                <option value="Institutional Capability Assessment (ILCA)">Institutional Capability Assessment (ILCA)</option>
                 <option value="Governance Visibility Review">Governance Visibility Review</option>
-                <option value="Portfolio Risk Visibility">Portfolio Risk Visibility</option>
-                <option value="Capability Development / Academy">Capability Development / Academy</option>
-                <option value="Operational Strengthening">Operational Strengthening</option>
+                <option value="Academy Programmes">Academy Programmes</option>
+                <option value="Credit Risk & Portfolio Management">Credit Risk & Portfolio Management</option>
+                <option value="RMS Implementation">RMS Implementation</option>
+                <option value="Command Centre">Command Centre</option>
+                <option value="Executive Advisory">Executive Advisory</option>
+                <option value="Partnership Opportunities">Partnership Opportunities</option>
+                <option value="Other">Other</option>
+
               </select>
             </div>
 
             <div class="form-group">
-              <label class="form-label">Brief Description of Need *</label>
+              <label class="form-label">Institutional Priorities *</label>
               <textarea
                 class="form-textarea"
                 name="need_description"
                 required
-                placeholder="Briefly describe what you're looking to address..."
+                placeholder="Tell us about your governance, operational, capability or strategic priorities."
               ></textarea>
             </div>
 
             <div class="form-group">
-              <label class="form-label">Preferred Meeting Time *</label>
+              <label class="form-label">Preferred Contact Method</label>
               <input
                 class="form-input"
                 type="text"
@@ -126,16 +196,31 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     </div>
   </section>
 
+  <div class="mini-panel" style="margin-top:30px;background:var(--cream);">
+
+<div class="mini-title">
+Confidential by Design
+</div>
+
+<p class="mini-note">
+
+Every enquiry is treated confidentially. Initial discussions focus on
+understanding your institution's priorities before recommending any
+assessment, learning, advisory, or implementation pathway.
+
+</p>
+
+</div>
+
   <section class="institutional" style="padding-top: 70px; padding-bottom: 70px">
     <div class="section-inner">
       <div class="section-tag reveal">What happens next</div>
-      <h2 class="section-heading reveal">Simple and confidential.</h2>
+      <h2 class="section-heading reveal">What Happens Next</h2>
       <p class="section-sub reveal">
-        We confirm scope, propose times, and share the next steps for an appropriate engagement pathway—starting from
-        Phase 0 if needed.
+        Once we receive your enquiry, our team reviews your institutional priorities, confirms the most appropriate engagement pathway, and schedules a confidential discussion. From there, we recommend the next steps based on your governance, capability, operational, and strategic objectives.
       </p>
       <div style="margin-top: 18px" class="reveal">
-        <a href="/" class="nav-cta" style="text-decoration: none">Back to Homepage →</a>
+        <a href="/about" class="nav-cta" style="text-decoration: none">Explore the KIPROD Methodology →</a>
         <span style="display:inline-block; width: 10px"></span>
         <a href="/partnerships" class="arm-link">Review engagement phases →</a>
       </div>

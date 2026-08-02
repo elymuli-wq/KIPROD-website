@@ -1,22 +1,7 @@
 ---
-const impactCards = [
-  {
-    label: 'Executive Learning',
-    title: 'Practical credit-risk capability sessions',
-    note: 'Workshop-ready layouts can hold Kenyan institution photos once the director sends approved images.',
-  },
-  {
-    label: 'Institutional Collaboration',
-    title: 'Governance conversations with local teams',
-    note: 'No generic stock people are used; this panel is intentionally branded until real Kenyan photos arrive.',
-  },
-  {
-    label: 'Operational Execution',
-    title: 'From assessment to measurable improvement',
-    note: 'Designed for SACCOs, banks, MFIs, credit providers, and public-sector partners in Kenya.',
-  },
-];
 ---
+
+
 
 <section class="about reveal" style="padding-top: 0;">
   <div class="section-inner">
@@ -29,12 +14,94 @@ const impactCards = [
     </p>
 
 <div class="impact-gallery">
-  {images.map((img) => (
-    <figure class="impact-card">
-      <img src={img.src} alt={img.alt} loading="lazy" />
-    </figure>
-  ))}
-</div>
 
+  <article class="impact-card reveal">
+
+    <div class="impact-image">
+      <span>Executive Learning</span>
+    </div>
+
+    <div class="impact-content">
+
+      <div class="impact-tag">
+        Capability Development
+      </div>
+
+      <h3>
+        Practical Credit Risk Capability Sessions
+      </h3>
+
+      <p>
+        Executive programmes designed to strengthen lending governance,
+        institutional capability, and strategic credit decision-making.
+      </p>
+
+      <a href="/academy" class="impact-link">
+        Learn More →
+      </a>
+
+    </div>
+
+  </article>
+
+  <article class="impact-card reveal">
+
+    <div class="impact-image">
+      <span>Institutional Collaboration</span>
+    </div>
+
+    <div class="impact-content">
+
+      <div class="impact-tag">
+        Advisory
+      </div>
+
+      <h3>
+        Governance Conversations
+      </h3>
+
+      <p>
+        Working alongside boards, executives and management teams to
+        strengthen governance and institutional performance.
+      </p>
+
+      <a href="/contact" class="impact-link">
+        Discuss →
+      </a>
+
+    </div>
+
+  </article>
+
+  <article class="impact-card reveal">
+
+    <div class="impact-image">
+      <span>Operational Excellence</span>
+    </div>
+
+    <div class="impact-content">
+
+      <div class="impact-tag">
+        Implementation
+      </div>
+
+      <h3>
+        From Assessment to Measurable Improvement
+      </h3>
+
+      <p>
+        Structured implementation support that transforms institutional
+        recommendations into measurable operational performance.
+      </p>
+
+      <a href="/resources" class="impact-link">
+        Explore →
+      </a>
+
+    </div>
+
+  </article>
+
+</div>
   </div>
 </section>

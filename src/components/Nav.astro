@@ -21,10 +21,10 @@ const primaryLinks = [
 ];
 
 const secondaryLinks = [
-  { href: "/command-centre", label: "Command Centre" },
+  { href: "/partners", label: "Partners" },
   { href: "/resources", label: "Resources" },
   { href: "/media", label: "Media Centre" },
-  { href: "/partners", label: "Partners" },
+  { href: "/command-centre", label: "Command Centre" },
   { href: "/about", label: "About" },
 ];
 
@@ -61,7 +61,13 @@ const links = [...primaryLinks, ...secondaryLinks];
     </li>
   ))}
   <li class="nav-more">
-    <button class="nav-more-toggle" type="button" aria-haspopup="true">More ▾</button>
+    <button
+  class="nav-more-toggle"
+  type="button"
+  aria-haspopup="true"
+  aria-expanded="false"
+  aria-label="Open more navigation"
+>More ▾</button>
     <ul class="nav-more-menu">
       {secondaryLinks.map((l) => (
         <li>
@@ -80,7 +86,7 @@ const links = [...primaryLinks, ...secondaryLinks];
     <button
   id="search-toggle"
   class="nav-search-btn"
-  aria-label="Search"
+  aria-label="Open search"
 >
   <svg
     viewBox="0 0 24 24"
@@ -120,7 +126,12 @@ const links = [...primaryLinks, ...secondaryLinks];
   {
     links.map((l) => (
       <li>
-        <a href={l.href}>{l.label}</a>
+        <a
+  href={l.href}
+  class={activePath === l.href ? "nav-link-active" : undefined}
+>
+  {l.label}
+</a>
       </li>
     ))
   }
