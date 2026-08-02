@@ -5,106 +5,243 @@ import { insightSlug, topicLabel } from "../../lib/insights";
 
 export async function getStaticPaths() {
   const posts = await getCollection("insights", ({ data }) => !data.draft);
-  return posts.map((post) => ({ params: { slug: insightSlug(post) }, props: { post } }));
+
+  return posts.map((post) => ({
+    params: { slug: insightSlug(post) },
+    props: { post }
+  }));
 }
 
 const { post } = Astro.props;
 const { Content } = await render(post);
 ---
 
-<BaseLayout title={`${post.data.title} – KIPROD`} description={post.data.description} activePath="/insights">
-  <section class="page-header">
-  <section class="page-hero page-hero--compact">
-    <div class="hero-grid"></div>
-    <div class="hero-glow hero-glow-left"></div>
+<BaseLayout
+  title={`${post.data.title} – KIPROD`}
+  description={post.data.description}
+  activePath="/insights"
+>
 
-    <div class="page-header-inner">
-      <h1 class="page-heading">
+<section class="about" style="padding-top:140px;">
+
+  <div class="section-inner">
+
+    <div class="article-header">
+
+      <div class="pill">
+        {topicLabel(post.data.topic)}
+      </div>
+
+      <h1 class="section-heading">
         {post.data.title}
       </h1>
-      <div class="page-divider"></div>
-      <p class="page-sub">{post.data.description}</p>
-      <div class="page-actions">
-        <a href="/insights" class="btn-primary">Back to Insights →</a>
-        <a href="/contact" class="btn-secondary">Start Institutional Discussion →</a>
+
+      <p class="section-sub">
+        {post.data.description}
+      </p>
+
+      <div class="article-meta">
+
+        <span>
+          📅 {post.data.publishDate}
+        </span>
+
+        <span>
+          🏷 {topicLabel(post.data.topic)}
+        </span>
+
       </div>
+
     </div>
-  </section>
 
-  <section class="about" style="background: var(--white); padding-top: 90px">
-    <div class="section-inner">
-      <div class="section-tag reveal">
-        {topicLabel(post.data.topic)} · {post.data.date.toLocaleDateString("en-US", { year: "numeric", month: "long", day: "2-digit" })}
+  </div>
+
+</section>
+
+<section class="about" style="padding-top:0;">
+
+  <div class="section-inner">
+
+    <article class="kiprod-article">
+
+      <Content />
+
+    </article>
+
+  </div>
+
+</section>
+
+<section class="about" style="background:var(--cream);">
+
+  <div class="section-inner">
+
+    <div class="featured-resource-card">
+
+      <div class="featured-left">
+
+        <div class="pill">
+          Continue the Conversation
+        </div>
+
+        <h2>
+          Looking for Institutional Guidance?
+        </h2>
+
+        <p>
+          KIPROD supports boards, executive teams and financial institutions
+          through governance advisory, capability development and
+          institutional transformation.
+        </p>
+
+        <div class="featured-actions">
+
+          <a
+            href="/contact"
+            class="btn-primary"
+          >
+            Talk to KIPROD →
+          </a>
+
+          <a
+            href="/insights"
+            class="btn-secondary"
+          >
+            Back to Insights
+          </a>
+
+        </div>
+
       </div>
 
-      <article class="reveal kiprod-article">
-        <Content />
-      </article>
-
-      <div style="height: 34px"></div>
-
-      <div class="mini-panel reveal" style="background: var(--cream)">
-        <div class="mini-title">Next step</div>
-        <div class="mini-note">
-          If you'd like to discuss how this applies to your institution's portfolio and governance routines, start an
-          institutional discussion.
-        </div>
-        <div style="margin-top: 16px">
-          <a class="btn-primary" href="/contact">Start Institutional Discussion →</a>
-          <span style="display:inline-block;width:10px"></span>
-          <a class="btn-secondary" href="/partnerships">See engagement model →</a>
-        </div>
-      </div>
     </div>
-  </section>
+
+  </div>
+
+</section>
+
 </BaseLayout>
 
-<style>
-  .kiprod-article :global(h2) {
-    font-family: var(--font-display);
-    font-size: 1.8rem;
-    font-weight: 600;
-    color: var(--navy);
-    margin: 26px 0 10px;
-    line-height: 1.2;
+/* ===================================================
+   KIPROD ARTICLE TYPOGRAPHY
+=================================================== */
+
+.kiprod-article{
+  max-width:850px;
+  margin:0 auto;
+}
+
+.kiprod-article :global(h2){
+  font-family:var(--font-display);
+  font-size:clamp(2rem,2.6vw,2.4rem);
+  font-weight:600;
+  color:var(--navy);
+  line-height:1.2;
+  margin:56px 0 20px;
+}
+
+.kiprod-article :global(h3){
+  font-family:var(--font-display);
+  font-size:clamp(1.4rem,2vw,1.7rem);
+  font-weight:600;
+  color:var(--navy);
+  line-height:1.3;
+  margin:38px 0 16px;
+}
+
+.kiprod-article :global(p),
+.kiprod-article :global(li){
+  font-size:1.08rem;
+  line-height:1.95;
+  color:var(--muted);
+}
+
+.kiprod-article :global(p){
+  margin:20px 0;
+}
+
+.kiprod-article :global(ul),
+.kiprod-article :global(ol){
+  margin:24px 0 24px 28px;
+}
+
+.kiprod-article :global(li){
+  margin-bottom:10px;
+}
+
+.kiprod-article :global(strong){
+  color:var(--navy);
+  font-weight:600;
+}
+
+.kiprod-article :global(blockquote){
+  margin:40px 0;
+  padding:28px 34px;
+  border-left:5px solid var(--gold);
+  background:#faf8f3;
+  border-radius:0 12px 12px 0;
+  font-size:1.18rem;
+  line-height:1.8;
+  color:var(--navy);
+  font-style:italic;
+}
+
+.kiprod-article :global(hr){
+  border:none;
+  height:1px;
+  background:#ececec;
+  margin:48px 0;
+}
+
+.kiprod-article :global(img){
+  width:100%;
+  border-radius:18px;
+  margin:36px 0;
+  box-shadow:0 20px 50px rgba(0,0,0,.08);
+}
+
+.kiprod-article :global(a){
+  color:var(--gold);
+  text-decoration:none;
+  border-bottom:1px solid rgba(196,136,42,.35);
+  transition:border-color .25s ease,color .25s ease;
+}
+
+.kiprod-article :global(a:hover){
+  color:var(--gold-dark);
+  border-bottom-color:var(--gold);
+}
+
+.kiprod-article :global(table){
+  width:100%;
+  border-collapse:collapse;
+  margin:36px 0;
+}
+
+.kiprod-article :global(th),
+.kiprod-article :global(td){
+  padding:14px 18px;
+  border:1px solid #ececec;
+  text-align:left;
+}
+
+.kiprod-article :global(th){
+  background:#f8f8f8;
+  color:var(--navy);
+}
+
+@media(max-width:768px){
+
+  .kiprod-article{
+    max-width:100%;
   }
 
-  .kiprod-article :global(h3) {
-    font-family: var(--font-display);
-    font-size: 1.35rem;
-    font-weight: 600;
-    color: var(--navy);
-    margin: 22px 0 8px;
-    line-height: 1.25;
+  .kiprod-article :global(h2){
+    margin-top:42px;
   }
 
-  .kiprod-article :global(p),
-  .kiprod-article :global(li) {
-    font-size: 1.02rem;
-    font-weight: 300;
-    color: var(--muted);
-    line-height: 1.85;
+  .kiprod-article :global(blockquote){
+    padding:22px;
   }
 
-  .kiprod-article :global(p) {
-    margin: 12px 0;
-  }
-
-  .kiprod-article :global(ul) {
-    margin: 12px 0 12px 22px;
-  }
-
-  .kiprod-article :global(strong) {
-    color: var(--navy);
-    font-weight: 600;
-  }
-  .kiprod-article :global(a) {
-    color: var(--gold);
-    text-decoration: none;
-    border-bottom: 1px solid rgba(196, 136, 42, 0.35);
-  }
-  .kiprod-article :global(a:hover) {
-    border-bottom-color: var(--gold);
-  }
-</style>
-
+}
